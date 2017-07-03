@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>API Key | BungieNetPlatform</title>
+	<title>GetTopicsPaged | ForumService | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -16,16 +16,16 @@
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
-	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1499118184">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../docs/API-Key.html | API Key -->
+<!-- ../../docs/ForumService/GetTopicsPaged.html | ForumService / GetTopicsPaged -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -35,29 +35,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="../" class="navbar-brand">BungieNetPlatform</a>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-<li><li><a href="../">Home</a></li>
-<li><a href="../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
-<ul>
-<li><a href="../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../docs/API-Details">API Details</a></li>
-<li><a href="../docs/Manifest">Manifest</a></li>
-<li><a href="../docs/Authentication">Authentication</a></li>
-<li><a href="../docs/Past-Authentication">Past Authentication</a></li>
-</ul></li>
-<li><a href="#References">References</a>
-<ul>
-<li><a href="../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../docs/Enums">Enums</a></li>
-<li><a href="../docs/Endpoints">Endpoints</a></li>
-<li><a href="../docs/Definitions">Definitions</a></li>
-<li><a href="../docs/HistoricalStats">HistoricalStats</a></li>
-</ul></li>
-</ul>			<ul class="nav navbar-nav navbar-right">
+			<br />
+<b>Warning</b>:  file_get_contents(C:\Users\willi\Development\personal\BNP/wiki/_Sidebar.md): failed to open stream: No such file or directory in <b>C:\Users\willi\Development\personal\BNP\master\wiki-builder\includes\pages.php</b> on line <b>49</b><br />
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
 				</li>
@@ -68,7 +51,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>API Key</h1>
+		<h1>ForumService / GetTopicsPaged</h1>
 		<h2></h2>
 
 		<!--<section id="downloads">
@@ -81,15 +64,52 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/API-Key/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>What is an API key?</h2>
-<p>The API key is used by Bungie to measure who and what is using the API.</p>
-<h2>How do I get one?</h2>
-<p>Visit the <a href="https://www.bungie.net/en/User/API">developer portal</a> on bungie.net.</p>
-<h2>How do I use it?</h2>
-<p>In a HTTP request, include the following header:</p>
-<pre><code>X-API-Key: your-api-key-here</code></pre>
-<h2>Is the key mandatory?</h2>
-<p>Yes, although as of May, 2015, it is not being enforced. However, you should include one now to avoid your application breaking in the future.</p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetTopicsPaged/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
+<h2>Info</h2>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/">/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Accessibility:</strong></li>
+<li><strong>Service:</strong> <a href="../../docs/Endpoints#ForumService">ForumService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>The current page to return. Starts at 1.</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>group</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>quickDate</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>categoryFilter</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 		</div>
 	</div>
 </div>
@@ -106,6 +126,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../js/main.js?1458004654"></script>
+<script src="../../js/main.js?1499118185"></script>
 </body>
 </html>
