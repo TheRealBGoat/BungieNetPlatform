@@ -21,6 +21,7 @@
 	<li><a href="?platform-lib">Check for Updates</a></li>
 	<li><a href="?wiki">Build Wiki</a></li>
 	<li><a href="?pages">Build Pages</a></li>
+	<li><a href="?swagger">Build Swagger</a></li>
 </ul>
 <h2>Log</h2>
 <?php
@@ -38,6 +39,11 @@ if (isset($_GET['pages'])) {
 else if (isset($_GET['wiki'])) {
 	echo '<pre>';
 	include('includes/wiki.php');
+	echo '</pre>';
+}
+else if (isset($_GET['swagger'])) {
+	echo '<pre>';
+	include('includes/swagger.php');
 	echo '</pre>';
 }
 else if (isset($_GET['stats'])) {
