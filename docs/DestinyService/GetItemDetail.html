@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1499118184">
 </head>
 
 <body>
@@ -38,26 +38,9 @@
 			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-<li><li><a href="../../">Home</a></li>
-<li><a href="../../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
-<ul>
-<li><a href="../../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../../docs/API-Details">API Details</a></li>
-<li><a href="../../docs/Manifest">Manifest</a></li>
-<li><a href="../../docs/Authentication">Authentication</a></li>
-<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
-</ul></li>
-<li><a href="#References">References</a>
-<ul>
-<li><a href="../../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../../docs/Enums">Enums</a></li>
-<li><a href="../../docs/Endpoints">Endpoints</a></li>
-<li><a href="../../docs/Definitions">Definitions</a></li>
-<li><a href="../../docs/HistoricalStats">HistoricalStats</a></li>
-</ul></li>
-</ul>			<ul class="nav navbar-nav navbar-right">
+			<br />
+<b>Warning</b>:  file_get_contents(C:\Users\willi\Development\personal\BNP/wiki/_Sidebar.md): failed to open stream: No such file or directory in <b>C:\Users\willi\Development\personal\BNP\master\wiki-builder\includes\pages.php</b> on line <b>49</b><br />
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
 				</li>
@@ -82,12 +65,13 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetItemDetail/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
 <h2>Info</h2>
-<p>Returns information about a unique item instance associated with a character.</p>
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/">/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/</a></li>
 <li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Accessibility:</strong></li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
 </ul>
 <h2>Parameters</h2>
@@ -114,201 +98,10 @@
 </tr>
 <tr>
 <td>itemInstanceId</td>
-<td>A valid item instance that is in the character's inventory.</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
-<h3>Query String Parameters</h3>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>definitions</td>
-<td>Include definitions in the response. Use while testing.</td>
-</tr>
-</tbody>
-</table>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/2/Account/4611686018428939884/Character/2305843009221011538/Inventory/6917529049922676245">https://www.bungie.net/Platform/Destiny/2/Account/4611686018428939884/Character/2305843009221011538/Inventory/6917529049922676245</a></p>
-<pre><code class="javascript">{
-    "Response": {
-        "data": {
-            "item": {
-                "itemHash": 1283021733,
-                "bindStatus": 0,
-                "isEquipped": false,
-                "itemInstanceId": "6917529049922676245",
-                "itemLevel": 24,
-                "stackSize": 1,
-                "qualityLevel": 60,
-                "stats": [
-                    {
-                        "statHash": 4284893193,
-                        "value": 77,
-                        "maximumValue": 100
-                    }
-                ],
-                "primaryStat": {
-                    "statHash": 368428387,
-                    "value": 365,
-                    "maximumValue": 0
-                },
-                "canEquip": true,
-                "equipRequiredLevel": 20,
-                "unlockFlagHashRequiredToEquip": 2166136261,
-                "cannotEquipReason": 0,
-                "damageType": 1,
-                "damageTypeNodeIndex": 0,
-                "damageTypeStepIndex": 0,
-                "progression": {
-                    "dailyProgress": 0,
-                    "weeklyProgress": 109000,
-                    "currentProgress": 109000,
-                    "level": 7,
-                    "step": 0,
-                    "progressToNextLevel": 0,
-                    "nextLevelAt": 20000,
-                    "progressionHash": 2958601622
-                },
-                "talentGridHash": 54170120,
-                "nodes": [
-                    {
-                        "isActivated": true,
-                        "stepIndex": 0,
-                        "state": 10,
-                        "hidden": false,
-                        "nodeHash": 402641165
-                    }
-                ],
-                "useCustomDyes": true,
-                "artRegions": {
-                    "3": 8,
-                    "5": 0,
-                    "21": 8
-                },
-                "isEquipment": true,
-                "isGridComplete": true,
-                "perks": [
-                    {
-                        "iconPath": "\/common\/destiny_content\/icons\/50f6d0597c7727280fe1871b0d819379.png",
-                        "perkHash": 2507926095,
-                        "isActive": true
-                    },
-                    {
-                        "iconPath": "\/common\/destiny_content\/icons\/218295cebc6d079edc5eb0d95ded4372.png",
-                        "perkHash": 770631416,
-                        "isActive": true
-                    }
-                ],
-                "location": 1,
-                "transferStatus": 0,
-                "locked": false,
-                "lockable": true
-            },
-            "talentNodes": [
-                {
-                    "nodeIndex": 0,
-                    "nodeHash": 402641165,
-                    "state": 10,
-                    "stateId": "Complete",
-                    "isActivated": true,
-                    "stepIndex": 0,
-                    "materialsToUpgrade": [],
-                    "activationGridLevel": 0,
-                    "progressPercent": 100,
-                    "hidden": false
-                }
-            ],
-            "statsOnNodes": {
-                "312682976": {
-                    "currentNodeStats": [],
-                    "nextNodeStats": [
-                        {
-                            "statHash": 1240592695,
-                            "value": -4,
-                            "maximumValue": 100
-                        },
-                        {
-                            "statHash": 155624089,
-                            "value": 7,
-                            "maximumValue": 100
-                        }
-                    ]
-                },
-                "3872169477": {
-                    "currentNodeStats": [],
-                    "nextNodeStats": [
-                        {
-                            "statHash": 155624089,
-                            "value": 31,
-                            "maximumValue": 100
-                        }
-                    ]
-                },
-                "452419628": {
-                    "currentNodeStats": [
-                        {
-                            "statHash": 1240592695,
-                            "value": 9,
-                            "maximumValue": 100
-                        }
-                    ],
-                    "nextNodeStats": []
-                },
-                "1503756812": {
-                    "currentNodeStats": [],
-                    "nextNodeStats": [
-                        {
-                            "statHash": 155624089,
-                            "value": -4,
-                            "maximumValue": 100
-                        }
-                    ]
-                },
-                "3359939809": {
-                    "currentNodeStats": [
-                        {
-                            "statHash": 1240592695,
-                            "value": 28,
-                            "maximumValue": 100
-                        }
-                    ],
-                    "nextNodeStats": []
-                },
-                "2947148901": {
-                    "currentNodeStats": [],
-                    "nextNodeStats": [
-                        {
-                            "statHash": 4188031367,
-                            "value": 38,
-                            "maximumValue": 100
-                        }
-                    ]
-                }
-            },
-            "characterStatsToDisplay": [],
-            "materialItemHashes": []
-        }
-    },
-    "ErrorCode": 1,
-    "ThrottleSeconds": 0,
-    "ErrorStatus": "Success",
-    "Message": "Ok",
-    "MessageData": {
-
-    }
-}</code></pre>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2fCharacter%2f%7bcharacterId%7d%2fInventory%2f%7bitemInstanceId%7d%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2fCharacter%2f%7bcharacterId%7d%2fInventory%2f%7bitemInstanceId%7d%2f</a></li>
-</ol>
 		</div>
 	</div>
 </div>
@@ -325,6 +118,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1458004654"></script>
+<script src="../../js/main.js?1499118185"></script>
 </body>
 </html>

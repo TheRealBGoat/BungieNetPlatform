@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1499118184">
 </head>
 
 <body>
@@ -38,26 +38,9 @@
 			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-<li><li><a href="../../">Home</a></li>
-<li><a href="../../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
-<ul>
-<li><a href="../../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../../docs/API-Details">API Details</a></li>
-<li><a href="../../docs/Manifest">Manifest</a></li>
-<li><a href="../../docs/Authentication">Authentication</a></li>
-<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
-</ul></li>
-<li><a href="#References">References</a>
-<ul>
-<li><a href="../../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../../docs/Enums">Enums</a></li>
-<li><a href="../../docs/Endpoints">Endpoints</a></li>
-<li><a href="../../docs/Definitions">Definitions</a></li>
-<li><a href="../../docs/HistoricalStats">HistoricalStats</a></li>
-</ul></li>
-</ul>			<ul class="nav navbar-nav navbar-right">
+			<br />
+<b>Warning</b>:  file_get_contents(C:\Users\willi\Development\personal\BNP/wiki/_Sidebar.md): failed to open stream: No such file or directory in <b>C:\Users\willi\Development\personal\BNP\master\wiki-builder\includes\pages.php</b> on line <b>49</b><br />
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
 				</li>
@@ -82,12 +65,13 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetMembersOfClan/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
 <h2>Info</h2>
-<p>Returns a paged list of members in a clan.</p>
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/{groupId}/ClanMembers/">/Group/{groupId}/ClanMembers/</a></li>
 <li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Accessibility:</strong></li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#GroupService">GroupService</a></li>
 </ul>
 <h2>Parameters</h2>
@@ -106,80 +90,6 @@
 </tr>
 </tbody>
 </table>
-<h3>Query String Parameters</h3>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>currentPage</td>
-<td>The current page to return. Starts at 1.</td>
-</tr>
-<tr>
-<td>memberType</td>
-<td>Default is -1. -1=All Members, 0=Member, 1=Admin, 2=Founder</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>Default is 0.</td>
-</tr>
-<tr>
-<td>platformType</td>
-<td>A valid clan membership type. Default is 0. Required. 0=None, 1=Xbox, 2=PSN</td>
-</tr>
-</tbody>
-</table>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Group/177526/ClanMembers/">https://www.bungie.net/Platform/Group/177526/ClanMembers/</a></p>
-<pre><code class="javascript">{
-    "Response": {
-        "results": [
-            {
-                "bungieNetUserInfo": {
-                    "iconPath": "\/img\/profile\/avatars\/bungieday_03.jpg",
-                    "membershipType": 254,
-                    "membershipId": "5197148",
-                    "displayName": "lowlines"
-                },
-                "hasPendingApplication": false,
-                "hasRated": false,
-                "approvalDate": "2014-09-02T09:08:36.038Z",
-                "approvedByMembershipId": "5197148",
-                "rating": 0,
-                "groupId": "177526",
-                "membershipType": 254,
-                "membershipId": "5197148",
-                "isMember": true,
-                "memberType": 2,
-                "isOriginalFounder": true
-            }
-        ],
-        "totalResults": "1",
-        "hasMore": false,
-        "query": {
-            "groupId": "177526",
-            "memberType": -1,
-            "platformType": 2,
-            "sort": 0,
-            "nameSearch": "",
-            "itemsPerPage": 10,
-            "currentPage": 1
-        },
-        "useTotalResults": true
-    },
-    "ErrorCode": 1,
-    "ThrottleSeconds": 0,
-    "ErrorStatus": "Success",
-    "Message": "Ok",
-    "MessageData": {}
-}</code></pre>
-<h2>References</h2>
 		</div>
 	</div>
 </div>
@@ -196,6 +106,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1458004654"></script>
+<script src="../../js/main.js?1499118185"></script>
 </body>
 </html>

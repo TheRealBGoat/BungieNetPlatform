@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1499118184">
 </head>
 
 <body>
@@ -38,26 +38,9 @@
 			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-<li><li><a href="../../">Home</a></li>
-<li><a href="../../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
-<ul>
-<li><a href="../../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../../docs/API-Details">API Details</a></li>
-<li><a href="../../docs/Manifest">Manifest</a></li>
-<li><a href="../../docs/Authentication">Authentication</a></li>
-<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
-</ul></li>
-<li><a href="#References">References</a>
-<ul>
-<li><a href="../../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../../docs/Enums">Enums</a></li>
-<li><a href="../../docs/Endpoints">Endpoints</a></li>
-<li><a href="../../docs/Definitions">Definitions</a></li>
-<li><a href="../../docs/HistoricalStats">HistoricalStats</a></li>
-</ul></li>
-</ul>			<ul class="nav navbar-nav navbar-right">
+			<br />
+<b>Warning</b>:  file_get_contents(C:\Users\willi\Development\personal\BNP/wiki/_Sidebar.md): failed to open stream: No such file or directory in <b>C:\Users\willi\Development\personal\BNP\master\wiki-builder\includes\pages.php</b> on line <b>49</b><br />
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
 				</li>
@@ -82,32 +65,6 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GroupSearch/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
-<h2>Info</h2>
-<p>Searches for groups matching input string.  Returns matching group information.</p>
-<ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/Search/">/Group/Search/</a></li>
-<li><strong>Method:</strong> POST</li>
-<li><strong>Accessibility:</strong> Public</li>
-<li><strong>Service:</strong> <a href="../../docs/Endpoints#GroupService">GroupService</a></li>
-</ul>
-<h2>Parameters</h2>
-<h3>Path Parameters</h3>
-<p>None</p>
-<h3>Query String Parameters</h3>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>populatefriends</td>
-<td>true or false.</td>
-</tr>
-</tbody>
-</table>
 <h3>JSON POST Parameters</h3>
 <table class="table table-bordered">
 <thead>
@@ -119,11 +76,11 @@
 <tbody>
 <tr>
 <td>contents.searchValue</td>
-<td>Group name to search for.</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td><a href="../../docs/Enums#GroupTypeSearchFilter">contents.searchType</a></td>
-<td>Filter by group type. Default 0.</td>
+<td>contents.searchType</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>creationDate</td>
@@ -134,12 +91,12 @@
 <td>The current page to return. Starts at 1.</td>
 </tr>
 <tr>
-<td><a href="../../docs/Enums#GroupMemberCountFilter">groupMemberCountFilter</a></td>
-<td>Filter groups based on how many members they have.</td>
+<td>groupMemberCountFilter</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>itemsPerPage</td>
-<td>Number of results per page. Default is 10.</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>localeFilter</td>
@@ -151,7 +108,7 @@
 </tr>
 <tr>
 <td>sortBy</td>
-<td>Default 0.</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>tagText</td>
@@ -159,195 +116,16 @@
 </tr>
 </tbody>
 </table>
-<h2>Example</h2>
-<p>POST <a href="https://www.bungie.net/Platform/Group/Search/">https://www.bungie.net/Platform/Group/Search/</a></p>
-<pre><code class="javascript">{
-    "contents": {
-        "searchValue": "HeisenbergClan",
-        "searchType": 0
-    },
-    "creationDate": 0,
-    "sortBy": 0,
-    "itemsPerPage": 10,
-    "currentPage": 1,
-    "membershipType": 0,
-    "tagText": "",
-    "localeFilter": "en",
-    "groupMemberCountFilter": 0
- }</code></pre>
-<pre><code class="javascript">{
-    "Response": {
-        "founders": [{
-            "membershipId": "6046610",
-            "uniqueName": "6046610",
-            "displayName": "CAPNPLAN3T",
-            "profilePicture": 69987,
-            "profileTheme": 66,
-            "userTitle": 0,
-            "successMessageFlags": "0",
-            "isDeleted": false,
-            "about": "",
-            "firstAccess": "2014-09-09T11:08:59.821Z",
-            "lastUpdate": "2014-09-12T11:37:53.104Z",
-            "psnDisplayName": "CAP-N_PLAN3T",
-            "showActivity": true,
-            "followerCount": 51,
-            "followingUserCount": 55,
-            "locale": "en",
-            "localeInheritDefault": true,
-            "showGroupMessaging": true,
-            "profilePicturePath": "/img/profile/avatars/odst_skull_5_4.png",
-            "profileThemeName": "Destiny1",
-            "userTitleDisplay": "Newbie",
-            "statusText": "",
-            "statusDate": "0001-01-01T00:00:00Z"
-        }],
-        "relatedGroups": [],
-        "results": [{
-            "detail": {
-                "groupId": "700997",
-                "name": "HeisenbergClan",
-                "membershipIdCreated": "6046610",
-                "creationDate": "2014-12-29T14:21:31.006Z",
-                "modificationDate": "2015-05-20T12:58:16.77Z",
-                "groupType": 0,
-                "about": "We shoot things, preferably in the face.",
-                "isDeleted": false,
-                "tags": ["#face", "#shoot"],
-                "rating": 63,
-                "ratingCount": 4,
-                "memberCount": 5,
-                "pendingMemberCount": 0,
-                "isPublic": true,
-                "isMembershipClosed": false,
-                "isMembershipReviewed": true,
-                "isPublicTopicAdminOnly": true,
-                "primaryAlliedGroupId": "0",
-                "motto": "Shoot",
-                "clanCallsign": "HSBN",
-                "allowChat": true,
-                "isDefaultPostPublic": true,
-                "isDefaultPostAlliance": false,
-                "chatSecurity": 0,
-                "locale": "en",
-                "avatarImageIndex": 60046,
-                "founderMembershipId": "6046610",
-                "homepage": 0,
-                "membershipOption": 0,
-                "defaultPublicity": 0,
-                "theme": "Group_Director",
-                "bannerPath": "/img/Themes/Group_Director/struct_images/group_top_banner.jpg",
-                "avatarPath": "/img/profile/avatars/group/avatars_groups_hunter.jpg",
-                "isAllianceOwner": false,
-                "conversationId": "7882965",
-                "clanReviewType": 0,
-                "enableInvitationMessagingForAdmins": true
-            },
-            "founderMembershipId": "6046610",
-            "founder": {
-                "membershipId": "6046610",
-                "uniqueName": "6046610",
-                "displayName": "CAPNPLAN3T",
-                "profilePicture": 69987,
-                "profileTheme": 66,
-                "userTitle": 0,
-                "successMessageFlags": "0",
-                "isDeleted": false,
-                "about": "",
-                "firstAccess": "2014-09-09T11:08:59.821Z",
-                "lastUpdate": "2014-09-12T11:37:53.104Z",
-                "psnDisplayName": "CAP-N_PLAN3T",
-                "showActivity": true,
-                "followerCount": 51,
-                "followingUserCount": 55,
-                "locale": "en",
-                "localeInheritDefault": true,
-                "showGroupMessaging": true,
-                "profilePicturePath": "/img/profile/avatars/odst_skull_5_4.png",
-                "profileThemeName": "Destiny1",
-                "userTitleDisplay": "Newbie",
-                "statusText": "",
-                "statusDate": "0001-01-01T00:00:00Z"
-            },
-            "followerCount": 4,
-            "currentUserStatus": {
-                "isFollowing": false
-            },
-            "alliedIds": [],
-            "attributes": [{
-                "attributeId": 1,
-                "minValue": 0,
-                "maxValue": 100
-            }, {
-                "attributeId": 2,
-                "minValue": 0,
-                "maxValue": 100
-            }, {
-                "attributeId": 3,
-                "minValue": 0,
-                "maxValue": 100
-            }, {
-                "attributeId": 4,
-                "minValue": 0,
-                "maxValue": 0
-            }, {
-                "attributeId": 5,
-                "minValue": 0,
-                "maxValue": 0
-            }, {
-                "attributeId": 6,
-                "minValue": 0,
-                "maxValue": 0
-            }, {
-                "attributeId": 7,
-                "minValue": 0,
-                "maxValue": 0
-            }, {
-                "attributeId": 8,
-                "minValue": 0,
-                "maxValue": 0
-            }],
-            "membershipIds": [],
-            "clanMembershipTypes": [{
-                "membershipType": 2,
-                "memberCount": 5,
-                "isProbation": false,
-                "isWorld": false,
-                "needsFounder": false
-            }],
-            "allianceStatus": 0,
-            "friends": [],
-            "groupJoinRequestCount": 0,
-            "groupJoinInviteCount": 0,
-            "clanJoinRequestCount": 0,
-            "clanJoinInviteCount": 0
-        }],
-        "totalResults": "1",
-        "hasMore": false,
-        "query": {
-            "contents": {
-                "searchValue": "heisenbergclan",
-                "searchType": 0
-            },
-            "creationDate": 0,
-            "sortBy": 0,
-            "membershipType": 0,
-            "groupMemberCountFilter": 0,
-            "localeFilter": "en",
-            "tagText": "",
-            "itemsPerPage": 26,
-            "currentPage": 1
-        },
-        "useTotalResults": false
-    },
-    "ErrorCode": 1,
-    "ThrottleSeconds": 0,
-    "ErrorStatus": "Success",
-    "Message": "Ok",
-    "MessageData": {}
-}
-}</code></pre>
-<h2>References</h2>
+<h2>Info</h2>
+<ul>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Group/Search/">/Group/Search/</a></li>
+<li><strong>Method:</strong> POST</li>
+<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Service:</strong> <a href="../../docs/Endpoints#GroupService">GroupService</a></li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
 		</div>
 	</div>
 </div>
@@ -364,6 +142,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1458004654"></script>
+<script src="../../js/main.js?1499118185"></script>
 </body>
 </html>

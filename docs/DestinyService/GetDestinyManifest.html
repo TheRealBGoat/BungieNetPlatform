@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1499118184">
 </head>
 
 <body>
@@ -38,26 +38,9 @@
 			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-<li><li><a href="../../">Home</a></li>
-<li><a href="../../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
-<ul>
-<li><a href="../../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../../docs/API-Details">API Details</a></li>
-<li><a href="../../docs/Manifest">Manifest</a></li>
-<li><a href="../../docs/Authentication">Authentication</a></li>
-<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
-</ul></li>
-<li><a href="#References">References</a>
-<ul>
-<li><a href="../../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../../docs/Enums">Enums</a></li>
-<li><a href="../../docs/Endpoints">Endpoints</a></li>
-<li><a href="../../docs/Definitions">Definitions</a></li>
-<li><a href="../../docs/HistoricalStats">HistoricalStats</a></li>
-</ul></li>
-</ul>			<ul class="nav navbar-nav navbar-right">
+			<br />
+<b>Warning</b>:  file_get_contents(C:\Users\willi\Development\personal\BNP/wiki/_Sidebar.md): failed to open stream: No such file or directory in <b>C:\Users\willi\Development\personal\BNP\master\wiki-builder\includes\pages.php</b> on line <b>49</b><br />
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
 				</li>
@@ -82,65 +65,18 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetDestinyManifest/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h3>JSON POST Parameters</h3>
+<p>None</p>
 <h2>Info</h2>
-<p>Returns the current version of the <a href="../../docs/Manifest">manifest</a> as a json object.</p>
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/Manifest/">/Destiny/Manifest/</a></li>
 <li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong> Public</li>
+<li><strong>Accessibility:</strong></li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
 </ul>
 <h2>Parameters</h2>
 <h3>Path Parameters</h3>
 <p>None</p>
-<h3>Query String Parameters</h3>
-<p>None</p>
-<h3>JSON POST Parameters</h3>
-<p>None</p>
-<h2>Example</h2>
-<p>GET <a href="https://www.bungie.net/Platform/Destiny/Manifest/">https://www.bungie.net/Platform/Destiny/Manifest/</a></p>
-<pre><code class="javascript">{
-    "Response": {
-        "version": "45194.15.05.13.1136-2",
-        "mobileAssetContentPath": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_7c23eefeaa0003dbc141793135dae141.content",
-        "mobileGearAssetDataBases": [
-            {
-                "version": 0,
-                "path": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_7c23eefeaa0003dbc141793135dae141.content"
-            },
-            {
-                "version": 1,
-                "path": "\/common\/destiny_content\/sqlite\/asset\/asset_sql_content_039b4a64b68a7ae75a1d349c301e494c.content"
-            }
-        ],
-        "mobileWorldContentPaths": {
-            "en": "\/common\/destiny_content\/sqlite\/en\/world_sql_content_bafce26a4daec6ba6932e93bb5bd200c.content",
-            "fr": "\/common\/destiny_content\/sqlite\/fr\/world_sql_content_50895b556dfee93a1f3d5a3817c18b19.content",
-            "es": "\/common\/destiny_content\/sqlite\/es\/world_sql_content_d016ba5a8d83b1526212bddaefbd96c6.content",
-            "de": "\/common\/destiny_content\/sqlite\/de\/world_sql_content_52fbe64346a0110511a86238aec07310.content",
-            "it": "\/common\/destiny_content\/sqlite\/it\/world_sql_content_bd613d541a690aa21896eb4ce761e42f.content",
-            "ja": "\/common\/destiny_content\/sqlite\/ja\/world_sql_content_884749c1a137aa80b701fb175eb9620d.content",
-            "pt-br": "\/common\/destiny_content\/sqlite\/pt-br\/world_sql_content_7a0cc97e802c88dee6a0ecff953194f2.content"
-        },
-        "mobileGearCDN": {
-            "Geometry": "\/common\/destiny_content\/geometry\/platform\/mobile\/geometry",
-            "Texture": "\/common\/destiny_content\/geometry\/platform\/mobile\/textures",
-            "PlateRegion": "\/common\/destiny_content\/geometry\/platform\/mobile\/plated_textures",
-            "Gear": "\/common\/destiny_content\/geometry\/gear"
-        }
-    },
-    "ErrorCode": 1,
-    "ThrottleSeconds": 0,
-    "ErrorStatus": "Success",
-    "Message": "Ok",
-    "MessageData": {
-
-    }
-}</code></pre>
-<h2>References</h2>
-<ol>
-<li><a href="http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Manifest%2f">http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Manifest%2f</a></li>
-</ol>
 		</div>
 	</div>
 </div>
@@ -157,6 +93,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1458004654"></script>
+<script src="../../js/main.js?1499118185"></script>
 </body>
 </html>
