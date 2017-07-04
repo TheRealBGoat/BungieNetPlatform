@@ -3,6 +3,8 @@
 $paramDetails = array(
 	'membershipType' => array('enum' => 'BungieMembershipType', 'type' => 'string', 'desc' => 'A valid Bungie.net membershipType.'),
 	'invitationResponseState' => array('enum' => 'InvitationResponseState', 'string' => 'integer', 'desc' => 'How to respond to the invitation.'),
+	'count' => array('type' => 'integer', 'desc' => 'Number of rows to return.'),
+	'tpage' => array('type' => 'integer', 'desc' => 'Page number to return, starting with 0.'),
 	'page' => array('type' => 'integer', 'desc' => 'The current page to return. Starts at 1.'),
 	'currentPage' => array('type' => 'integer', 'desc' => 'The current page to return. Starts at 1.'),
 	'currentpage' => array('type' => 'integer', 'desc' => 'The current page to return. Starts at 1.'),
@@ -22,7 +24,30 @@ $paramDetails = array(
 
 	'partnershipType' => array('enum' => 'PartnershipType', 'type' => 'string', 'desc' => 'The type of partnership. 0=None, 1=Twitch'),
 	'communityStatusSort' => array('enum' => 'CommunityStatusSort', 'type' => 'string', 'desc' => 'Sort by status.'),
-	'modeHash' => array('enum' => 'DestinyActivityModeType', 'type' => 'string', 'desc' => 'Filter by ActivityModeType.')
+	'mode' => array('enum' => 'DestinyActivityModeType', 'type' => 'string', 'desc' => 'Filter by ActivityModeType.'),
+	'modes' => array('enum' => 'DestinyActivityModeType', 'type' => 'string', 'desc' => 'Filter by ActivityModeType.'),
+	'direction' => array('enum' => 'DestinyExplorerOrderDirection', 'type' => 'string', 'desc' => 'Order to sort items: Ascending or Descending'),
+	'order' => array('enum' => 'DestinyExplorerOrderBy', 'type' => 'string', 'desc' => 'Item property used for sorting'),
+	'orderstathash' => array('type' => 'integer', 'desc' => 'This value is used when the order parameter is set to ItemStatHash. The item stat for the provided hash value will be used in the sort.'),
+	'rarity' => array('enum' => 'TierType', 'type' => 'string', 'desc' => 'Rarity of items to return. Omit for all items.'),
+	'step' => array('type' => 'integer', 'desc' => 'Hash ID of the talent node step that an item must have in order to be returned.'),
+	'guardianAttributes' => array('enum' => 'DestinyTalentNodeStepGuardianAttributes', 'type' => 'string', 'desc' => 'Items must have node steps in one of these categories, omit for all items.'),
+	'impactEffects' => array('enum' => 'DestinyTalentNodeStepImpactEffects', 'type' => 'string', 'desc' => 'Items must have node steps in one of these categories, omit for all items.'),
+	'damageTypes' => array('enum' => 'DestinyTalentNodeStepDamageTypes', 'type' => 'string', 'desc' => 'Items must have node steps in one of these categories, omit for all items.'),
+	'weaponPerformance' => array('enum' => 'DestinyTalentNodeStepWeaponPerformances', 'type' => 'string', 'desc' => 'Items must have node steps in one of these categories, omit for all items.'),
+	'lightAbilities' => array('enum' => 'DestinyTalentNodeStepLightAbilities', 'type' => 'string', 'desc' => 'Items must have node steps in one of these categories, omit for all items.'),
+	'sourcecat' => array('enum' => 'DestinyRewardSourceCategory', 'type' => 'string', 'desc' => 'Items must drop from the specified source category, omit for all items.'),
+	'sourcehash' => array('type' => 'integer', 'desc' => 'Items must drop from the specified source, omit for all items. Overrides sourcecat.'),
+	'name' => array('type' => 'string', 'desc' => 'Name of items to return (partial match, no case). Omit for all items.'),
+	'matchrandomsteps' => array('type' => 'boolean', 'desc' => 'True if the supplied groups/step hash filters should match random node steps. False indicates the item can always get the step before it is considered a match.'),
+	'groups' => array('enum' => 'DestinyStatsGroupType', 'type' => 'string', 'desc' => 'Group of stats to include, otherwise only general stats are returned.'),
+	'periodType' => array('enum' => 'PeriodType', 'type' => 'string', 'desc' => 'Indicates a specific period type to return. Optional.'),
+	'monthstart' => array('type' => 'string', 'desc' => 'First month to return when monthly stats are requested. Use the format YYYY-MM.'),
+	'monthend' => array('type' => 'string', 'desc' => 'Last month to return when monthly stats are requested. Use the format YYYY-MM.'),
+	'daystart' => array('type' => 'string', 'desc' => 'First day to return when daily stats are requested. Use the format YYYY-MM-DD'),
+	'dayend' => array('type' => 'string', 'desc' => 'Last day to return when daily stats are requested. Use the format YYYY-MM-DD')
+
+
 );
 
 function buildInfo() {
@@ -74,6 +99,13 @@ function buildParam($name, $paramType, $enums) {
 		// we can assume a path parameter is always required
 		if ($paramType === 'path') {
 			$param->required = true;
+		}
+
+		// For now, set all QS parameters to allow empty values until
+		// we can map which ones are truly required
+		if ($paramType === 'query') {
+			$param->required = false;
+			$param->allowEmptyValue = true;
 		}
 
 
@@ -153,6 +185,9 @@ $paths = new stdClass();
 
 // Loop through each of the different API service groups
 foreach ($endpoints as $service) {
+	// Only include the DestinyService endpoints right now
+	if ($service->name !== 'DestinyService') continue;
+
 	$serviceEndpoints = get_object_vars($service->endpoints);
 
 	usort($serviceEndpoints, function($a, $b) {
@@ -226,8 +261,8 @@ $swagger->info = buildInfo();
 $swagger->securityDefinitions = buildSecurityDefinitions();
 $swagger->security = array();
 $swagger->security[] = array('APIKeyHeader' => array());
-$swagger->host = 'https://crossorigin.me/www.bungie.net';
-$swagger->basePath = '/BungieNetPlatform';
+$swagger->host = 'www.bungie.net';
+$swagger->basePath = '/Platform';
 $swagger->paths = $paths;
 
 //echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
