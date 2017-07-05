@@ -72,12 +72,30 @@ function buildInfo() {
 function buildSecurityDefinitions() {
 	$security = new stdClass();
 
+	// Setup Bungie API Key security definition
 	$header = new stdClass();
 	$header->type = 'apiKey';
 	$header->in = 'header';
 	$header->name = 'X-API-Key';
 
 	$security->APIKeyHeader = $header;
+
+	// Setup Bungie OAuth security definition
+	$oauth = new stdClass();
+	$oauth->type = 'oauth2';
+	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize?client_id=1953&response_type=code';
+	$oauth->flow = 'implicit';
+
+	$scopes = new stdClass();
+	$scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
+	$scopes->{'MoveEquipDestinyItems'} = "Move or equip Destiny items";
+	$scopes->{'ReadDestinyInventoryAndVault'} = "Read user's Destiny vault and character inventory.";
+	$scopes->{'ReadUserData'} = "Read user data such as web notifications, clan/group memberships, recent activity, and muted users.";
+	$scopes->{'ReadDestinyVendorsAndAdvisors'} = "Access vendor and advisor data specific to a user.";
+
+	$oauth->scopes = $scopes;
+
+	$security->BungieAuth = $oauth;
 
 	return $security;
 }
@@ -258,9 +276,16 @@ foreach ($endpoints as $service) {
 $swagger = new stdClass();
 $swagger->swagger = '2.0';
 $swagger->info = buildInfo();
+$swagger->schemes = array('https');
 $swagger->securityDefinitions = buildSecurityDefinitions();
 $swagger->security = array();
-$swagger->security[] = array('APIKeyHeader' => array());
+$swagger->security[] = array('APIKeyHeader' => array(), 'BungieAuth' => array(
+	'ReadBasicUserProfile',
+	'MoveEquipDestinyItems',
+	'ReadDestinyInventoryAndVault',
+	'ReadUserData',
+	'ReadDestinyVendorsAndAdvisors'
+));
 $swagger->host = 'www.bungie.net';
 $swagger->basePath = '/Platform';
 $swagger->paths = $paths;
