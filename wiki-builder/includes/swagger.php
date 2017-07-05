@@ -83,8 +83,8 @@ function buildSecurityDefinitions() {
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
 	$oauth->type = 'oauth2';
-	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize?client_id=1953&response_type=code';
-	$oauth->flow = 'implicit';
+	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
+	$oauth->flow = 'accessCode';
 
 	$scopes = new stdClass();
 	$scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
