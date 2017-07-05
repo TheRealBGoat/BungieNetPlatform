@@ -74,8 +74,14 @@ window.onload = function() {
 
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "https://dl.dropbox.com/s/8fr474qjdp1hhio/swagger.json?dl=0",
+    urls: [
+			{
+				url: 'https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger.json',
+				name: 'DestinyService'
+			}
+		],
     dom_id: '#swagger-ui',
+		displayOperationId: true,
     presets: [
       SwaggerUIBundle.presets.apis,
       SwaggerUIStandalonePreset
