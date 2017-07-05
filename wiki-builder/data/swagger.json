@@ -25,7 +25,7 @@
         "BungieAuth": {
             "type": "oauth2",
             "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
-            "flow": "accessCode",
+            "flow": "implicit",
             "scopes": {
                 "ReadBasicUserProfile": "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.",
                 "MoveEquipDestinyItems": "Move or equip Destiny items",
