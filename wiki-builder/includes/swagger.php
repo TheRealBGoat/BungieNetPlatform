@@ -84,7 +84,7 @@ function buildSecurityDefinitions() {
 	$oauth = new stdClass();
 	$oauth->type = 'oauth2';
 	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
-	$oauth->flow = 'accessCode';
+	$oauth->flow = 'implicit';
 
 	$scopes = new stdClass();
 	$scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
