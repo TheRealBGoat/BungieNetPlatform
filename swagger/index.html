@@ -69,8 +69,48 @@
 
 <script src="./swagger-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script>
 window.onload = function() {
+	let apiKey = '';
+
+	// Store the API Key if it's not already there
+	if (!localStorage.getItem('bnet-api-key')) {
+		localStorage.setItem('bnet-api-key', 'e19e08c066fd4ef58ed84834a1082da8')
+	} else {
+		apiKey = localStorage.getItem('bnet-api-key')
+	}
+
+	// Check for code and make request to Bungie auth if necessary
+	const urlParams = new URLSearchParams(window.location.search)
+
+	if (urlParams.has('code')) {
+		// Store the code
+		const code = urlParams.get('code')
+
+		console.log('Code:', code)
+
+		$.ajax({
+			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
+			type: 'post',
+			contentType: 'application/json',
+			data: {
+				'code': code
+			},
+			headers: {
+				'X-API-Key': apiKey
+			},
+			dataType: 'json',
+			success: function (data) {
+				console.log(data)
+				localStorage.setItem('bnet-access-token', data.Response.accessToken.value)
+				localStorage.setItem('bnet-refresh-token', data.Response.refreshToken.value)
+			}
+		})
+	}
 
   // Build a system
   const ui = SwaggerUIBundle({
