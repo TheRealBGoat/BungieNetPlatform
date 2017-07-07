@@ -91,7 +91,7 @@ window.onload = function() {
 		// Store the code
 		const authCode = urlParams.get('code')
 
-		console.log('Code:', code)
+		console.log('Code:', authCode)
 
 		$.ajax({
 			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
