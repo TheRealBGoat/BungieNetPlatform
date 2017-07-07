@@ -281,7 +281,7 @@ $swagger = new stdClass();
 $swagger->swagger = '2.0';
 $swagger->info = buildInfo();
 $swagger->schemes = array('https');
-$swagger->securityDefinitions = buildSecurityDefinitions();
+// $swagger->securityDefinitions = buildSecurityDefinitions();
 // $swagger->security = array();
 // $swagger->security[] = array('APIKeyHeader' => array(), 'BungieAuth' => array(
 // 	'ReadBasicUserProfile',
