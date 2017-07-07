@@ -113,6 +113,10 @@ function buildParam($name, $paramType, $enums) {
 		$param->name = $name;
 		$param->description = $details['desc'];
 
+		if ($details['type'] === 'boolean') {
+			$param->default = false;
+		}
+
 		// The platform-lib does not specify which parameters are required, but
 		// we can assume a path parameter is always required
 		if ($paramType === 'path') {
@@ -121,10 +125,10 @@ function buildParam($name, $paramType, $enums) {
 
 		// For now, set all QS parameters to allow empty values until
 		// we can map which ones are truly required
-		if ($paramType === 'query') {
-			$param->required = false;
-			$param->allowEmptyValue = true;
-		}
+		// if ($paramType === 'query') {
+		// 	$param->required = false;
+		// 	$param->allowEmptyValue = true;
+		// }
 
 
 		if (isset($details['enum'])) {
@@ -278,14 +282,14 @@ $swagger->swagger = '2.0';
 $swagger->info = buildInfo();
 $swagger->schemes = array('https');
 $swagger->securityDefinitions = buildSecurityDefinitions();
-$swagger->security = array();
-$swagger->security[] = array('APIKeyHeader' => array(), 'BungieAuth' => array(
-	'ReadBasicUserProfile',
-	'MoveEquipDestinyItems',
-	'ReadDestinyInventoryAndVault',
-	'ReadUserData',
-	'ReadDestinyVendorsAndAdvisors'
-));
+// $swagger->security = array();
+// $swagger->security[] = array('APIKeyHeader' => array(), 'BungieAuth' => array(
+// 	'ReadBasicUserProfile',
+// 	'MoveEquipDestinyItems',
+// 	'ReadDestinyInventoryAndVault',
+// 	'ReadUserData',
+// 	'ReadDestinyVendorsAndAdvisors'
+// ));
 $swagger->host = 'www.bungie.net';
 $swagger->basePath = '/Platform';
 $swagger->paths = $paths;
