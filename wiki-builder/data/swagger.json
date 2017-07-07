@@ -16,25 +16,6 @@
     "schemes": [
         "https"
     ],
-    "securityDefinitions": {
-        "APIKeyHeader": {
-            "type": "apiKey",
-            "in": "header",
-            "name": "X-API-Key"
-        },
-        "BungieAuth": {
-            "type": "oauth2",
-            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
-            "flow": "implicit",
-            "scopes": {
-                "ReadBasicUserProfile": "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.",
-                "MoveEquipDestinyItems": "Move or equip Destiny items",
-                "ReadDestinyInventoryAndVault": "Read user's Destiny vault and character inventory.",
-                "ReadUserData": "Read user data such as web notifications, clan/group memberships, recent activity, and muted users.",
-                "ReadDestinyVendorsAndAdvisors": "Access vendor and advisor data specific to a user."
-            }
-        }
-    },
     "host": "www.bungie.net",
     "basePath": "/Platform",
     "paths": {
