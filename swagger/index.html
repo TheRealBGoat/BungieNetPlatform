@@ -89,7 +89,7 @@ window.onload = function() {
 
 	if (urlParams.has('code')) {
 		// Store the code
-		const code = urlParams.get('code')
+		const authCode = urlParams.get('code')
 
 		console.log('Code:', code)
 
@@ -97,9 +97,10 @@ window.onload = function() {
 			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
 			type: 'post',
 			contentType: 'application/json',
-			data: {
-				'code': code
-			},
+			processData: false,
+			data: JSON.stringify({
+				code: authCode
+			}),
 			headers: {
 				'X-API-Key': apiKey
 			},
