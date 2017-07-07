@@ -97,6 +97,7 @@ window.onload = function() {
 			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
 			type: 'post',
 			contentType: 'application/json',
+			processData: false,
 			data: {
 				'code': code
 			},
