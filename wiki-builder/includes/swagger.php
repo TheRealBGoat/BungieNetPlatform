@@ -218,6 +218,38 @@ foreach ($endpoints as $service) {
 	foreach ($serviceEndpoints as $endpoint) {
 		$operationId = $endpoint->name;
 
+		$noLeadingSlash = substr($endpoint->endpoint, 1);
+		$nextSlashIdx = strpos($noLeadingSlash, '/');
+		$truncated = substr($noLeadingSlash, $nextSlashIdx + 1);
+
+		// TODO - make this work for all services by stripping "Service" from the name
+		$externalDocUrl = 'https://www.bungie.net/platform/destiny/help/HelpDetail/'.$endpoint->method.'?uri='.urlencode($truncated);
+
+		//var_dump('ExternalDocUrl: '.$externalDocUrl);
+		// Fetch the external doc page and parse to see if login is required
+		$ch = curl_init($externalDocUrl);
+		curl_setopt_array($ch, array(
+			CURLOPT_RETURNTRANSFER => true
+		));
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+		$externalDocData = curl_exec($ch);
+		curl_close($ch);
+
+		// /<b>Requires Sign-in: <\/b>\n\s*<span class=\"method\">(true|false)/
+		preg_match_all("/<b>Requires Sign-in: <\/b>\s*<span class=\"method\">(true|false)/",
+			$externalDocData,
+			$matches);
+
+		$loginRequired = 'false';
+
+		if (isset($matches[1][0])) {
+			$loginRequired = $matches[1][0];
+		}
+
+		//var_dump((string)$externalDocData);
+		//var_dump($matches[1][0]);
+
 		if (in_array($operationId, $operationIds)) {
 			$operationId .= $service->name;
 		}
@@ -262,7 +294,16 @@ foreach ($endpoints as $service) {
 		$opDetails->produces = array('application/json');
 		$opDetails->parameters = $params;
 		$opDetails->responses = $responses;
-		$opDetails->security[] = array('BungieAuth' => array());
+
+		$externalDocs = new stdClass();
+		$externalDocs->description = 'View Bungie Documentation';
+		$externalDocs->url = $externalDocUrl;
+
+		$opDetails->externalDocs = $externalDocs;
+
+		if ($loginRequired === 'true') {
+			$opDetails->security[] = array('BungieAuth' => array());
+		}
 
 		$op = array(strtolower($endpoint->method) => $opDetails);
 
