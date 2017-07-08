@@ -276,7 +276,7 @@ $swagger->swagger = '2.0';
 $swagger->info = buildInfo();
 $swagger->schemes = array('https');
 $swagger->securityDefinitions = buildSecurityDefinitions();
-$swagger->security = array();
+// $swagger->security = array();
 // $swagger->security[] = array('BungieAuth' => array(
 // 	'ReadBasicUserProfile',
 // 	'MoveEquipDestinyItems',

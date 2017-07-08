@@ -25,7 +25,6 @@
             "scopes": {}
         }
     },
-    "security": [],
     "host": "www.bungie.net",
     "basePath": "/Platform",
     "paths": {
