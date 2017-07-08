@@ -84,7 +84,8 @@ window.onload = function() {
 		apiKey = localStorage.getItem('bnet-api-key')
 	}
 
-	// Listen for changes to localStorage
+	// Listen for changes to localStorage and request tokens
+	// once a code has been added
 	window.addEventListener('storage', function(e) {
 		if (localStorage.getItem('bnet-code')) {
 			$.ajax({
@@ -104,31 +105,15 @@ window.onload = function() {
 				}
 			});
 		}
-	})
+	});
 
-	// Check for code, store it and close the window
 	const urlParams = new URLSearchParams(window.location.search);
 
+  // Check for code, store it and close the window
 	if (urlParams.has('code')) {
 		const authCode = urlParams.get('code');
 		localStorage.setItem('bnet-code', authCode);
 		window.close();
-	}
-
-		$.ajax({
-			url: 'https://www.bungie.net/platform/app/oauth/token/',
-			type: 'post',
-			data: {
-				grant_type: 'authorization_code',
-				code: authCode,
-				client_id: 1953
-			},
-			dataType: 'json',
-			success: function (data) {
-				localStorage.setItem('bnet-access-token', data.access_token);
-				window.close();
-			}
-		});
 	}
 
   // Build a system
