@@ -66,10 +66,6 @@
                         "description": "Successful operation"
                     }
                 },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/POST?uri=EquipItem%2F"
-                },
                 "security": [
                     {
                         "BungieAuth": []
@@ -114,10 +110,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/POST?uri=EquipItems%2F"
                 },
                 "security": [
                     {
@@ -174,10 +166,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2F"
                 }
             }
         },
@@ -229,10 +217,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FSummary%2F"
                 }
             }
         },
@@ -258,10 +242,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FActivityBlob%2F%7Be%7D%2F"
                 }
             }
         },
@@ -379,10 +359,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FActivityHistory%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -434,10 +410,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FAdvisors%2F"
                 }
             }
         },
@@ -496,10 +468,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FAdvisors%2F"
                 }
             }
         },
@@ -558,10 +526,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FAdvisors%2FV2%2F"
                 }
             }
         },
@@ -613,10 +577,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FAdvisors%2F"
                 },
                 "security": [
                     {
@@ -673,10 +633,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FItems%2F"
                 }
             }
         },
@@ -729,10 +685,6 @@
                         "description": "Successful operation"
                     }
                 },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendors%2F"
-                },
                 "security": [
                     {
                         "BungieAuth": []
@@ -781,10 +733,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FAdvisors%2FBonds%2F"
                 },
                 "security": [
                     {
@@ -849,10 +797,6 @@
                         "description": "Successful operation"
                     }
                 },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FComplete%2F"
-                },
                 "security": [
                     {
                         "BungieAuth": []
@@ -915,10 +859,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FActivities%2F"
                 }
             }
         },
@@ -977,10 +917,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FInventory%2F"
                 }
             }
         },
@@ -1039,10 +975,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FInventory%2FSummary%2F"
                 }
             }
         },
@@ -1101,10 +1033,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FProgression%2F"
                 }
             }
         },
@@ -1163,10 +1091,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -1251,10 +1175,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FClanLeaderboards%2F%7Bparam1%7D%2F"
                 }
             }
         },
@@ -1313,10 +1233,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FAggregateActivityStats%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -1559,10 +1475,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Explorer%2FItems%2F"
                 }
             }
         },
@@ -1722,10 +1634,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Explorer%2FTalentNodeSteps%2F"
                 }
             }
         },
@@ -1743,10 +1651,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=LiveTiles%2F"
                 }
             }
         },
@@ -1764,10 +1668,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Manifest%2F"
                 }
             }
         },
@@ -1842,10 +1742,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Manifest%2F%7BdefinitionType%7D%2F%7BdefinitionId%7D%2F"
                 }
             }
         },
@@ -1897,10 +1793,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FGetExcellenceBadges%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F"
                 }
             }
         },
@@ -1964,10 +1856,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Vanguard%2FGrimoire%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F"
                 }
             }
         },
@@ -1985,10 +1873,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Vanguard%2FGrimoire%2FDefinition%2F"
                 }
             }
         },
@@ -2148,10 +2032,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -2169,10 +2049,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FDefinition%2F"
                 }
             }
         },
@@ -2238,10 +2114,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FAccount%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F"
                 }
             }
         },
@@ -2307,10 +2179,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FCharacter%2F%7BcharacterId%7D%2FInventory%2F%7BitemInstanceId%7D%2F"
                 }
             }
         },
@@ -2364,10 +2232,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7Bparam1%7D%2FAccount%2F%7Bparam2%7D%2FCharacter%2F%7Bparam3%7D%2FItemReference%2F%7Bparam4%7D%2F"
                 }
             }
         },
@@ -2471,10 +2335,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FLeaderboards%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F"
                 }
             }
         },
@@ -2585,10 +2445,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FLeaderboards%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -2660,10 +2516,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FLeaderboardsForPsn%2F"
                 }
             }
         },
@@ -2714,10 +2566,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FStats%2FGetMembershipIdByDisplayName%2F%7BdisplayName%7D%2F"
                 }
             }
         },
@@ -2774,10 +2622,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Vanguard%2FGrimoire%2F%7BmembershipType%7D%2F"
                 }
             }
         },
@@ -2810,10 +2654,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FPostGameCarnageReport%2F%7BactivityInstanceId%7D%2F"
                 }
             }
         },
@@ -2839,10 +2679,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Advisors%2F"
                 }
             }
         },
@@ -2868,10 +2704,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Advisors%2FV2%2F"
                 }
             }
         },
@@ -2904,10 +2736,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Vendors%2F%7BvendorId%7D%2F"
                 }
             }
         },
@@ -2940,10 +2768,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Vendors%2F%7BvendorId%7D%2FMetadata%2F"
                 }
             }
         },
@@ -2969,10 +2793,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Advisors%2FXur%2F"
                 }
             }
         },
@@ -3025,10 +2845,6 @@
                         "description": "Successful operation"
                     }
                 },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FRecordBooks%2F%7BrecordBookHash%7D%2FCompletion%2F"
-                },
                 "security": [
                     {
                         "BungieAuth": []
@@ -3058,10 +2874,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Events%2F"
                 }
             }
         },
@@ -3113,10 +2925,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FAccount%2F%7BdestinyMembershipId%7D%2FTriumphs%2F"
                 }
             }
         },
@@ -3175,10 +2983,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=Stats%2FUniqueWeapons%2F%7BmembershipType%7D%2F%7BdestinyMembershipId%7D%2F%7BcharacterId%7D%2F"
                 }
             }
         },
@@ -3229,10 +3033,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FVault%2F"
                 },
                 "security": [
                     {
@@ -3288,10 +3088,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FVault%2FSummary%2F"
                 },
                 "security": [
                     {
@@ -3355,10 +3151,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendor%2F%7BvendorId%7D%2F"
                 }
             }
         },
@@ -3417,10 +3209,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendor%2F%7BvendorId%7D%2FMetadata%2F"
                 }
             }
         },
@@ -3486,10 +3274,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendor%2F%7BvendorId%7D%2FItem%2F%7BitemId%7D%2F"
                 }
             }
         },
@@ -3555,10 +3339,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendor%2F%7BvendorId%7D%2FItem%2F%7BitemId%7D%2FMetadata%2F"
                 }
             }
         },
@@ -3611,10 +3391,6 @@
                         "description": "Successful operation"
                     }
                 },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7BmembershipType%7D%2FMyAccount%2FCharacter%2F%7BcharacterId%7D%2FVendors%2FSummaries%2F"
-                },
                 "security": [
                     {
                         "BungieAuth": []
@@ -3663,10 +3439,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=SearchDestinyPlayer%2F%7BmembershipType%7D%2F%7BdisplayName%7D%2F"
                 }
             }
         },
@@ -3710,10 +3482,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/POST?uri=SetLockState%2F"
                 },
                 "security": [
                     {
@@ -3765,10 +3533,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/POST?uri=SetQuestTrackedState%2F"
                 },
                 "security": [
                     {
@@ -3823,10 +3587,6 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                },
-                "externalDocs": {
-                    "description": "     ",
-                    "url": "https://www.bungie.net/platform/destiny/help/HelpDetail/POST?uri=TransferItem%2F"
                 },
                 "security": [
                     {

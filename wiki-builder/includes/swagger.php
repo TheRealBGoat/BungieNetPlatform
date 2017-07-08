@@ -295,11 +295,11 @@ foreach ($endpoints as $service) {
 		$opDetails->parameters = $params;
 		$opDetails->responses = $responses;
 
-		$externalDocs = new stdClass();
-		$externalDocs->description = '     ';
-		$externalDocs->url = $externalDocUrl;
+		// $externalDocs = new stdClass();
+		// $externalDocs->description = '';
+		// $externalDocs->url = $externalDocUrl;
 
-		$opDetails->externalDocs = $externalDocs;
+		// $opDetails->externalDocs = $externalDocs;
 
 		if ($loginRequired === 'true') {
 			$opDetails->security[] = array('BungieAuth' => array());
