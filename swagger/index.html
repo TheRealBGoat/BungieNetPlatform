@@ -87,7 +87,9 @@ window.onload = function() {
 	// Listen for changes to localStorage and request tokens
 	// once a code has been added
 	window.addEventListener('storage', function(e) {
-		if (localStorage.getItem('bnet-code')) {
+		const authCode = localStorage.getItem('bnet-code');
+
+		if (authCode) {
 			$.ajax({
 				url: 'https://www.bungie.net/platform/app/oauth/token/',
 				type: 'post',
