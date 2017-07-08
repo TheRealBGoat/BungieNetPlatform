@@ -85,32 +85,32 @@ window.onload = function() {
 	}
 
 	// Check for code and make request to Bungie auth if necessary
-	const urlParams = new URLSearchParams(window.location.search)
+	const urlParams = new URLSearchParams(window.location.search);
 
 	if (urlParams.has('code')) {
-		// Store the code
-		const authCode = urlParams.get('code')
-
-		console.log('Code:', authCode)
+		const authCode = urlParams.get('code');
 
 		$.ajax({
 			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
 			type: 'post',
-			contentType: 'application/json',
+			contentType: 'application/json; charset=UTF-8',
 			processData: false,
 			data: JSON.stringify({
 				code: authCode
 			}),
+			dataType: 'json',
 			headers: {
 				'X-API-Key': apiKey
 			},
-			dataType: 'json',
 			success: function (data) {
-				console.log(data)
-				localStorage.setItem('bnet-access-token', data.Response.accessToken.value)
-				localStorage.setItem('bnet-refresh-token', data.Response.refreshToken.value)
+				if (data.Response) {
+					localStorage.setItem('bnet-access-token', data.Response.accessToken.value);
+					localStorage.setItem('bnet-refresh-token', data.Response.refreshToken.value);
+				} else {
+					console.error(data.Message)
+				}
 			}
-		})
+		});
 	}
 
   // Build a system
