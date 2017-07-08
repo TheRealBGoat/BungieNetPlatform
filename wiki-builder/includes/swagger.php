@@ -262,6 +262,7 @@ foreach ($endpoints as $service) {
 		$opDetails->produces = array('application/json');
 		$opDetails->parameters = $params;
 		$opDetails->responses = $responses;
+		$opDetails->security[] = array('BungieAuth' => array());
 
 		$op = array(strtolower($endpoint->method) => $opDetails);
 
@@ -276,13 +277,13 @@ $swagger->info = buildInfo();
 $swagger->schemes = array('https');
 $swagger->securityDefinitions = buildSecurityDefinitions();
 $swagger->security = array();
-$swagger->security[] = array('BungieAuth' => array(
-	'ReadBasicUserProfile',
-	'MoveEquipDestinyItems',
-	'ReadDestinyInventoryAndVault',
-	'ReadUserData',
-	'ReadDestinyVendorsAndAdvisors'
-));
+// $swagger->security[] = array('BungieAuth' => array(
+// 	'ReadBasicUserProfile',
+// 	'MoveEquipDestinyItems',
+// 	'ReadDestinyInventoryAndVault',
+// 	'ReadUserData',
+// 	'ReadDestinyVendorsAndAdvisors'
+// ));
 $swagger->host = 'www.bungie.net';
 $swagger->basePath = '/Platform';
 $swagger->paths = $paths;

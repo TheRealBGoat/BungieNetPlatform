@@ -25,17 +25,7 @@
             "scopes": {}
         }
     },
-    "security": [
-        {
-            "BungieAuth": [
-                "ReadBasicUserProfile",
-                "MoveEquipDestinyItems",
-                "ReadDestinyInventoryAndVault",
-                "ReadUserData",
-                "ReadDestinyVendorsAndAdvisors"
-            ]
-        }
-    ],
+    "security": [],
     "host": "www.bungie.net",
     "basePath": "/Platform",
     "paths": {
@@ -76,7 +66,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/EquipItems/": {
@@ -116,7 +111,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/": {
@@ -167,7 +167,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Summary/": {
@@ -218,7 +223,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/ActivityBlob/{e}/": {
@@ -243,7 +253,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/": {
@@ -360,7 +375,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Advisors/": {
@@ -411,7 +431,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/": {
@@ -469,7 +494,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/V2/": {
@@ -527,7 +557,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/": {
@@ -578,7 +613,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Items/": {
@@ -629,7 +669,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/": {
@@ -680,7 +725,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Advisors/Bonds/": {
@@ -724,7 +774,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/": {
@@ -782,7 +837,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/": {
@@ -840,7 +900,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/": {
@@ -898,7 +963,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/": {
@@ -956,7 +1026,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/": {
@@ -1014,7 +1089,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/": {
@@ -1072,7 +1152,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/ClanLeaderboards/{param1}/": {
@@ -1156,7 +1241,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/": {
@@ -1214,7 +1304,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Explorer/Items/": {
@@ -1456,7 +1551,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Explorer/TalentNodeSteps/": {
@@ -1615,7 +1715,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/LiveTiles/": {
@@ -1632,7 +1737,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Manifest/": {
@@ -1649,7 +1759,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Manifest/{definitionType}/{definitionId}/": {
@@ -1723,7 +1838,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/": {
@@ -1774,7 +1894,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/": {
@@ -1837,7 +1962,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Vanguard/Grimoire/Definition/": {
@@ -1854,7 +1984,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/{membershipType}/{destinyMembershipId}/{characterId}/": {
@@ -2013,7 +2148,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/Definition/": {
@@ -2030,7 +2170,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/Account/{membershipType}/{destinyMembershipId}/": {
@@ -2095,7 +2240,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/": {
@@ -2160,7 +2310,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/": {
@@ -2213,7 +2368,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/": {
@@ -2316,7 +2476,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/": {
@@ -2426,7 +2591,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/LeaderboardsForPsn/": {
@@ -2497,7 +2667,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Stats/GetMembershipIdByDisplayName/{displayName}/": {
@@ -2547,7 +2722,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Vanguard/Grimoire/{membershipType}/": {
@@ -2603,7 +2783,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/PostGameCarnageReport/{activityInstanceId}/": {
@@ -2635,7 +2820,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Advisors/": {
@@ -2660,7 +2850,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Advisors/V2/": {
@@ -2685,7 +2880,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Vendors/{vendorId}/": {
@@ -2717,7 +2917,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Vendors/{vendorId}/Metadata/": {
@@ -2749,7 +2954,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Advisors/Xur/": {
@@ -2774,7 +2984,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/": {
@@ -2825,7 +3040,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Events/": {
@@ -2850,7 +3070,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Triumphs/": {
@@ -2901,7 +3126,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/": {
@@ -2959,7 +3189,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Vault/": {
@@ -3009,7 +3244,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Vault/Summary/": {
@@ -3059,7 +3299,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/": {
@@ -3117,7 +3362,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Metadata/": {
@@ -3175,7 +3425,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/": {
@@ -3240,7 +3495,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/Metadata/": {
@@ -3305,7 +3565,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/Summaries/": {
@@ -3356,7 +3621,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/SearchDestinyPlayer/{membershipType}/{displayName}/": {
@@ -3400,7 +3670,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/SetLockState/": {
@@ -3443,7 +3718,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/SetQuestTrackedState/": {
@@ -3489,7 +3769,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Destiny/TransferItem/": {
@@ -3538,7 +3823,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         }
     }
