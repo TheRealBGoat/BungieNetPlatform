@@ -296,7 +296,7 @@ foreach ($endpoints as $service) {
 		$opDetails->responses = $responses;
 
 		$externalDocs = new stdClass();
-		$externalDocs->description = '';
+		$externalDocs->description = '     ';
 		$externalDocs->url = $externalDocUrl;
 
 		$opDetails->externalDocs = $externalDocs;
