@@ -101,7 +101,6 @@ window.onload = function() {
 			dataType: 'json',
 			success: function (data) {
 				localStorage.setItem('bnet-access-token', data.access_token);
-				localStorage.setItem('bnet-refresh-token', data.refresh_token);
 			}
 		});
 	}
@@ -114,6 +113,7 @@ window.onload = function() {
 				name: 'DestinyService'
 			}
 		],
+		oauth2RedirectUrl: 'https://therealbgoat.github.io/BungieNetPlatform/swagger/oauth2-redirect.html',
     dom_id: '#swagger-ui',
 		displayOperationId: true,
     presets: [
