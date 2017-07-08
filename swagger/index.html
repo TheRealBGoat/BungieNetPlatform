@@ -91,23 +91,20 @@ window.onload = function() {
 		const authCode = urlParams.get('code');
 
 		$.ajax({
-			url: 'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/',
+			url: 'https://www.bungie.net/platform/app/oauth/token/',
 			type: 'post',
-			contentType: 'application/json; charset=UTF-8',
-			processData: false,
-			data: JSON.stringify({
-				code: authCode
-			}),
-			dataType: 'json',
-			headers: {
-				'X-API-Key': apiKey
+			data: {
+				grant_type: authorization_code,
+				code: authCode,
+				client_id: 1953
 			},
+			dataType: 'json',
 			success: function (data) {
 				if (data.Response) {
-					localStorage.setItem('bnet-access-token', data.Response.accessToken.value);
-					localStorage.setItem('bnet-refresh-token', data.Response.refreshToken.value);
+					localStorage.setItem('bnet-access-token', data.access_token);
+					localStorage.setItem('bnet-refresh-token', data.refresh_token);
 				} else {
-					console.error(data.Message)
+					console.error(data)
 				}
 			}
 		});
