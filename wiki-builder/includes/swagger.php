@@ -73,18 +73,19 @@ function buildSecurityDefinitions() {
 	$security = new stdClass();
 
 	// Setup Bungie API Key security definition
-	$header = new stdClass();
-	$header->type = 'apiKey';
-	$header->in = 'header';
-	$header->name = 'X-API-Key';
-
-	$security->APIKeyHeader = $header;
+	// $header = new stdClass();
+	// $header->type = 'apiKey';
+	// $header->in = 'header';
+	// $header->name = 'X-API-Key';
+	//
+	// $security->APIKeyHeader = $header;
 
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
 	$oauth->type = 'oauth2';
 	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
-	$oauth->flow = 'implicit';
+	$oauth->tokenUrl = 'https://www.bungie.net/platform/app/oauth/token/';
+	$oauth->flow = 'accessCode';
 
 	$scopes = new stdClass();
 	$scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
@@ -281,18 +282,18 @@ $swagger = new stdClass();
 $swagger->swagger = '2.0';
 $swagger->info = buildInfo();
 $swagger->schemes = array('https');
-// $swagger->securityDefinitions = buildSecurityDefinitions();
-// $swagger->security = array();
-// $swagger->security[] = array('APIKeyHeader' => array(), 'BungieAuth' => array(
-// 	'ReadBasicUserProfile',
-// 	'MoveEquipDestinyItems',
-// 	'ReadDestinyInventoryAndVault',
-// 	'ReadUserData',
-// 	'ReadDestinyVendorsAndAdvisors'
-// ));
+$swagger->securityDefinitions = buildSecurityDefinitions();
+$swagger->security = array();
+$swagger->security[] = array('BungieAuth' => array(
+	'ReadBasicUserProfile',
+	'MoveEquipDestinyItems',
+	'ReadDestinyInventoryAndVault',
+	'ReadUserData',
+	'ReadDestinyVendorsAndAdvisors'
+));
 $swagger->host = 'www.bungie.net';
 $swagger->basePath = '/Platform';
 $swagger->paths = $paths;
 
-//echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
+echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
 file_put_contents(BUILDERPATH.'/data/swagger.json', str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)));
