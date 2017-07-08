@@ -72,14 +72,6 @@ function buildInfo() {
 function buildSecurityDefinitions() {
 	$security = new stdClass();
 
-	// Setup Bungie API Key security definition
-	// $header = new stdClass();
-	// $header->type = 'apiKey';
-	// $header->in = 'header';
-	// $header->name = 'X-API-Key';
-	//
-	// $security->APIKeyHeader = $header;
-
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
 	$oauth->type = 'oauth2';
@@ -88,11 +80,11 @@ function buildSecurityDefinitions() {
 	$oauth->flow = 'accessCode';
 
 	$scopes = new stdClass();
-	$scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
-	$scopes->{'MoveEquipDestinyItems'} = "Move or equip Destiny items";
-	$scopes->{'ReadDestinyInventoryAndVault'} = "Read user's Destiny vault and character inventory.";
-	$scopes->{'ReadUserData'} = "Read user data such as web notifications, clan/group memberships, recent activity, and muted users.";
-	$scopes->{'ReadDestinyVendorsAndAdvisors'} = "Access vendor and advisor data specific to a user.";
+	// $scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
+	// $scopes->{'MoveEquipDestinyItems'} = "Move or equip Destiny items";
+	// $scopes->{'ReadDestinyInventoryAndVault'} = "Read user's Destiny vault and character inventory.";
+	// $scopes->{'ReadUserData'} = "Read user data such as web notifications, clan/group memberships, recent activity, and muted users.";
+	// $scopes->{'ReadDestinyVendorsAndAdvisors'} = "Access vendor and advisor data specific to a user.";
 
 	$oauth->scopes = $scopes;
 
