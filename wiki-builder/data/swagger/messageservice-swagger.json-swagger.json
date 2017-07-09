@@ -1,0 +1,876 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all MessageService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Message/CreateConversation/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "CreateConversation",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/CreateConversationV2/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "CreateConversationV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/AllianceInvitations/InvitationsToJoinAnotherGroup/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetAllianceInvitedToJoinInvitations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/AllianceInvitations/RequestsToJoinYourGroup/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetAllianceJoinInvitations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationById/{conversationId}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "conversationId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationByIdV2/{param1}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationByIdV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationsV2/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationsV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationsV3/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationsV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationsV4/{param1}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationsV4",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationsV5/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationsV5",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationThreadV2/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationThreadV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationThreadV3/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationThreadV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "before",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "after",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationWithMember/{memberId}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationWithMemberId",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "memberId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetConversationWithMemberV2/{param1}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetConversationWithMemberIdV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetGroupConversations/{param1}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetGroupConversations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Invitations/{param1}/Details/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetInvitationDetails",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetTotalConversationCount/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetTotalConversationCount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetUnreadPrivateConversationCount/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetUnreadConversationCountV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetUnreadConversationCountV3/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetUnreadConversationCountV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetUnreadConversationCountV4/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetUnreadConversationCountV4",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/GetUnreadGroupConversationCount/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "GetUnreadGroupConversationCount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/LeaveConversation/{param1}/": {
+            "get": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "LeaveConversation",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/ModerateGroupWall/{param1}/{param2}/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "ModerateGroupWall",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Invitations/ReviewAllDirect/{param1}/{param2}/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "ReviewAllInvitations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Invitations/{param1}/{param2}/{param3}/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "ReviewInvitation",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Invitations/ReviewDirect/{invitationId}/{invitationResponseState}/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "ReviewInvitationDirect",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "invitationId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "invitationResponseState",
+                        "description": "How to respond to the invitation.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Unreviewed",
+                                "Approved",
+                                "Rejected"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Invitations/ReviewListDirect/{param1}/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "ReviewInvitations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/SaveMessageV2/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "SaveMessageV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/SaveMessageV3/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "SaveMessageV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/SaveMessageV4/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "SaveMessageV4",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/Conversations/UpdateLastViewedTimestamp/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "UpdateConversationLastViewedTimestamp",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Message/UserIsTyping/": {
+            "post": {
+                "tags": [
+                    "MessageService"
+                ],
+                "operationId": "UserIsTyping",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

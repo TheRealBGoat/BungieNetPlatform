@@ -1,0 +1,569 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all ContentService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Content/Careers/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetCareer",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Careers/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetCareers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/GetContentById/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetContentById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "head",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/GetContentByTagAndType/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetContentByTagAndType",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "head",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/GetContentType/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetContentType",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Destiny/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetDestinyContent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Destiny/V2/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetDestinyContentV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Featured/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetFeaturedArticle",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Homepage/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetHomepageContent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Homepage/V2/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetHomepageContentV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Jobs/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetJobs",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/News/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetNews",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Destiny/Promo/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetPromoWidget",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Site/Publications/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "GetPublications",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Careers/Search/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "SearchCareers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "searchtext",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/SearchContentByTagAndType/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "SearchContentByTagAndType",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "head",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/SearchEx/{param1}/": {
+            "post": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "SearchContentEx",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "head",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Content/Search/{param1}/": {
+            "get": {
+                "tags": [
+                    "ContentService"
+                ],
+                "operationId": "SearchContentWithText",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "head",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "ctype",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "searchtext",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

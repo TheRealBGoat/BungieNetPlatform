@@ -1,0 +1,361 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all ApplicationService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/App/Search/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "ApplicationSearch",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/ChangeApiKeyState/{param1}/{param2}/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "ChangeApiKeyStatus",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/CreateApiKey/{param1}/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "CreateApiKey",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/CreateApplication/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "CreateApplication",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/EditApplication/{param1}/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "EditApplication",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/GetAccessTokensFromCode/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetAccessTokensFromCode",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/GetAccessTokensFromRefreshToken/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetAccessTokensFromRefreshToken",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/Application/{param1}/": {
+            "get": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetApplication",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/ApplicationApiKeys/{param1}/": {
+            "get": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetApplicationApiKeys",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/Authorization/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetAuthorizationForUserAndApplication",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/Authorizations/{param1}/": {
+            "get": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetAuthorizations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/oauth/token/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "GetOAuthTokens",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/PrivateSearch/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "PrivateApplicationSearch",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/App/RevokeAuthorization/{param1}/{param2}/": {
+            "post": {
+                "tags": [
+                    "ApplicationService"
+                ],
+                "operationId": "RevokeAuthorization",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

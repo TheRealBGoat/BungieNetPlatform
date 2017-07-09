@@ -12,8 +12,40 @@
     "layout": "StandaloneLayout",
     "urls": [
         {
-            "name": "DestinyService",
-            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice-swagger.json"
+            "name": "JSONPService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/jsonpservice-swagger.json"
+        },
+        {
+            "name": "ApplicationService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/applicationservice-swagger.json"
+        },
+        {
+            "name": "UserService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/userservice-swagger.json"
+        },
+        {
+            "name": "MessageService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/messageservice-swagger.json"
+        },
+        {
+            "name": "NotificationService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/notificationservice-swagger.json"
+        },
+        {
+            "name": "ContentService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/contentservice-swagger.json"
+        },
+        {
+            "name": "ExternalSocialService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/externalsocialservice-swagger.json"
+        },
+        {
+            "name": "SurveyService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/surveyservice-swagger.json"
+        },
+        {
+            "name": "ForumService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/forumservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"

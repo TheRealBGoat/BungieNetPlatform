@@ -1,0 +1,861 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all UserService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/User/CreateUser/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "CreateUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/MessageFlags/Success/Update/{param1}/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "EditSuccessMessageFlags",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetAvailableAvatars/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetAvailableAvatars",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetAvailableAvatarsAdmin/{param1}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetAvailableAvatarsAdmin",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetAvailableThemes/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetAvailableThemes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetBungieAccount/{membershipId}/{membershipType}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetBungieAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetBungieNetUserById/{membershipId}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetBungieNetUserById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetCounts/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetCountsForCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetCredentialTypesForAccount/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetCredentialTypesForAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetCurrentBungieAccount/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetCurrentBungieAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetCurrentBungieNetUser/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetCurrentBungieNetUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetBungieNetUser/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetCurrentUserUserService",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetMembershipsById/{membershipId}/{membershipType}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetMembershipDataById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetMembershipsForCurrentUser/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetMembershipDataForCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetMobileAppPairings/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetMobileAppPairings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetMobileAppPairingsUncached/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetMobileAppPairingsUncached",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetNotificationSettings/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetNotificationSettings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/{membershipId}/Partnerships/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetPartnerships",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetPlatformApiKeysForUser/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetPlatformApiKeysForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetSignOutUrl/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetSignOutUrl",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetUserAliases/{membershipId}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetUserAliases",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/GetMembershipIds/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "GetUserMembershipIds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "excludebungienet",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/LinkOverride/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "LinkOverride",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/RegisterMobileAppPair/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "RegisterMobileAppPair",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/Partnerships/{param1}/Remove/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "RemovePartnership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/SearchUsers/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "SearchUsers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/SearchUsersPaged/{searchTerm}/{page}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "SearchUsersPaged",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "searchTerm",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/SearchUsersPaged/{searchTerm}/{page}/{param3}/": {
+            "get": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "SearchUsersPagedV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "searchTerm",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/Acknowledged/{ackId}/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "SetAcknowledged",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ackId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/UnregisterMobileAppPair/{param1}/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UnregisterMobileAppPair",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/UpdateDestinyEmblemAvatar/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UpdateDestinyEmblemAvatar",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/Notification/Update/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UpdateNotificationSetting",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/UpdateStateInfoForMobileAppPair/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UpdateStateInfoForMobileAppPair",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/UpdateUser/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UpdateUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "about": {
+                                    "type": "string"
+                                },
+                                "adultMode": {
+                                    "type": "string"
+                                },
+                                "displayName": {
+                                    "type": "string"
+                                },
+                                "emailAddress": {
+                                    "type": "string"
+                                },
+                                "emailUsage": {
+                                    "type": "string"
+                                },
+                                "locale": {
+                                    "type": "string"
+                                },
+                                "localeInheritDefault": {
+                                    "type": "string"
+                                },
+                                "profilePicture": {
+                                    "type": "string"
+                                },
+                                "profileTheme": {
+                                    "type": "string"
+                                },
+                                "showActivity": {
+                                    "type": "string"
+                                },
+                                "showFacebookPublic": {
+                                    "type": "string"
+                                },
+                                "showGamertagPublic": {
+                                    "type": "string"
+                                },
+                                "showGroupMessaging": {
+                                    "type": "string"
+                                },
+                                "showPsnPublic": {
+                                    "type": "string"
+                                },
+                                "uniqueName": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/User/UpdateUserAdmin/{param1}/": {
+            "post": {
+                "tags": [
+                    "UserService"
+                ],
+                "operationId": "UpdateUserAdmin",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

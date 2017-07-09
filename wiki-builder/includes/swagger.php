@@ -219,7 +219,7 @@ foreach ($endpoints as $service) {
 	$serviceName = $service->name;
 
 	// Only include the DestinyService endpoints right now
-	if ($serviceName !== 'DestinyService') continue;
+	// if ($serviceName !== 'DestinyService') continue;
 
 	$serviceEndpoints = get_object_vars($service->endpoints);
 
