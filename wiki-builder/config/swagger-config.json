@@ -1,0 +1,20 @@
+{
+    "oauth2RedirectUrl": "https://therealbgoat.github.io/BungieNetPlatform/swagger/",
+    "dom_id": "#swagger-ui",
+    "displayOperationId": true,
+    "showRequestHeaders": true,
+    "presets": [
+        "SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset"
+    ],
+    "plugins": [
+        "SwaggerUIBundle.plugins.DownloadUrl"
+    ],
+    "layout": "StandaloneLayout",
+    "urls": [
+        {
+            "name": "DestinyService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice"
+        }
+    ],
+    "urls.primaryName": "DestinyService"
+}

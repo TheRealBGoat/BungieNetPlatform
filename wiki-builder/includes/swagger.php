@@ -50,7 +50,22 @@ $paramDetails = array(
 
 );
 
-function buildInfo() {
+function buildAndSaveConfig($swaggerFiles) {
+	$config = new stdClass();
+	$config->oauth2RedirectUrl = 'https://therealbgoat.github.io/BungieNetPlatform/swagger/';
+	$config->dom_id = '#swagger-ui';
+	$config->displayOperationId = true;
+	$config->showRequestHeaders = true;
+	$config->presets = array('SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset');
+	$config->plugins = array('SwaggerUIBundle.plugins.DownloadUrl');
+	$config->layout = 'StandaloneLayout';
+	$config->urls = $swaggerFiles;
+	$config->{'urls.primaryName'} = 'DestinyService';
+
+	file_put_contents(BUILDERPATH.'/config/swagger-config.json', str_replace(['\/'], ['/'], json_encode($config, JSON_PRETTY_PRINT)));
+}
+
+function buildInfo($desc) {
 	$contact = new stdClass();
 	$contact->name = '/r/DestinyTheGame';
 	$contact->email = 'fake@email.com';
@@ -60,7 +75,7 @@ function buildInfo() {
 	$license->url = 'http://opensource.org/licenses/MIT';
 
 	$info = new stdClass();
-	$info->description = 'Swagger documentation for all API endpoints within the BungieNetPlatform.';
+	$info->description = $desc;
 	$info->version = '1.0.0';
 	$info->title = 'BungieNetPlatform API Swagger';
 	$info->contact = $contact;
@@ -196,12 +211,15 @@ $enums = file_exists($enumsPath) ? json_decode(file_get_contents($enumsPath), tr
 $endpointsPath = BUILDERPATH.'/data/endpoints.json';
 $endpoints = file_exists($endpointsPath) ? json_decode(file_get_contents($endpointsPath)) : array();
 
-$paths = new stdClass();
+$swaggerFiles = array();
 
-// Loop through each of the different API service groups
+// Loop through each of the different API service groups and create a swagger
+// spec for each and add that spec to the swagger config
 foreach ($endpoints as $service) {
+	$serviceName = $service->name;
+
 	// Only include the DestinyService endpoints right now
-	if ($service->name !== 'DestinyService') continue;
+	if ($serviceName !== 'DestinyService') continue;
 
 	$serviceEndpoints = get_object_vars($service->endpoints);
 
@@ -213,6 +231,8 @@ foreach ($endpoints as $service) {
 
 	$apis[$service->name] = array();
 	$operationIds[] = array();
+
+	$paths = new stdClass();
 
 	// For this particular API service group, loop through all of it's endpoints
 	foreach ($serviceEndpoints as $endpoint) {
@@ -310,24 +330,24 @@ foreach ($endpoints as $service) {
 		// Build up the Path
 		$paths->{$endpoint->endpoint} = $op;
 	}
+
+	$swagger = new stdClass();
+	$swagger->swagger = '2.0';
+	$swagger->info = buildInfo('Swagger documenation and interactive testing for all '.$serviceName.' endpoints in the BungieNetPlatform');
+	$swagger->schemes = array('https');
+	$swagger->securityDefinitions = buildSecurityDefinitions();
+	$swagger->host = 'www.bungie.net';
+	$swagger->basePath = '/Platform';
+	$swagger->paths = $paths;
+
+	$filename = strtolower($serviceName);
+	$swaggerUrl = new stdClass();
+	$swaggerUrl->name = $serviceName;
+	$swaggerUrl->url = 'https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/'.$filename;
+
+	$swaggerFiles[] = $swaggerUrl;
+	buildAndSaveConfig($swaggerFiles);
+
+	echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
+	file_put_contents(BUILDERPATH.'/data/swagger/'.$filename.'-swagger.json', str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)));
 }
-
-$swagger = new stdClass();
-$swagger->swagger = '2.0';
-$swagger->info = buildInfo();
-$swagger->schemes = array('https');
-$swagger->securityDefinitions = buildSecurityDefinitions();
-// $swagger->security = array();
-// $swagger->security[] = array('BungieAuth' => array(
-// 	'ReadBasicUserProfile',
-// 	'MoveEquipDestinyItems',
-// 	'ReadDestinyInventoryAndVault',
-// 	'ReadUserData',
-// 	'ReadDestinyVendorsAndAdvisors'
-// ));
-$swagger->host = 'www.bungie.net';
-$swagger->basePath = '/Platform';
-$swagger->paths = $paths;
-
-echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
-file_put_contents(BUILDERPATH.'/data/swagger.json', str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)));

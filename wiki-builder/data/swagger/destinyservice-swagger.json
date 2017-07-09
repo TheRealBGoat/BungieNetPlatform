@@ -1,0 +1,3599 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all DestinyService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Destiny/EquipItem/": {
+            "post": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "EquipItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "itemId": {
+                                    "type": "string"
+                                },
+                                "characterId": {
+                                    "type": "string",
+                                    "description": "A valid characterId that is associated with the given account."
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/EquipItems/": {
+            "post": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "EquipItems",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "characterId": {
+                                    "type": "string",
+                                    "description": "A valid characterId that is associated with the given account."
+                                },
+                                "itemIds][": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Summary/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAccountSummary",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/ActivityBlob/{e}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetActivityBlob",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "e",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetActivityHistory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "mode",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "count",
+                        "description": "Number of rows to return.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Advisors/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAdvisorsForAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAdvisorsForCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/V2/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAdvisorsForCharacterV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAdvisorsForCurrentCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Items/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAllItemsSummary",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetAllVendorsForCurrentCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Advisors/Bonds/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetBondAdvisors",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacterActivities",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacterInventory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacterInventorySummary",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacterProgression",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetCharacterSummary",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/ClanLeaderboards/{param1}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetClanLeaderboards",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "modes",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinyAggregateActivityStats",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Explorer/Items/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinyExplorerItems",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "tpage",
+                        "description": "Page number to return, starting with 0.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "count",
+                        "description": "Number of rows to return.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "description": "Name of items to return (partial match, no case). Omit for all items.",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Item property used for sorting",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Name",
+                                "ItemType",
+                                "Rarity",
+                                "ItemTypeName",
+                                "ItemStatHash",
+                                "MinimumRequiredLevel",
+                                "MaximumRequiredLevel"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "orderstathash",
+                        "description": "This value is used when the order parameter is set to ItemStatHash. The item stat for the provided hash value will be used in the sort.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "direction",
+                        "description": "Order to sort items: Ascending or Descending",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Ascending",
+                                "Descending"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "rarity",
+                        "description": "Rarity of items to return. Omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Unknown",
+                                "Currency",
+                                "Basic",
+                                "Common",
+                                "Rare",
+                                "Superior",
+                                "Exotic"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "step",
+                        "description": "Hash ID of the talent node step that an item must have in order to be returned.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "categories",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "weaponPerformance",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "RateOfFire",
+                                "Damage",
+                                "Accuracy",
+                                "Range",
+                                "Zoom",
+                                "Recoil",
+                                "Ready",
+                                "Reload",
+                                "HairTrigger",
+                                "AmmoAndMagazine",
+                                "TrackingAndDetonation",
+                                "ShotgunSpread",
+                                "ChargeTime",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "impactEffects",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "ArmorPiercing",
+                                "Ricochet",
+                                "Flinch",
+                                "CollateralDamage",
+                                "Disorient",
+                                "HighlightTarget",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "guardianAttributes",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Stats",
+                                "Shields",
+                                "Health",
+                                "Revive",
+                                "AimUnderFire",
+                                "Radar",
+                                "Invisibility",
+                                "Reputations",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "lightAbilities",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Grenades",
+                                "Melee",
+                                "MovementModes",
+                                "Orbs",
+                                "SuperEnergy",
+                                "SuperMods",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "damageTypes",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Kinetic",
+                                "Arc",
+                                "Solar",
+                                "Void",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "matchrandomsteps",
+                        "description": "True if the supplied groups/step hash filters should match random node steps. False indicates the item can always get the step before it is considered a match.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sourcecat",
+                        "description": "Items must drop from the specified source category, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Activity",
+                                "Vendor",
+                                "Aggregate"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "sourcehash",
+                        "description": "Items must drop from the specified source, omit for all items. Overrides sourcecat.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Explorer/TalentNodeSteps/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinyExplorerTalentNodeSteps",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "count",
+                        "description": "Number of rows to return.",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "description": "Name of items to return (partial match, no case). Omit for all items.",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "direction",
+                        "description": "Order to sort items: Ascending or Descending",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Ascending",
+                                "Descending"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "weaponPerformance",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "RateOfFire",
+                                "Damage",
+                                "Accuracy",
+                                "Range",
+                                "Zoom",
+                                "Recoil",
+                                "Ready",
+                                "Reload",
+                                "HairTrigger",
+                                "AmmoAndMagazine",
+                                "TrackingAndDetonation",
+                                "ShotgunSpread",
+                                "ChargeTime",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "impactEffects",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "ArmorPiercing",
+                                "Ricochet",
+                                "Flinch",
+                                "CollateralDamage",
+                                "Disorient",
+                                "HighlightTarget",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "guardianAttributes",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Stats",
+                                "Shields",
+                                "Health",
+                                "Revive",
+                                "AimUnderFire",
+                                "Radar",
+                                "Invisibility",
+                                "Reputations",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "lightAbilities",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Grenades",
+                                "Melee",
+                                "MovementModes",
+                                "Orbs",
+                                "SuperEnergy",
+                                "SuperMods",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "damageTypes",
+                        "description": "Items must have node steps in one of these categories, omit for all items.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Kinetic",
+                                "Arc",
+                                "Solar",
+                                "Void",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/LiveTiles/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinyLiveTileContentItems",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Manifest/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinyManifest",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Manifest/{definitionType}/{definitionId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetDestinySingleDefinition",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "definitionType",
+                        "description": "The type of definition to return.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Activity",
+                                "ActivityType",
+                                "Class",
+                                "Gender",
+                                "InventoryBucket",
+                                "InventoryItem",
+                                "Progression",
+                                "Race",
+                                "Stat",
+                                "TalentGrid",
+                                "StatGroup",
+                                "UnlockFlag",
+                                "Vendor",
+                                "Destination",
+                                "Place",
+                                "DirectorBook",
+                                "MaterialRequirement",
+                                "SandboxPerk",
+                                "ArtDye",
+                                "ArtDyeChannel",
+                                "ActivityBundle",
+                                "GearAsset",
+                                "GrimoireCard"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "definitionId",
+                        "description": "A valid definitionId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetExcellenceBadges",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetGrimoireByMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "flavour",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "single",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/Definition/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetGrimoireDefinition",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/{membershipType}/{destinyMembershipId}/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetHistoricalStats",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "periodType",
+                        "description": "Indicates a specific period type to return. Optional.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Daily",
+                                "Monthly",
+                                "AllTime",
+                                "Activity"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "modes",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "groups",
+                        "description": "Group of stats to include, otherwise only general stats are returned.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "General",
+                                "Weapons",
+                                "Medals",
+                                "Enemies",
+                                "ReservedGroups",
+                                "Leaderboard",
+                                "Activity",
+                                "UniqueWeapon",
+                                "Internal",
+                                "Unknown"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "monthstart",
+                        "description": "First month to return when monthly stats are requested. Use the format YYYY-MM.",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "monthend",
+                        "description": "Last month to return when monthly stats are requested. Use the format YYYY-MM.",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "daystart",
+                        "description": "First day to return when daily stats are requested. Use the format YYYY-MM-DD",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "dayend",
+                        "description": "Last day to return when daily stats are requested. Use the format YYYY-MM-DD",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/Definition/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetHistoricalStatsDefinition",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/Account/{membershipType}/{destinyMembershipId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetHistoricalStatsForAccount",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "groups",
+                        "description": "Group of stats to include, otherwise only general stats are returned.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "General",
+                                "Weapons",
+                                "Medals",
+                                "Enemies",
+                                "ReservedGroups",
+                                "Leaderboard",
+                                "Activity",
+                                "UniqueWeapon",
+                                "Internal",
+                                "Unknown"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetItemDetail",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemInstanceId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetItemReferenceDetail",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param4",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetLeaderboards",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "modes",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetLeaderboardsForCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "modes",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/LeaderboardsForPsn/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetLeaderboardsForPsn",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "modes",
+                        "description": "Filter by ActivityModeType.",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Story",
+                                "Strike",
+                                "Raid",
+                                "AllPvP",
+                                "Patrol",
+                                "AllPvE",
+                                "PvPIntroduction",
+                                "ThreeVsThree",
+                                "Control",
+                                "Lockdown",
+                                "Team",
+                                "FreeForAll",
+                                "TrialsOfOsiris",
+                                "Doubles",
+                                "Nightfall",
+                                "Heroic",
+                                "AllStrikes",
+                                "IronBanner",
+                                "AllArena",
+                                "Arena",
+                                "ArenaChallenge",
+                                "Elimination",
+                                "Rift",
+                                "AllMayhem",
+                                "MayhemClash",
+                                "MayhemRumble",
+                                "ZoneControl",
+                                "Racing",
+                                "ArenaElderChallenge",
+                                "Supremacy",
+                                "PrivateMatchesAll",
+                                "SupremacyRumble",
+                                "SupremacyClash",
+                                "SupremacyInferno",
+                                "SupremacyMayhem"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Stats/GetMembershipIdByDisplayName/{displayName}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetMembershipIdByDisplayName",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "displayName",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "ignorecase",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/{membershipType}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetMyGrimoire",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "flavour",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "single",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/PostGameCarnageReport/{activityInstanceId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPostGameCarnageReport",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "activityInstanceId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Advisors/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPublicAdvisors",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Advisors/V2/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPublicAdvisorsV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Vendors/{vendorId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPublicVendor",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Vendors/{vendorId}/Metadata/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPublicVendorWithMetadata",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Advisors/Xur/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetPublicXurVendor",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetRecordBookCompletionStatus",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "recordBookHash",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/Events/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetSpecialEventAdvisors",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Triumphs/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetTriumphs",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetUniqueWeaponHistory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "destinyMembershipId",
+                        "description": "A valid destinyMembershipId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Vault/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVault",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "in": "query",
+                        "name": "accountId",
+                        "description": "A valid destinyMembershipId.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Vault/Summary/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVaultSummary",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "in": "query",
+                        "name": "accountId",
+                        "description": "A valid destinyMembershipId.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVendorForCurrentCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Metadata/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVendorForCurrentCharacterWithMetadata",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVendorItemDetailForCurrentCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/Metadata/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVendorItemDetailForCurrentCharacterWithMetadata",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "vendorId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/Summaries/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "GetVendorSummariesForCurrentCharacter",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "characterId",
+                        "description": "A valid characterId that is associated with the given account.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "definitions",
+                        "description": "Include definitions in the response. Use while testing.",
+                        "default": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/SearchDestinyPlayer/{membershipType}/{displayName}/": {
+            "get": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "SearchDestinyPlayer",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "displayName",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Destiny/SetLockState/": {
+            "post": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "SetItemLockState",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "itemId": {
+                                    "type": "string"
+                                },
+                                "characterId": {
+                                    "type": "string",
+                                    "description": "A valid characterId that is associated with the given account."
+                                },
+                                "state": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/SetQuestTrackedState/": {
+            "post": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "SetQuestTrackedState",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "membershipId": {
+                                    "type": "string"
+                                },
+                                "characterId": {
+                                    "type": "string",
+                                    "description": "A valid characterId that is associated with the given account."
+                                },
+                                "itemId": {
+                                    "type": "string"
+                                },
+                                "state": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Destiny/TransferItem/": {
+            "post": {
+                "tags": [
+                    "DestinyService"
+                ],
+                "operationId": "TransferItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "itemReferenceHash": {
+                                    "type": "string"
+                                },
+                                "itemId": {
+                                    "type": "string"
+                                },
+                                "stackSize": {
+                                    "type": "string"
+                                },
+                                "characterId": {
+                                    "type": "string",
+                                    "description": "A valid characterId that is associated with the given account."
+                                },
+                                "transferToVault": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        }
+    }
+}
