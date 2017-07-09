@@ -1,0 +1,613 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all CommunitycontentService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/CommunityContent/Live/Partnerships/{param1}/{param2}/Ban/{param3}/": {
+            "post": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "AdminSetCommunityLiveMemberBanStatus",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Partnerships/{param1}/{param2}/Feature/{param3}/": {
+            "post": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "AdminSetCommunityLiveMemberFeatureStatus",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/AlterApprovalState/{param1}/": {
+            "post": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "AlterApprovalState",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Edit/{param1}/": {
+            "post": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "EditContent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Admin/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetAdminCommunityLiveStatuses",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "description": "Name of items to return (partial match, no case). Omit for all items.",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Queue/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetApprovalQueue",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Get/{param1}/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetCommunityContent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/ActivityModes/Featured/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetCommunityFeaturedActivityModes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/All/{partnershipType}/{communityStatusSort}/{page}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetCommunityLiveStatuses",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "partnershipType",
+                        "description": "The type of partnership. 0=None, 1=Twitch",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Twitch"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "communityStatusSort",
+                        "description": "Sort by status.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Viewers",
+                                "Trending",
+                                "OverallViewers",
+                                "Followers"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "modeHash",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "streamLocale",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Clan/{partnershipType}/{communityStatusSort}/{page}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetCommunityLiveStatusesForClanmates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "partnershipType",
+                        "description": "The type of partnership. 0=None, 1=Twitch",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Twitch"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "communityStatusSort",
+                        "description": "Sort by status.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Viewers",
+                                "Trending",
+                                "OverallViewers",
+                                "Followers"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Friends/{partnershipType}/{communityStatusSort}/{page}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetCommunityLiveStatusesForFriends",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "partnershipType",
+                        "description": "The type of partnership. 0=None, 1=Twitch",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Twitch"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "communityStatusSort",
+                        "description": "Sort by status.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Viewers",
+                                "Trending",
+                                "OverallViewers",
+                                "Followers"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Featured/{partnershipType}/{communityStatusSort}/{page}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetFeaturedCommunityLiveStatuses",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "partnershipType",
+                        "description": "The type of partnership. 0=None, 1=Twitch",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Twitch"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "communityStatusSort",
+                        "description": "Sort by status.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Viewers",
+                                "Trending",
+                                "OverallViewers",
+                                "Followers"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "page",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "streamLocale",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/": {
+            "get": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "GetStreamingStatusForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "partnershipType",
+                        "description": "The type of partnership. 0=None, 1=Twitch",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "Twitch"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/CommunityContent/Submit/": {
+            "post": {
+                "tags": [
+                    "CommunitycontentService"
+                ],
+                "operationId": "SubmitContent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

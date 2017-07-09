@@ -84,7 +84,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/GetAvailableAvatarsAdmin/{param1}/": {
@@ -246,7 +251,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/GetCurrentBungieNetUser/": {
@@ -263,7 +273,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/GetBungieNetUser/": {
@@ -280,7 +295,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/GetMembershipsById/{membershipId}/{membershipType}/": {
@@ -341,7 +361,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/GetMobileAppPairings/": {
@@ -392,7 +417,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/{membershipId}/Partnerships/": {
@@ -679,7 +709,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/UnregisterMobileAppPair/{param1}/": {
@@ -721,7 +756,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/Notification/Update/": {
@@ -738,7 +778,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/UpdateStateInfoForMobileAppPair/": {
@@ -829,7 +874,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/User/UpdateUserAdmin/{param1}/": {

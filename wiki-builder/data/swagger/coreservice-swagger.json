@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all NotificationService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all CoreService endpoints in the BungieNetPlatform",
         "version": "1.0.0",
         "title": "BungieNetPlatform API Swagger",
         "contact": {
@@ -28,12 +28,70 @@
     "host": "www.bungie.net",
     "basePath": "/Platform",
     "paths": {
-        "/Notification/Events/{param1}/{param2}/": {
+        "//GetAvailableLocales/": {
             "get": {
                 "tags": [
-                    "NotificationService"
+                    "CoreService"
                 ],
-                "operationId": "GetRealTimeEvents",
+                "operationId": "GetAvailableLocales",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "//Settings/": {
+            "get": {
+                "tags": [
+                    "CoreService"
+                ],
+                "operationId": "GetCommonSettings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "//GlobalAlerts/": {
+            "get": {
+                "tags": [
+                    "CoreService"
+                ],
+                "operationId": "GetGlobalAlerts",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "includestreaming",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "//Status/{param1}/": {
+            "get": {
+                "tags": [
+                    "CoreService"
+                ],
+                "operationId": "GetSystemStatus",
                 "produces": [
                     "application/json"
                 ],
@@ -44,19 +102,6 @@
                         "description": "",
                         "type": "string",
                         "required": true
-                    },
-                    {
-                        "name": "param2",
-                        "in": "path",
-                        "description": "",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "name": "timeout",
-                        "in": "query",
-                        "description": "",
-                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -66,12 +111,12 @@
                 }
             }
         },
-        "/Notification/GetCount/": {
+        "//HelloWorld/": {
             "get": {
                 "tags": [
-                    "NotificationService"
+                    "CoreService"
                 ],
-                "operationId": "GetRecentNotificationCount",
+                "operationId": "HelloWorld",
                 "produces": [
                     "application/json"
                 ],
@@ -81,57 +126,6 @@
                         "description": "Successful operation"
                     }
                 }
-            }
-        },
-        "/Notification/GetRecent/": {
-            "get": {
-                "tags": [
-                    "NotificationService"
-                ],
-                "operationId": "GetRecentNotifications",
-                "produces": [
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "name": "format",
-                        "in": "query",
-                        "description": "",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                },
-                "security": [
-                    {
-                        "BungieAuth": []
-                    }
-                ]
-            }
-        },
-        "/Notification/Reset/": {
-            "get": {
-                "tags": [
-                    "NotificationService"
-                ],
-                "operationId": "ResetNotification",
-                "produces": [
-                    "application/json"
-                ],
-                "parameters": [],
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                },
-                "security": [
-                    {
-                        "BungieAuth": []
-                    }
-                ]
             }
         }
     }

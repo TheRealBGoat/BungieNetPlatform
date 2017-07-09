@@ -1,0 +1,357 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all TokensService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Tokens/ApplyOfferToCurrentDestinyMembership/{param1}/{param2}/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "ApplyOfferToCurrentDestinyMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/BreakBond/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "BreakBond",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/ClaimAndApplyToken/{tokenType}/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "ClaimAndApplyOnToken",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tokenType",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "redeemCode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/Claim/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "ClaimToken",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "redeemCode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/ConsumeMarketplacePlatformCodeOffer/{param1}/{param2}/{param3}/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "ConsumeMarketplacePlatformCodeOffer",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/OfferHistory/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "GetCurrentUserOfferHistory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Tokens/ThrottleState/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "GetCurrentUserThrottleState",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/GetEligibility/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "GetRAFEligibility",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/MarketplacePlatformCodeOfferHistory/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "MarketplacePlatformCodeOfferHistory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/Claim/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "RAFClaim",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/GenerateReferralCode/{param1}/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "RAFGenerateReferralCode",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/GetNewPlayerBondDetails/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "RAFGetNewPlayerBondDetails",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/RAF/GetVeteranBondDetails/": {
+            "get": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "RAFGetVeteranBondDetails",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Tokens/VerifyAge/": {
+            "post": {
+                "tags": [
+                    "TokensService"
+                ],
+                "operationId": "VerifyAge",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

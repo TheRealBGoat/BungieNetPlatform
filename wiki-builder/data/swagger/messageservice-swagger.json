@@ -59,7 +59,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Message/AllianceInvitations/InvitationsToJoinAnotherGroup/{param1}/{param2}/": {
@@ -835,7 +840,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Message/Conversations/UpdateLastViewedTimestamp/": {
@@ -869,7 +879,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         }
     }

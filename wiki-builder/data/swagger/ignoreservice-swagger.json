@@ -1,0 +1,227 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all IgnoreService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Ignore/Flag/": {
+            "post": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "FlagItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/MyIgnores/": {
+            "post": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "GetIgnoresForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/MyIgnores/Posts/{param1}/": {
+            "get": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "GetIgnoreStatusForPost",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/MyIgnores/Users/{param1}/": {
+            "get": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "GetIgnoreStatusForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/ReportContext/{param1}/": {
+            "get": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "GetReportContext",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/Ignore/": {
+            "post": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "IgnoreItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "ignoredItemId": {
+                                    "type": "string",
+                                    "description": "A valid ignoredItemId."
+                                },
+                                "ignoredItemType": {
+                                    "type": "string",
+                                    "description": "The type of item to ignore."
+                                },
+                                "comment": {
+                                    "type": "string"
+                                },
+                                "reason": {
+                                    "type": "string"
+                                },
+                                "itemContextId": {
+                                    "type": "string"
+                                },
+                                "itemContextType": {
+                                    "type": "string"
+                                },
+                                "ModeratorRequest": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/MyLastReport/": {
+            "get": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "MyLastReport",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Ignore/Unignore/": {
+            "post": {
+                "tags": [
+                    "IgnoreService"
+                ],
+                "operationId": "UnignoreItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

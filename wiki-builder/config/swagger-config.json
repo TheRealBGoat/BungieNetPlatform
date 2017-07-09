@@ -50,6 +50,42 @@
         {
             "name": "ActivityService",
             "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/activityservice-swagger.json"
+        },
+        {
+            "name": "GroupService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/groupservice-swagger.json"
+        },
+        {
+            "name": "IgnoreService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/ignoreservice-swagger.json"
+        },
+        {
+            "name": "GameService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/gameservice-swagger.json"
+        },
+        {
+            "name": "AdminService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/adminservice-swagger.json"
+        },
+        {
+            "name": "TrendingService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/trendingservice-swagger.json"
+        },
+        {
+            "name": "TokensService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/tokensservice-swagger.json"
+        },
+        {
+            "name": "DestinyService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice-swagger.json"
+        },
+        {
+            "name": "CommunitycontentService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/communitycontentservice-swagger.json"
+        },
+        {
+            "name": "CoreService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/coreservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"

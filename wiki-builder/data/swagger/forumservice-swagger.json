@@ -188,7 +188,12 @@
                     "200": {
                         "description": "Successful operation"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
             }
         },
         "/Forum/DeletePost/{param1}/": {

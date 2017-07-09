@@ -1,0 +1,3056 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all GroupService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Group/{groupId}/Members/ApproveAll/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "ApproveAllPending",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/Approve/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "ApproveGroupMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/ApproveV2/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "ApproveGroupMembershipV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/ApproveList/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "ApprovePendingForList",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                },
+                                "membershipIds[]": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/Ban/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "BanMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "comment": {
+                                    "type": "string"
+                                },
+                                "length": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Relationship/{allyGroupId}/BreakAlliance/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "BreakAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "allyGroupId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/BreakAlliances/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "BreakAlliances",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Create/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "CreateGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Create/V2/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "CreateGroupV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of items to return (partial match, no case). Omit for all items."
+                                },
+                                "clanCallSign": {
+                                    "type": "string"
+                                },
+                                "motto": {
+                                    "type": "string"
+                                },
+                                "about": {
+                                    "type": "string"
+                                },
+                                "theme": {
+                                    "type": "string"
+                                },
+                                "tags": {
+                                    "type": "string"
+                                },
+                                "avatarImageIndex": {
+                                    "type": "string"
+                                },
+                                "isPublic": {
+                                    "type": "string"
+                                },
+                                "membershipOption": {
+                                    "type": "string"
+                                },
+                                "isPublicTopicAdminOnly": {
+                                    "type": "string"
+                                },
+                                "isDefaultPostPublic": {
+                                    "type": "string"
+                                },
+                                "clanMembershipTypes": {
+                                    "type": "string"
+                                },
+                                "attributes": {
+                                    "type": "string"
+                                },
+                                "allowChat": {
+                                    "type": "string"
+                                },
+                                "locale": {
+                                    "type": "string"
+                                },
+                                "clanReviewType": {
+                                    "type": "string"
+                                },
+                                "clanName": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Create/Minimal/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "CreateMinimalGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "groupName": {
+                                    "type": "string"
+                                },
+                                "groupAbout": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/DenyAll/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DenyAllPending",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/Deny/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DenyGroupMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/DenyV2/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DenyGroupMembershipV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/DenyList/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DenyPendingForList",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                },
+                                "membershipIds[]": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{param1}/DesignateClanFounder/{param2}/{param3}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DesignateClanFounder",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Clans/Disable/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DisableClanForGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/BreakAllAlliances/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "DisbandAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Edit/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "EditGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "EditGroupMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "groupMembershipType",
+                        "description": "A valid group membershipType. 0=Member, 1=Admin, 2=Founder (probably will throw an error)",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "clanPlatformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/EditV2/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "EditGroupV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of items to return (partial match, no case). Omit for all items."
+                                },
+                                "clanCallSign": {
+                                    "type": "string"
+                                },
+                                "motto": {
+                                    "type": "string"
+                                },
+                                "about": {
+                                    "type": "string"
+                                },
+                                "theme": {
+                                    "type": "string"
+                                },
+                                "tags": {
+                                    "type": "string"
+                                },
+                                "avatarImageIndex": {
+                                    "type": "string"
+                                },
+                                "chatSecurity": {
+                                    "type": "string"
+                                },
+                                "allowChat": {
+                                    "type": "string"
+                                },
+                                "membershipOptions": {
+                                    "type": "string"
+                                },
+                                "homepage": {
+                                    "type": "string"
+                                },
+                                "locale": {
+                                    "type": "string"
+                                },
+                                "isPublic": {
+                                    "type": "string"
+                                },
+                                "isPublicTopicAdminOnly": {
+                                    "type": "string"
+                                },
+                                "defaultPublicity": {
+                                    "type": "string"
+                                },
+                                "isDefaultPostPublic": {
+                                    "type": "string"
+                                },
+                                "clanReviewType": {
+                                    "type": "string"
+                                },
+                                "enableInvitationMessagingForAdmins": {
+                                    "type": "string"
+                                },
+                                "clanName": {
+                                    "type": "string"
+                                },
+                                "clanMembershipTypes": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Clans/Enable/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "EnableClanForGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "clanName",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/FollowList/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "FollowGroupsWithGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Follow/{followGroupId}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "FollowGroupWithGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "followGroupId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Admins/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAdminsOfGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/AdminsV2/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAdminsOfGroupV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{param1}/Founded/All/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAllFoundedGroupsForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyGroups/All/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAllGroupsForCurrentMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/All/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAllGroupsForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Allies/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAlliedGroups",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/GetAvailableAvatars/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAvailableAvatarsGroupService",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/GetAvailableThemes/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetAvailableThemesGroupService",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Banned/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetBannedMembersOfGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/BannedV2/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetBannedMembersOfGroupV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/GetClanAttributeDefinitions/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetClanAttributeDefinitions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyGroups/Deleted/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetDeletedGroupsForCurrentMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/Founded/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetFoundedGroupsForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Name/{groupName}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetGroupByName",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "groupName",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Following/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetGroupsFollowedByGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/FollowedBy/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetGroupsFollowingGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/GetGroupTagSuggestions/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetGroupTagSuggestions",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "partialtag",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyGroups/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetJoinedGroupsForCurrentMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyGroups/V2/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetJoinedGroupsForCurrentMemberV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetJoinedGroupsForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/Joined/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetJoinedGroupsForMemberV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "clanonly",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/JoinedV3/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetJoinedGroupsForMemberV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/ClanMembers/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetMembersOfClan",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "memberType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "platformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetMembersOfGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "memberType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "platformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/MembersV2/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetMembersOfGroupV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "memberType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "platformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/MembersV3/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetMembersOfGroupV3",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "memberType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "platformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "nameSearch",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyClans/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetMyClanMemberships",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "BungieAuth": []
+                    }
+                ]
+            }
+        },
+        "/Group/{groupId}/Clan/{clanMembershipType}/Pending/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingClanMemberships",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyPendingGroups/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingGroupsForCurrentMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyPendingGroups/V2/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingGroupsForCurrentMemberV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/Pending/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingGroupsForMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/User/{membershipId}/PendingV2/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingGroupsForMemberV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/Pending/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingMemberships",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/PendingV2/": {
+            "get": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetPendingMembershipsV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Recommended/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GetRecommendedGroups",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/Search/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "GroupSearch",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "contents[searchValue]": {
+                                    "type": "string"
+                                },
+                                "contents[searchType]": {
+                                    "type": "string"
+                                },
+                                "creationDate": {
+                                    "type": "string"
+                                },
+                                "currentPage": {
+                                    "type": "string",
+                                    "description": "The current page to return. Starts at 1."
+                                },
+                                "groupMemberCountFilter": {
+                                    "type": "string"
+                                },
+                                "itemsPerPage": {
+                                    "type": "string"
+                                },
+                                "localeFilter": {
+                                    "type": "string"
+                                },
+                                "membershipType": {
+                                    "type": "string",
+                                    "description": "A valid Bungie.net membershipType."
+                                },
+                                "sortBy": {
+                                    "type": "string"
+                                },
+                                "tagText": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/InviteToClan/{membershipId}/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "InviteClanMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Invite/{membershipId}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "InviteGroupMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Allies/InviteMany/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "InviteManyToJoinAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "targetIds[]": {
+                                    "type": "string"
+                                },
+                                "messageContent[message]": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Allies/Invite/{allyGroupId}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "InviteToJoinAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "allyGroupId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Clans/Join/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "JoinClanForGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Object to be posted",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/Kick/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "KickMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clanPlatformType",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Clans/Leave/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "LeaveClanForGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Admin/FounderOverride/{membershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "OverrideFounderAdmin",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/MyClans/Refresh/{clanMembershipType}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "RefreshClanSettingsInDestiny",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "clanMembershipType",
+                        "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/Apply/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "RequestGroupMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/ApplyV2/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "RequestGroupMembershipV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Allies/RequestToJoin/{allyGroupId}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "RequestToJoinAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "allyGroupId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/Rescind/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "RescindGroupMembership",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "populatefriends",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{param1}/MigrationSelection/{param2}/{param3}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "SaveMigrationSelection",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/SetAsAlliance/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "SetGroupAsAlliance",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Privacy/{param2}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "SetPrivacy",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Members/{membershipId}/Unban/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "UnbanMember",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "membershipId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Undelete/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "UndeleteGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/UnfollowAll/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "UnfollowAllGroupsWithGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/UnfollowList/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "UnfollowGroupsWithGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Group/{groupId}/Unfollow/{followGroupId}/": {
+            "post": {
+                "tags": [
+                    "GroupService"
+                ],
+                "operationId": "UnfollowGroupWithGroup",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "description": "A valid groupId.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "followGroupId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

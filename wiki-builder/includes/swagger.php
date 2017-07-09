@@ -218,6 +218,9 @@ $swaggerFiles = array();
 foreach ($endpoints as $service) {
 	$serviceName = $service->name;
 
+	$chopIdx = strpos($serviceName, 'Service');
+	$shortServiceName = substr($serviceName, 0, $chopIdx);
+
 	// Only include the DestinyService endpoints right now
 	// if ($serviceName !== 'DestinyService') continue;
 
@@ -243,7 +246,7 @@ foreach ($endpoints as $service) {
 		$truncated = substr($noLeadingSlash, $nextSlashIdx + 1);
 
 		// TODO - make this work for all services by stripping "Service" from the name
-		$externalDocUrl = 'https://www.bungie.net/platform/destiny/help/HelpDetail/'.$endpoint->method.'?uri='.urlencode($truncated);
+		$externalDocUrl = 'https://www.bungie.net/platform/'.strtolower($shortServiceName).'/help/HelpDetail/'.$endpoint->method.'?uri='.urlencode($truncated);
 
 		//var_dump('ExternalDocUrl: '.$externalDocUrl);
 		// Fetch the external doc page and parse to see if login is required
