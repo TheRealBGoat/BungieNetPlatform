@@ -340,7 +340,7 @@ foreach ($endpoints as $service) {
 	$swagger->basePath = '/Platform';
 	$swagger->paths = $paths;
 
-	$filename = strtolower($serviceName);
+	$filename = strtolower($serviceName).'-swagger.json';
 	$swaggerUrl = new stdClass();
 	$swaggerUrl->name = $serviceName;
 	$swaggerUrl->url = 'https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/'.$filename;

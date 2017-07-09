@@ -13,7 +13,7 @@
     "urls": [
         {
             "name": "DestinyService",
-            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice"
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"
