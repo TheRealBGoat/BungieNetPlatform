@@ -1,0 +1,759 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Swagger documenation and interactive testing for all ActivityService endpoints in the BungieNetPlatform",
+        "version": "1.0.0",
+        "title": "BungieNetPlatform API Swagger",
+        "contact": {
+            "name": "/r/DestinyTheGame",
+            "email": "fake@email.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    },
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "BungieAuth": {
+            "type": "oauth2",
+            "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+            "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
+            "flow": "accessCode",
+            "scopes": {}
+        }
+    },
+    "host": "www.bungie.net",
+    "basePath": "/Platform",
+    "paths": {
+        "/Activity/Tag/Follow/": {
+            "post": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "FollowTag",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Follow/": {
+            "post": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "FollowUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/Application/{param2}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetApplicationActivityForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Following/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetEntitiesFollowedByCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Following/V2/{param1}/{param2}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetEntitiesFollowedByCurrentUserV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Following/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetEntitiesFollowedByUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Following/V2/{param2}/{param3}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetEntitiesFollowedByUserV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Tag/Followers/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetFollowersOfTag",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{profileId}/Followers/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetFollowersOfUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "profileId",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/Forums/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetForumActivityForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/ForumsV2/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetForumActivityForUserV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Friends/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetFriends",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Friends/AllNoPresence/{param1}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetFriendsAllNoPresence",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Friends/Paged/{membershipType}/{currentPage}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetFriendsPaged",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "membershipType",
+                        "description": "A valid Bungie.net membershipType.",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "None",
+                                "TigerXbox",
+                                "TigerPsn",
+                                "TigerBlizzard",
+                                "TigerDemon",
+                                "BungieNext",
+                                "All"
+                            ]
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "currentPage",
+                        "description": "The current page to return. Starts at 1.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Following/Groups/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetGroupsFollowedByCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Following/Groups/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetGroupsFollowedByUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Following/Groups/{param1}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetGroupsFollowedPagedByCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Following/Groups/Paged/{param2}/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetGroupsFollowedPagedByUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/LikesAndShares/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetLikeAndShareActivityForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "itemsperpage",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/LikesAndSharesV2/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetLikeAndShareActivityForUserV2",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Activities/LikeShareAndForum/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetLikeShareAndForumActivityForUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "currentpage",
+                        "description": "The current page to return. Starts at 1.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Following/Users/": {
+            "get": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "GetUsersFollowedByCurrentUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/Tag/Unfollow/": {
+            "post": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "UnfollowTag",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/Activity/User/{param1}/Unfollow/": {
+            "post": {
+                "tags": [
+                    "ActivityService"
+                ],
+                "operationId": "UnfollowUser",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

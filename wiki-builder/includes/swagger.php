@@ -349,5 +349,5 @@ foreach ($endpoints as $service) {
 	buildAndSaveConfig($swaggerFiles);
 
 	echo str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)) . "\n";
-	file_put_contents(BUILDERPATH.'/data/swagger/'.$filename.'-swagger.json', str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)));
+	file_put_contents(BUILDERPATH.'/data/swagger/'.$filename, str_replace(['\/'], ['/'], json_encode($swagger, JSON_PRETTY_PRINT)));
 }

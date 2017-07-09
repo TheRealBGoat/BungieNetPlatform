@@ -46,6 +46,10 @@
         {
             "name": "ForumService",
             "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/forumservice-swagger.json"
+        },
+        {
+            "name": "ActivityService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/activityservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"
