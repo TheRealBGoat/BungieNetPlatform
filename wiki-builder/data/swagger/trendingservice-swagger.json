@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all `TrendingService` endpoints in the `BungieNetPlatform`<br/><br/>Official Documentation: https://www.bungie.net/platform/trending/help",
+        "description": "Swagger documenation and interactive testing for all `TrendingService` endpoints in the `BungieNetPlatform` API<br/><br/>Official Documentation: https://www.bungie.net/platform/trending/help",
         "version": "1.0.0",
         "title": "BungieNetPlatform TrendingService API",
         "contact": {
@@ -18,7 +18,7 @@
     ],
     "securityDefinitions": {
         "BungieAuth": {
-            "type": "oauth2",
+            "type": "bungie",
             "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
             "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
             "flow": "accessCode",

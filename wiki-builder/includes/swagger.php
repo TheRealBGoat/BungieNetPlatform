@@ -82,7 +82,7 @@ function buildSecurityDefinitions() {
 
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
-	$oauth->type = 'oauth2';
+	$oauth->type = 'bungie';
 	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
 	$oauth->tokenUrl = 'https://www.bungie.net/platform/app/oauth/token/';
 	$oauth->flow = 'accessCode';
@@ -333,7 +333,7 @@ foreach ($endpoints as $service) {
 	$swagger = new stdClass();
 	$swagger->swagger = '2.0';
 	$swagger->info = buildInfo(
-		'Swagger documenation and interactive testing for all `'.$serviceName.'` endpoints in the `BungieNetPlatform`<br/><br/>Official Documentation: '.$externalDocBaseUrl,
+		'Swagger documenation and interactive testing for all `'.$serviceName.'` endpoints in the `BungieNetPlatform` API<br/><br/>Official Documentation: '.$externalDocBaseUrl,
 		$serviceName
 	);
 	$swagger->schemes = array('https');
