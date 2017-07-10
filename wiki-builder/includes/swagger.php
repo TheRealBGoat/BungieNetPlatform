@@ -333,7 +333,7 @@ foreach ($endpoints as $service) {
 	$swagger = new stdClass();
 	$swagger->swagger = '2.0';
 	$swagger->info = buildInfo(
-		'Swagger documenation and interactive testing for all `'.$serviceName.'` endpoints in the `BungieNetPlatform`\n\nOfficial Documentation: '.$externalDocBaseUrl,
+		'Swagger documenation and interactive testing for all `'.$serviceName.'` endpoints in the `BungieNetPlatform`<br/><br/>Official Documentation: '.$externalDocBaseUrl,
 		$serviceName
 	);
 	$swagger->schemes = array('https');

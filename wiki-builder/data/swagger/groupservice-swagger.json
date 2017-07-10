@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all `GroupService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/group/help",
+        "description": "Swagger documenation and interactive testing for all `GroupService` endpoints in the `BungieNetPlatform`<br/><br/>Official Documentation: https://www.bungie.net/platform/group/help",
         "version": "1.0.0",
         "title": "BungieNetPlatform GroupService API",
         "contact": {
