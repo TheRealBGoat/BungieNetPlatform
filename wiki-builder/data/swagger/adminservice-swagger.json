@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all AdminService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `AdminService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/admin/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform AdminService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Admin",
     "paths": {
-        "/Admin/Member/Search/": {
+        "/Member/Search/": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/Admin/BulkEditPost/": {
+        "/BulkEditPost/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -69,7 +69,7 @@
                 }
             }
         },
-        "/Admin/GlobalHistory/{param1}/{param2}/": {
+        "/GlobalHistory/{param1}/{param2}/": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -119,7 +119,7 @@
                 }
             }
         },
-        "/Admin/Assigned/": {
+        "/Assigned/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -136,7 +136,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/Reports/": {
+        "/Member/{param1}/Reports/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -161,7 +161,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/RecentIncludingFlags/{param2}": {
+        "/Member/{param1}/RecentIncludingFlags/{param2}": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -193,7 +193,7 @@
                 }
             }
         },
-        "/Admin/Reports/": {
+        "/Reports/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -210,7 +210,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/GetBanState/": {
+        "/Member/{param1}/GetBanState/": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -235,7 +235,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/PostHistory/{param2}/": {
+        "/Member/{param1}/PostHistory/{param2}/": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -267,7 +267,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/GetWebClientIpHistory/": {
+        "/Member/{param1}/GetWebClientIpHistory/": {
             "get": {
                 "tags": [
                     "AdminService"
@@ -292,7 +292,7 @@
                 }
             }
         },
-        "/Admin/Ignores/GloballyIgnore/": {
+        "/Ignores/GloballyIgnore/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -309,7 +309,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/SetBan/": {
+        "/Member/{param1}/SetBan/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -334,7 +334,7 @@
                 }
             }
         },
-        "/Admin/Ignores/OverrideGlobalIgnore/": {
+        "/Ignores/OverrideGlobalIgnore/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -351,7 +351,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/SetGroupWallBan/": {
+        "/Member/{param1}/SetGroupWallBan/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -376,7 +376,7 @@
                 }
             }
         },
-        "/Admin/Member/{param1}/SetMsgBan/": {
+        "/Member/{param1}/SetMsgBan/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -401,7 +401,7 @@
                 }
             }
         },
-        "/Admin/Reports/Overturn/": {
+        "/Reports/Overturn/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -418,7 +418,7 @@
                 }
             }
         },
-        "/Admin/Assigned/Resolve/": {
+        "/Assigned/Resolve/": {
             "post": {
                 "tags": [
                     "AdminService"
@@ -435,7 +435,7 @@
                 }
             }
         },
-        "/Admin/Assigned/ReturnAll": {
+        "/Assigned/ReturnAll": {
             "post": {
                 "tags": [
                     "AdminService"

@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all GroupService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `GroupService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/group/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform GroupService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Group",
     "paths": {
-        "/Group/{groupId}/Members/ApproveAll/": {
+        "/{groupId}/Members/ApproveAll/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -67,7 +67,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/Approve/": {
+        "/{groupId}/Members/{membershipId}/Approve/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -99,7 +99,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/ApproveV2/": {
+        "/{groupId}/Members/{membershipId}/ApproveV2/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -145,7 +145,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/ApproveList/": {
+        "/{groupId}/Members/ApproveList/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -187,7 +187,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/Ban/": {
+        "/{groupId}/Members/{membershipId}/Ban/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -236,7 +236,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Relationship/{allyGroupId}/BreakAlliance/": {
+        "/{groupId}/Relationship/{allyGroupId}/BreakAlliance/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -268,7 +268,7 @@
                 }
             }
         },
-        "/Group/{groupId}/BreakAlliances/": {
+        "/{groupId}/BreakAlliances/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -293,7 +293,7 @@
                 }
             }
         },
-        "/Group/Create/": {
+        "/Create/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -310,7 +310,7 @@
                 }
             }
         },
-        "/Group/Create/V2/": {
+        "/Create/V2/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -391,7 +391,7 @@
                 }
             }
         },
-        "/Group/Create/Minimal/": {
+        "/Create/Minimal/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -426,7 +426,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/DenyAll/": {
+        "/{groupId}/Members/DenyAll/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -465,7 +465,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/Deny/": {
+        "/{groupId}/Members/{membershipId}/Deny/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -497,7 +497,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/DenyV2/": {
+        "/{groupId}/Members/{membershipId}/DenyV2/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -543,7 +543,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/DenyList/": {
+        "/{groupId}/Members/DenyList/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -585,7 +585,7 @@
                 }
             }
         },
-        "/Group/{param1}/DesignateClanFounder/{param2}/{param3}/": {
+        "/{param1}/DesignateClanFounder/{param2}/{param3}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -624,7 +624,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Clans/Disable/{clanMembershipType}/": {
+        "/{groupId}/Clans/Disable/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -668,7 +668,7 @@
                 }
             }
         },
-        "/Group/{groupId}/BreakAllAlliances/": {
+        "/{groupId}/BreakAllAlliances/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -693,7 +693,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Edit/": {
+        "/{groupId}/Edit/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -718,7 +718,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/": {
+        "/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -763,7 +763,7 @@
                 }
             }
         },
-        "/Group/{groupId}/EditV2/": {
+        "/{groupId}/EditV2/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -860,7 +860,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Clans/Enable/{clanMembershipType}/": {
+        "/{groupId}/Clans/Enable/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -910,7 +910,7 @@
                 }
             }
         },
-        "/Group/{groupId}/FollowList/": {
+        "/{groupId}/FollowList/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -935,7 +935,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Follow/{followGroupId}/": {
+        "/{groupId}/Follow/{followGroupId}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -967,7 +967,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Admins/": {
+        "/{groupId}/Admins/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1004,7 +1004,7 @@
                 }
             }
         },
-        "/Group/{groupId}/AdminsV2/": {
+        "/{groupId}/AdminsV2/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1041,7 +1041,7 @@
                 }
             }
         },
-        "/Group/User/{param1}/Founded/All/": {
+        "/User/{param1}/Founded/All/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1066,7 +1066,7 @@
                 }
             }
         },
-        "/Group/MyGroups/All/": {
+        "/MyGroups/All/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1096,7 +1096,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/All/": {
+        "/User/{membershipId}/All/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1133,7 +1133,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Allies/": {
+        "/{groupId}/Allies/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1170,7 +1170,7 @@
                 }
             }
         },
-        "/Group/GetAvailableAvatars/": {
+        "/GetAvailableAvatars/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1187,7 +1187,7 @@
                 }
             }
         },
-        "/Group/GetAvailableThemes/": {
+        "/GetAvailableThemes/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1204,7 +1204,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Banned/": {
+        "/{groupId}/Banned/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1241,7 +1241,7 @@
                 }
             }
         },
-        "/Group/{groupId}/BannedV2/": {
+        "/{groupId}/BannedV2/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1278,7 +1278,7 @@
                 }
             }
         },
-        "/Group/GetClanAttributeDefinitions/": {
+        "/GetClanAttributeDefinitions/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1295,7 +1295,7 @@
                 }
             }
         },
-        "/Group/MyGroups/Deleted/": {
+        "/MyGroups/Deleted/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1312,7 +1312,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/Founded/{currentPage}/": {
+        "/User/{membershipId}/Founded/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1356,7 +1356,7 @@
                 }
             }
         },
-        "/Group/{groupId}/": {
+        "/{groupId}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1387,7 +1387,7 @@
                 }
             }
         },
-        "/Group/Name/{groupName}/": {
+        "/Name/{groupName}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1418,7 +1418,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Following/{currentPage}/": {
+        "/{groupId}/Following/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1456,7 +1456,7 @@
                 }
             }
         },
-        "/Group/{groupId}/FollowedBy/{currentPage}/": {
+        "/{groupId}/FollowedBy/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1494,7 +1494,7 @@
                 }
             }
         },
-        "/Group/GetGroupTagSuggestions/": {
+        "/GetGroupTagSuggestions/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1518,7 +1518,7 @@
                 }
             }
         },
-        "/Group/MyGroups/": {
+        "/MyGroups/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1548,7 +1548,7 @@
                 }
             }
         },
-        "/Group/MyGroups/V2/{currentPage}/": {
+        "/MyGroups/V2/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1585,7 +1585,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/": {
+        "/User/{membershipId}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1622,7 +1622,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/Joined/{currentPage}/": {
+        "/User/{membershipId}/Joined/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1666,7 +1666,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/JoinedV3/{currentPage}/": {
+        "/User/{membershipId}/JoinedV3/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1704,7 +1704,7 @@
                 }
             }
         },
-        "/Group/{groupId}/ClanMembers/": {
+        "/{groupId}/ClanMembers/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1753,7 +1753,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/": {
+        "/{groupId}/Members/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1808,7 +1808,7 @@
                 }
             }
         },
-        "/Group/{groupId}/MembersV2/": {
+        "/{groupId}/MembersV2/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1863,7 +1863,7 @@
                 }
             }
         },
-        "/Group/{groupId}/MembersV3/": {
+        "/{groupId}/MembersV3/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1924,7 +1924,7 @@
                 }
             }
         },
-        "/Group/MyClans/": {
+        "/MyClans/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1946,7 +1946,7 @@
                 ]
             }
         },
-        "/Group/{groupId}/Clan/{clanMembershipType}/Pending/{currentPage}/": {
+        "/{groupId}/Clan/{clanMembershipType}/Pending/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -1997,7 +1997,7 @@
                 }
             }
         },
-        "/Group/MyPendingGroups/": {
+        "/MyPendingGroups/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2021,7 +2021,7 @@
                 }
             }
         },
-        "/Group/MyPendingGroups/V2/{currentPage}/": {
+        "/MyPendingGroups/V2/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2052,7 +2052,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/Pending/": {
+        "/User/{membershipId}/Pending/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2083,7 +2083,7 @@
                 }
             }
         },
-        "/Group/User/{membershipId}/PendingV2/{currentPage}/": {
+        "/User/{membershipId}/PendingV2/{currentPage}/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2121,7 +2121,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/Pending/": {
+        "/{groupId}/Members/Pending/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2158,7 +2158,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/PendingV2/": {
+        "/{groupId}/Members/PendingV2/": {
             "get": {
                 "tags": [
                     "GroupService"
@@ -2189,7 +2189,7 @@
                 }
             }
         },
-        "/Group/Recommended/": {
+        "/Recommended/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2213,7 +2213,7 @@
                 }
             }
         },
-        "/Group/Search/": {
+        "/Search/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2280,7 +2280,7 @@
                 }
             }
         },
-        "/Group/{groupId}/InviteToClan/{membershipId}/{clanMembershipType}/": {
+        "/{groupId}/InviteToClan/{membershipId}/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2348,7 +2348,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Invite/{membershipId}/": {
+        "/{groupId}/Invite/{membershipId}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2397,7 +2397,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Allies/InviteMany/": {
+        "/{groupId}/Allies/InviteMany/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2439,7 +2439,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Allies/Invite/{allyGroupId}/": {
+        "/{groupId}/Allies/Invite/{allyGroupId}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2471,7 +2471,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Clans/Join/{clanMembershipType}/": {
+        "/{groupId}/Clans/Join/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2529,7 +2529,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/Kick/": {
+        "/{groupId}/Members/{membershipId}/Kick/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2567,7 +2567,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Clans/Leave/{clanMembershipType}/": {
+        "/{groupId}/Clans/Leave/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2611,7 +2611,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Admin/FounderOverride/{membershipType}/": {
+        "/{groupId}/Admin/FounderOverride/{membershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2655,7 +2655,7 @@
                 }
             }
         },
-        "/Group/MyClans/Refresh/{clanMembershipType}/": {
+        "/MyClans/Refresh/{clanMembershipType}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2692,7 +2692,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/Apply/": {
+        "/{groupId}/Members/Apply/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2723,7 +2723,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/ApplyV2/": {
+        "/{groupId}/Members/ApplyV2/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2754,7 +2754,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Allies/RequestToJoin/{allyGroupId}/": {
+        "/{groupId}/Allies/RequestToJoin/{allyGroupId}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2786,7 +2786,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/Rescind/": {
+        "/{groupId}/Members/Rescind/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2817,7 +2817,7 @@
                 }
             }
         },
-        "/Group/{param1}/MigrationSelection/{param2}/{param3}/": {
+        "/{param1}/MigrationSelection/{param2}/{param3}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2856,7 +2856,7 @@
                 }
             }
         },
-        "/Group/{groupId}/SetAsAlliance/": {
+        "/{groupId}/SetAsAlliance/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2881,7 +2881,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Privacy/{param2}/": {
+        "/{groupId}/Privacy/{param2}/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2913,7 +2913,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Members/{membershipId}/Unban/": {
+        "/{groupId}/Members/{membershipId}/Unban/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2945,7 +2945,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Undelete/": {
+        "/{groupId}/Undelete/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2970,7 +2970,7 @@
                 }
             }
         },
-        "/Group/{groupId}/UnfollowAll/": {
+        "/{groupId}/UnfollowAll/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -2995,7 +2995,7 @@
                 }
             }
         },
-        "/Group/{groupId}/UnfollowList/": {
+        "/{groupId}/UnfollowList/": {
             "post": {
                 "tags": [
                     "GroupService"
@@ -3020,7 +3020,7 @@
                 }
             }
         },
-        "/Group/{groupId}/Unfollow/{followGroupId}/": {
+        "/{groupId}/Unfollow/{followGroupId}/": {
             "post": {
                 "tags": [
                     "GroupService"

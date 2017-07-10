@@ -1,15 +1,4 @@
 {
-    "oauth2RedirectUrl": "https://therealbgoat.github.io/BungieNetPlatform/swagger/",
-    "dom_id": "#swagger-ui",
-    "displayOperationId": true,
-    "showRequestHeaders": true,
-    "presets": [
-        "SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset"
-    ],
-    "plugins": [
-        "SwaggerUIBundle.plugins.DownloadUrl"
-    ],
-    "layout": "StandaloneLayout",
     "urls": [
         {
             "name": "JSONPService",
@@ -74,18 +63,6 @@
         {
             "name": "TokensService",
             "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/tokensservice-swagger.json"
-        },
-        {
-            "name": "DestinyService",
-            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice-swagger.json"
-        },
-        {
-            "name": "CommunitycontentService",
-            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/communitycontentservice-swagger.json"
-        },
-        {
-            "name": "CoreService",
-            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/coreservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"

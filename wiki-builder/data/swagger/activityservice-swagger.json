@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all ActivityService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `ActivityService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/activity/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform ActivityService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Activity",
     "paths": {
-        "/Activity/Tag/Follow/": {
+        "/Tag/Follow/": {
             "post": {
                 "tags": [
                     "ActivityService"
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Follow/": {
+        "/User/{param1}/Follow/": {
             "post": {
                 "tags": [
                     "ActivityService"
@@ -77,7 +77,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/Application/{param2}/": {
+        "/User/{param1}/Activities/Application/{param2}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -121,7 +121,7 @@
                 }
             }
         },
-        "/Activity/Following/": {
+        "/Following/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -138,7 +138,7 @@
                 }
             }
         },
-        "/Activity/Following/V2/{param1}/{param2}/": {
+        "/Following/V2/{param1}/{param2}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -170,7 +170,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Following/": {
+        "/User/{param1}/Following/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -195,7 +195,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Following/V2/{param2}/{param3}/": {
+        "/User/{param1}/Following/V2/{param2}/{param3}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -234,7 +234,7 @@
                 }
             }
         },
-        "/Activity/Tag/Followers/": {
+        "/Tag/Followers/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -270,7 +270,7 @@
                 }
             }
         },
-        "/Activity/User/{profileId}/Followers/": {
+        "/User/{profileId}/Followers/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -307,7 +307,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/Forums/": {
+        "/User/{param1}/Activities/Forums/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -350,7 +350,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/ForumsV2/": {
+        "/User/{param1}/Activities/ForumsV2/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -387,7 +387,7 @@
                 }
             }
         },
-        "/Activity/Friends/": {
+        "/Friends/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -404,7 +404,7 @@
                 }
             }
         },
-        "/Activity/Friends/AllNoPresence/{param1}/": {
+        "/Friends/AllNoPresence/{param1}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -429,7 +429,7 @@
                 }
             }
         },
-        "/Activity/Friends/Paged/{membershipType}/{currentPage}/": {
+        "/Friends/Paged/{membershipType}/{currentPage}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -473,7 +473,7 @@
                 }
             }
         },
-        "/Activity/Following/Groups/": {
+        "/Following/Groups/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -490,7 +490,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Following/Groups/": {
+        "/User/{param1}/Following/Groups/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -515,7 +515,7 @@
                 }
             }
         },
-        "/Activity/Following/Groups/{param1}/": {
+        "/Following/Groups/{param1}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -540,7 +540,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Following/Groups/Paged/{param2}/": {
+        "/User/{param1}/Following/Groups/Paged/{param2}/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -572,7 +572,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/LikesAndShares/": {
+        "/User/{param1}/Activities/LikesAndShares/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -615,7 +615,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/LikesAndSharesV2/": {
+        "/User/{param1}/Activities/LikesAndSharesV2/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -652,7 +652,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Activities/LikeShareAndForum/": {
+        "/User/{param1}/Activities/LikeShareAndForum/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -689,7 +689,7 @@
                 }
             }
         },
-        "/Activity/Following/Users/": {
+        "/Following/Users/": {
             "get": {
                 "tags": [
                     "ActivityService"
@@ -706,7 +706,7 @@
                 }
             }
         },
-        "/Activity/Tag/Unfollow/": {
+        "/Tag/Unfollow/": {
             "post": {
                 "tags": [
                     "ActivityService"
@@ -730,7 +730,7 @@
                 }
             }
         },
-        "/Activity/User/{param1}/Unfollow/": {
+        "/User/{param1}/Unfollow/": {
             "post": {
                 "tags": [
                     "ActivityService"

@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all UserService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `UserService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/user/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform UserService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/User",
     "paths": {
-        "/User/CreateUser/": {
+        "/CreateUser/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -45,7 +45,7 @@
                 }
             }
         },
-        "/User/MessageFlags/Success/Update/{param1}/": {
+        "/MessageFlags/Success/Update/{param1}/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -70,7 +70,7 @@
                 }
             }
         },
-        "/User/GetAvailableAvatars/": {
+        "/GetAvailableAvatars/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -92,7 +92,7 @@
                 ]
             }
         },
-        "/User/GetAvailableAvatarsAdmin/{param1}/": {
+        "/GetAvailableAvatarsAdmin/{param1}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -117,7 +117,7 @@
                 }
             }
         },
-        "/User/GetAvailableThemes/": {
+        "/GetAvailableThemes/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -134,7 +134,7 @@
                 }
             }
         },
-        "/User/GetBungieAccount/{membershipId}/{membershipType}/": {
+        "/GetBungieAccount/{membershipId}/{membershipType}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -178,7 +178,7 @@
                 }
             }
         },
-        "/User/GetBungieNetUserById/{membershipId}/": {
+        "/GetBungieNetUserById/{membershipId}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -203,7 +203,7 @@
                 }
             }
         },
-        "/User/GetCounts/": {
+        "/GetCounts/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -220,7 +220,7 @@
                 }
             }
         },
-        "/User/GetCredentialTypesForAccount/": {
+        "/GetCredentialTypesForAccount/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -237,7 +237,7 @@
                 }
             }
         },
-        "/User/GetCurrentBungieAccount/": {
+        "/GetCurrentBungieAccount/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -259,7 +259,7 @@
                 ]
             }
         },
-        "/User/GetCurrentBungieNetUser/": {
+        "/GetCurrentBungieNetUser/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -281,7 +281,7 @@
                 ]
             }
         },
-        "/User/GetBungieNetUser/": {
+        "/GetBungieNetUser/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -303,7 +303,7 @@
                 ]
             }
         },
-        "/User/GetMembershipsById/{membershipId}/{membershipType}/": {
+        "/GetMembershipsById/{membershipId}/{membershipType}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -347,7 +347,7 @@
                 }
             }
         },
-        "/User/GetMembershipsForCurrentUser/": {
+        "/GetMembershipsForCurrentUser/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -369,7 +369,7 @@
                 ]
             }
         },
-        "/User/GetMobileAppPairings/": {
+        "/GetMobileAppPairings/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -386,7 +386,7 @@
                 }
             }
         },
-        "/User/GetMobileAppPairingsUncached/": {
+        "/GetMobileAppPairingsUncached/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -403,7 +403,7 @@
                 }
             }
         },
-        "/User/GetNotificationSettings/": {
+        "/GetNotificationSettings/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -425,7 +425,7 @@
                 ]
             }
         },
-        "/User/{membershipId}/Partnerships/": {
+        "/{membershipId}/Partnerships/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -450,7 +450,7 @@
                 }
             }
         },
-        "/User/GetPlatformApiKeysForUser/": {
+        "/GetPlatformApiKeysForUser/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -467,7 +467,7 @@
                 }
             }
         },
-        "/User/GetSignOutUrl/": {
+        "/GetSignOutUrl/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -484,7 +484,7 @@
                 }
             }
         },
-        "/User/GetUserAliases/{membershipId}/": {
+        "/GetUserAliases/{membershipId}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -509,7 +509,7 @@
                 }
             }
         },
-        "/User/GetMembershipIds/": {
+        "/GetMembershipIds/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -533,7 +533,7 @@
                 }
             }
         },
-        "/User/LinkOverride/": {
+        "/LinkOverride/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -550,7 +550,7 @@
                 }
             }
         },
-        "/User/RegisterMobileAppPair/": {
+        "/RegisterMobileAppPair/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -567,7 +567,7 @@
                 }
             }
         },
-        "/User/Partnerships/{param1}/Remove/": {
+        "/Partnerships/{param1}/Remove/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -592,7 +592,7 @@
                 }
             }
         },
-        "/User/SearchUsers/": {
+        "/SearchUsers/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -616,7 +616,7 @@
                 }
             }
         },
-        "/User/SearchUsersPaged/{searchTerm}/{page}/": {
+        "/SearchUsersPaged/{searchTerm}/{page}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -648,7 +648,7 @@
                 }
             }
         },
-        "/User/SearchUsersPaged/{searchTerm}/{page}/{param3}/": {
+        "/SearchUsersPaged/{searchTerm}/{page}/{param3}/": {
             "get": {
                 "tags": [
                     "UserService"
@@ -687,7 +687,7 @@
                 }
             }
         },
-        "/User/Acknowledged/{ackId}/": {
+        "/Acknowledged/{ackId}/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -717,7 +717,7 @@
                 ]
             }
         },
-        "/User/UnregisterMobileAppPair/{param1}/": {
+        "/UnregisterMobileAppPair/{param1}/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -742,7 +742,7 @@
                 }
             }
         },
-        "/User/UpdateDestinyEmblemAvatar/": {
+        "/UpdateDestinyEmblemAvatar/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -764,7 +764,7 @@
                 ]
             }
         },
-        "/User/Notification/Update/": {
+        "/Notification/Update/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -786,7 +786,7 @@
                 ]
             }
         },
-        "/User/UpdateStateInfoForMobileAppPair/": {
+        "/UpdateStateInfoForMobileAppPair/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -803,7 +803,7 @@
                 }
             }
         },
-        "/User/UpdateUser/": {
+        "/UpdateUser/": {
             "post": {
                 "tags": [
                     "UserService"
@@ -882,7 +882,7 @@
                 ]
             }
         },
-        "/User/UpdateUserAdmin/{param1}/": {
+        "/UpdateUserAdmin/{param1}/": {
             "post": {
                 "tags": [
                     "UserService"

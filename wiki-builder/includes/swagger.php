@@ -52,22 +52,15 @@ $paramDetails = array(
 
 function buildAndSaveConfig($swaggerFiles) {
 	$config = new stdClass();
-	$config->oauth2RedirectUrl = 'https://therealbgoat.github.io/BungieNetPlatform/swagger/';
-	$config->dom_id = '#swagger-ui';
-	$config->displayOperationId = true;
-	$config->showRequestHeaders = true;
-	$config->presets = array('SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset');
-	$config->plugins = array('SwaggerUIBundle.plugins.DownloadUrl');
-	$config->layout = 'StandaloneLayout';
 	$config->urls = $swaggerFiles;
 	$config->{'urls.primaryName'} = 'DestinyService';
 
 	file_put_contents(BUILDERPATH.'/config/swagger-config.json', str_replace(['\/'], ['/'], json_encode($config, JSON_PRETTY_PRINT)));
 }
 
-function buildInfo($desc) {
+function buildInfo($desc, $serviceName) {
 	$contact = new stdClass();
-	$contact->name = '/r/DestinyTheGame';
+	$contact->name = 'TheRealBGoat';
 	$contact->email = 'fake@email.com';
 
 	$license = new stdClass();
@@ -77,7 +70,7 @@ function buildInfo($desc) {
 	$info = new stdClass();
 	$info->description = $desc;
 	$info->version = '1.0.0';
-	$info->title = 'BungieNetPlatform API Swagger';
+	$info->title = 'BungieNetPlatform '.$serviceName.' API';
 	$info->contact = $contact;
 	$info->license = $license;
 
@@ -219,7 +212,7 @@ foreach ($endpoints as $service) {
 	$serviceName = $service->name;
 
 	$chopIdx = strpos($serviceName, 'Service');
-	$shortServiceName = substr($serviceName, 0, $chopIdx);
+	$shortServiceName = ($serviceName === 'ApplicationService') ? 'App' : substr($serviceName, 0, $chopIdx);
 
 	// Only include the DestinyService endpoints right now
 	// if ($serviceName !== 'DestinyService') continue;
@@ -246,11 +239,12 @@ foreach ($endpoints as $service) {
 		$truncated = substr($noLeadingSlash, $nextSlashIdx + 1);
 
 		// TODO - make this work for all services by stripping "Service" from the name
-		$externalDocUrl = 'https://www.bungie.net/platform/'.strtolower($shortServiceName).'/help/HelpDetail/'.$endpoint->method.'?uri='.urlencode($truncated);
+		$externalDocBaseUrl = 'https://www.bungie.net/platform/'.strtolower($shortServiceName).'/help';
+		$externalDocDetailUrl = $externalDocBaseUrl.'/HelpDetail/'.$endpoint->method.'?uri='.urlencode($truncated);
 
 		//var_dump('ExternalDocUrl: '.$externalDocUrl);
 		// Fetch the external doc page and parse to see if login is required
-		$ch = curl_init($externalDocUrl);
+		$ch = curl_init($externalDocDetailUrl);
 		curl_setopt_array($ch, array(
 			CURLOPT_RETURNTRANSFER => true
 		));
@@ -320,7 +314,7 @@ foreach ($endpoints as $service) {
 
 		// $externalDocs = new stdClass();
 		// $externalDocs->description = '';
-		// $externalDocs->url = $externalDocUrl;
+		// $externalDocs->url = $externalDocDetailUrl;
 
 		// $opDetails->externalDocs = $externalDocs;
 
@@ -330,17 +324,22 @@ foreach ($endpoints as $service) {
 
 		$op = array(strtolower($endpoint->method) => $opDetails);
 
+		$pathName = str_replace('/'.$shortServiceName, '', $endpoint->endpoint);
+
 		// Build up the Path
-		$paths->{$endpoint->endpoint} = $op;
+		$paths->{$pathName} = $op;
 	}
 
 	$swagger = new stdClass();
 	$swagger->swagger = '2.0';
-	$swagger->info = buildInfo('Swagger documenation and interactive testing for all '.$serviceName.' endpoints in the BungieNetPlatform');
+	$swagger->info = buildInfo(
+		'Swagger documenation and interactive testing for all `'.$serviceName.'` endpoints in the `BungieNetPlatform`\n\nOfficial Documentation: '.$externalDocBaseUrl,
+		$serviceName
+	);
 	$swagger->schemes = array('https');
 	$swagger->securityDefinitions = buildSecurityDefinitions();
 	$swagger->host = 'www.bungie.net';
-	$swagger->basePath = '/Platform';
+	$swagger->basePath = '/Platform/'.$shortServiceName;
 	$swagger->paths = $paths;
 
 	$filename = strtolower($serviceName).'-swagger.json';

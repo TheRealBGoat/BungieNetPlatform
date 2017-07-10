@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all JSONPService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `JSONPService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/jsonp/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform JSONPService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/JSONP",
     "paths": {
-        "/JSONP/GetBungieNetUser/": {
+        "/GetBungieNetUser/": {
             "get": {
                 "tags": [
                     "JSONPService"

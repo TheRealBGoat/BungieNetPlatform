@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all ContentService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `ContentService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/content/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform ContentService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Content",
     "paths": {
-        "/Content/Careers/{param1}/": {
+        "/Careers/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -53,7 +53,7 @@
                 }
             }
         },
-        "/Content/Careers/": {
+        "/Careers/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -70,7 +70,7 @@
                 }
             }
         },
-        "/Content/GetContentById/{param1}/{param2}/": {
+        "/GetContentById/{param1}/{param2}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -108,7 +108,7 @@
                 }
             }
         },
-        "/Content/GetContentByTagAndType/{param1}/{param2}/{param3}/": {
+        "/GetContentByTagAndType/{param1}/{param2}/{param3}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -153,7 +153,7 @@
                 }
             }
         },
-        "/Content/GetContentType/{param1}/": {
+        "/GetContentType/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -178,7 +178,7 @@
                 }
             }
         },
-        "/Content/Site/Destiny/{param1}/": {
+        "/Site/Destiny/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -203,7 +203,7 @@
                 }
             }
         },
-        "/Content/Site/Destiny/V2/{param1}/": {
+        "/Site/Destiny/V2/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -228,7 +228,7 @@
                 }
             }
         },
-        "/Content/Site/Featured/": {
+        "/Site/Featured/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -245,7 +245,7 @@
                 }
             }
         },
-        "/Content/Site/Homepage/{param1}/": {
+        "/Site/Homepage/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -270,7 +270,7 @@
                 }
             }
         },
-        "/Content/Site/Homepage/V2/": {
+        "/Site/Homepage/V2/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -287,7 +287,7 @@
                 }
             }
         },
-        "/Content/Site/Jobs/{param1}/": {
+        "/Site/Jobs/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -312,7 +312,7 @@
                 }
             }
         },
-        "/Content/Site/News/{param1}/{param2}/": {
+        "/Site/News/{param1}/{param2}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -356,7 +356,7 @@
                 }
             }
         },
-        "/Content/Site/Destiny/Promo/": {
+        "/Site/Destiny/Promo/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -373,7 +373,7 @@
                 }
             }
         },
-        "/Content/Site/Publications/{param1}/": {
+        "/Site/Publications/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -398,7 +398,7 @@
                 }
             }
         },
-        "/Content/Careers/Search/": {
+        "/Careers/Search/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -422,7 +422,7 @@
                 }
             }
         },
-        "/Content/SearchContentByTagAndType/{param1}/{param2}/{param3}/": {
+        "/SearchContentByTagAndType/{param1}/{param2}/{param3}/": {
             "get": {
                 "tags": [
                     "ContentService"
@@ -479,7 +479,7 @@
                 }
             }
         },
-        "/Content/SearchEx/{param1}/": {
+        "/SearchEx/{param1}/": {
             "post": {
                 "tags": [
                     "ContentService"
@@ -510,7 +510,7 @@
                 }
             }
         },
-        "/Content/Search/{param1}/": {
+        "/Search/{param1}/": {
             "get": {
                 "tags": [
                     "ContentService"

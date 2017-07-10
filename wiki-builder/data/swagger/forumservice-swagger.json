@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all ForumService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `ForumService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/forum/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform ForumService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Forum",
     "paths": {
-        "/Forum/Recruit/Approve/{param1}/": {
+        "/Recruit/Approve/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -53,7 +53,7 @@
                 }
             }
         },
-        "/Forum/ChangeLockState/{param1}/{param2}/": {
+        "/ChangeLockState/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -85,7 +85,7 @@
                 }
             }
         },
-        "/Forum/ChangePinState/{param1}/{param2}/": {
+        "/ChangePinState/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -117,7 +117,7 @@
                 }
             }
         },
-        "/Forum/CreateContentComment/": {
+        "/CreateContentComment/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -134,7 +134,7 @@
                 }
             }
         },
-        "/Forum/CreatePost/": {
+        "/CreatePost/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -196,7 +196,7 @@
                 ]
             }
         },
-        "/Forum/DeletePost/{param1}/": {
+        "/DeletePost/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -221,7 +221,7 @@
                 }
             }
         },
-        "/Forum/EditPost/{param1}/": {
+        "/EditPost/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -246,7 +246,7 @@
                 }
             }
         },
-        "/Forum/GetCoreTopicsPaged/{param1}/{param2}/{param3}/{param4}/": {
+        "/GetCoreTopicsPaged/{param1}/{param2}/{param3}/{param4}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -298,7 +298,7 @@
                 }
             }
         },
-        "/Forum/GetForumTagCountEstimate/{param1}/": {
+        "/GetForumTagCountEstimate/{param1}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -323,7 +323,7 @@
                 }
             }
         },
-        "/Forum/GetForumTagSuggestions/": {
+        "/GetForumTagSuggestions/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -347,7 +347,7 @@
                 }
             }
         },
-        "/Forum/Poll/{param1}/": {
+        "/Poll/{param1}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -372,7 +372,7 @@
                 }
             }
         },
-        "/Forum/GetPopularTags/": {
+        "/GetPopularTags/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -402,7 +402,7 @@
                 }
             }
         },
-        "/Forum/GetPostAndParent/{childPostId}/": {
+        "/GetPostAndParent/{childPostId}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -433,7 +433,7 @@
                 }
             }
         },
-        "/Forum/GetPostAndParentAwaitingApproval/{childPostId}/": {
+        "/GetPostAndParentAwaitingApproval/{childPostId}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -464,7 +464,7 @@
                 }
             }
         },
-        "/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/": {
+        "/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -537,7 +537,7 @@
                 }
             }
         },
-        "/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/": {
+        "/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -603,7 +603,7 @@
                 }
             }
         },
-        "/Forum/Recruit/Summaries/": {
+        "/Recruit/Summaries/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -620,7 +620,7 @@
                 }
             }
         },
-        "/Forum/GetTopicForContent/{contentId}/": {
+        "/GetTopicForContent/{contentId}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -645,7 +645,7 @@
                 }
             }
         },
-        "/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/": {
+        "/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/": {
             "get": {
                 "tags": [
                     "ForumService"
@@ -717,7 +717,7 @@
                 }
             }
         },
-        "/Forum/Recruit/Join/{param1}/": {
+        "/Recruit/Join/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -742,7 +742,7 @@
                 }
             }
         },
-        "/Forum/Recruit/KickBan/{param1}/{param2}/": {
+        "/Recruit/KickBan/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -774,7 +774,7 @@
                 }
             }
         },
-        "/Forum/Recruit/Leave/{param1}/": {
+        "/Recruit/Leave/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -799,7 +799,7 @@
                 }
             }
         },
-        "/Forum/MarkReplyAsAnswer/{param1}/{param2}/": {
+        "/MarkReplyAsAnswer/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -831,7 +831,7 @@
                 }
             }
         },
-        "/Forum/Post/{param1}/GroupModerate/": {
+        "/Post/{param1}/GroupModerate/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -856,7 +856,7 @@
                 }
             }
         },
-        "/Forum/Post/{param1}/Moderate/": {
+        "/Post/{param1}/Moderate/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -881,7 +881,7 @@
                 }
             }
         },
-        "/Forum/Tags/{param1}/Moderate/": {
+        "/Tags/{param1}/Moderate/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -906,7 +906,7 @@
                 }
             }
         },
-        "/Forum/Poll/Vote/{param1}/{param2}/": {
+        "/Poll/Vote/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -938,7 +938,7 @@
                 }
             }
         },
-        "/Forum/RatePost/{param1}/{param2}/": {
+        "/RatePost/{param1}/{param2}/": {
             "post": {
                 "tags": [
                     "ForumService"
@@ -970,7 +970,7 @@
                 }
             }
         },
-        "/Forum/UnmarkReplyAsAnswer/{param1}/": {
+        "/UnmarkReplyAsAnswer/{param1}/": {
             "post": {
                 "tags": [
                     "ForumService"
