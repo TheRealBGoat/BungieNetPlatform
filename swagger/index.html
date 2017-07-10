@@ -86,28 +86,28 @@ window.onload = function() {
 
 	// Listen for changes to localStorage and request tokens
 	// once a code has been added
-	window.addEventListener('storage', function(e) {
-		const authCode = localStorage.getItem('bnet-code');
-
-		if (authCode) {
-			$.ajax({
-				url: 'https://www.bungie.net/platform/app/oauth/token/',
-				type: 'post',
-				data: {
-					grant_type: 'authorization_code',
-					code: authCode,
-					client_id: 1953
-				},
-				dataType: 'json',
-				success: function(data) {
-					localStorage.setItem('bnet-access-token', data.access_token);
-				},
-				complete: function(req, status) {
-					localStorage.removeItem('bnet-code');
-				}
-			});
-		}
-	});
+	// window.addEventListener('storage', function(e) {
+	// 	const authCode = localStorage.getItem('bnet-code');
+	//
+	// 	if (authCode) {
+	// 		$.ajax({
+	// 			url: 'https://www.bungie.net/platform/app/oauth/token/',
+	// 			type: 'post',
+	// 			data: {
+	// 				grant_type: 'authorization_code',
+	// 				code: authCode,
+	// 				client_id: 1953
+	// 			},
+	// 			dataType: 'json',
+	// 			success: function(data) {
+	// 				localStorage.setItem('bnet-access-token', data.access_token);
+	// 			},
+	// 			complete: function(req, status) {
+	// 				localStorage.removeItem('bnet-code');
+	// 			}
+	// 		});
+	// 	}
+	// });
 
 	const urlParams = new URLSearchParams(window.location.search);
 
@@ -130,8 +130,6 @@ window.onload = function() {
 
 		isValid = qp.state === sentState
 
-		console.log('isValid:', isValid);
-
 		if (oauth2.auth.schema.get("flow") === "accessCode" && !oauth2.auth.code) {
 				if (!isValid) {
 						oauth2.errCb({
@@ -145,7 +143,6 @@ window.onload = function() {
 				if (qp.code) {
 						delete oauth2.state;
 						oauth2.auth.code = qp.code;
-						console.log('Calling oauth2 callback with auth:', oauth2.auth);
 						oauth2.callback({auth: oauth2.auth, redirectUrl: redirectUrl});
 				} else {
 						oauth2.errCb({
@@ -159,9 +156,7 @@ window.onload = function() {
 				oauth2.callback({auth: oauth2.auth, token: qp, isValid: isValid, redirectUrl: redirectUrl});
 		}
 
-		// const authCode = urlParams.get('code');
-		// localStorage.setItem('bnet-code', authCode);
-		// window.close();
+		window.close();
 	}
 
   // Build a system
