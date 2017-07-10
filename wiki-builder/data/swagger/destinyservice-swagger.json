@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Swagger documenation and interactive testing for all DestinyService endpoints in the BungieNetPlatform",
+        "description": "Swagger documenation and interactive testing for all `DestinyService` endpoints in the `BungieNetPlatform`\\n\\nOfficial Documentation: https://www.bungie.net/platform/destiny/help",
         "version": "1.0.0",
-        "title": "BungieNetPlatform API Swagger",
+        "title": "BungieNetPlatform DestinyService API",
         "contact": {
-            "name": "/r/DestinyTheGame",
+            "name": "TheRealBGoat",
             "email": "fake@email.com"
         },
         "license": {
@@ -26,9 +26,9 @@
         }
     },
     "host": "www.bungie.net",
-    "basePath": "/Platform",
+    "basePath": "/Platform/Destiny",
     "paths": {
-        "/Destiny/EquipItem/": {
+        "/EquipItem/": {
             "post": {
                 "tags": [
                     "DestinyService"
@@ -73,7 +73,7 @@
                 ]
             }
         },
-        "/Destiny/EquipItems/": {
+        "/EquipItems/": {
             "post": {
                 "tags": [
                     "DestinyService"
@@ -118,7 +118,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/": {
+        "/{membershipType}/Account/{destinyMembershipId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -169,7 +169,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Summary/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Summary/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -220,7 +220,7 @@
                 }
             }
         },
-        "/Destiny/Stats/ActivityBlob/{e}/": {
+        "/Stats/ActivityBlob/{e}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -245,7 +245,7 @@
                 }
             }
         },
-        "/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/": {
+        "/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -362,7 +362,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Advisors/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Advisors/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -413,7 +413,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -471,7 +471,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/V2/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/V2/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -529,7 +529,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Advisors/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -585,7 +585,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Items/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Items/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -636,7 +636,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendors/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -692,7 +692,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Advisors/Bonds/": {
+        "/{membershipType}/MyAccount/Advisors/Bonds/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -741,7 +741,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -804,7 +804,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -862,7 +862,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -920,7 +920,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -978,7 +978,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1036,7 +1036,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1094,7 +1094,7 @@
                 }
             }
         },
-        "/Destiny/Stats/ClanLeaderboards/{param1}/": {
+        "/Stats/ClanLeaderboards/{param1}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1178,7 +1178,7 @@
                 }
             }
         },
-        "/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/": {
+        "/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1236,7 +1236,7 @@
                 }
             }
         },
-        "/Destiny/Explorer/Items/": {
+        "/Explorer/Items/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1478,7 +1478,7 @@
                 }
             }
         },
-        "/Destiny/Explorer/TalentNodeSteps/": {
+        "/Explorer/TalentNodeSteps/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1637,7 +1637,7 @@
                 }
             }
         },
-        "/Destiny/LiveTiles/": {
+        "/LiveTiles/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1654,7 +1654,7 @@
                 }
             }
         },
-        "/Destiny/Manifest/": {
+        "/Manifest/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1671,7 +1671,7 @@
                 }
             }
         },
-        "/Destiny/Manifest/{definitionType}/{definitionId}/": {
+        "/Manifest/{definitionType}/{definitionId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1745,7 +1745,7 @@
                 }
             }
         },
-        "/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/": {
+        "/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1796,7 +1796,7 @@
                 }
             }
         },
-        "/Destiny/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/": {
+        "/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1859,7 +1859,7 @@
                 }
             }
         },
-        "/Destiny/Vanguard/Grimoire/Definition/": {
+        "/Vanguard/Grimoire/Definition/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -1876,7 +1876,7 @@
                 }
             }
         },
-        "/Destiny/Stats/{membershipType}/{destinyMembershipId}/{characterId}/": {
+        "/Stats/{membershipType}/{destinyMembershipId}/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2035,7 +2035,7 @@
                 }
             }
         },
-        "/Destiny/Stats/Definition/": {
+        "/Stats/Definition/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2052,7 +2052,7 @@
                 }
             }
         },
-        "/Destiny/Stats/Account/{membershipType}/{destinyMembershipId}/": {
+        "/Stats/Account/{membershipType}/{destinyMembershipId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2117,7 +2117,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2182,7 +2182,7 @@
                 }
             }
         },
-        "/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/": {
+        "/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2235,7 +2235,7 @@
                 }
             }
         },
-        "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/": {
+        "/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2338,7 +2338,7 @@
                 }
             }
         },
-        "/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/": {
+        "/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2448,7 +2448,7 @@
                 }
             }
         },
-        "/Destiny/Stats/LeaderboardsForPsn/": {
+        "/Stats/LeaderboardsForPsn/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2519,7 +2519,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Stats/GetMembershipIdByDisplayName/{displayName}/": {
+        "/{membershipType}/Stats/GetMembershipIdByDisplayName/{displayName}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2569,7 +2569,7 @@
                 }
             }
         },
-        "/Destiny/Vanguard/Grimoire/{membershipType}/": {
+        "/Vanguard/Grimoire/{membershipType}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2625,7 +2625,7 @@
                 }
             }
         },
-        "/Destiny/Stats/PostGameCarnageReport/{activityInstanceId}/": {
+        "/Stats/PostGameCarnageReport/{activityInstanceId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2657,7 +2657,7 @@
                 }
             }
         },
-        "/Destiny/Advisors/": {
+        "/Advisors/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2682,7 +2682,7 @@
                 }
             }
         },
-        "/Destiny/Advisors/V2/": {
+        "/Advisors/V2/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2707,7 +2707,7 @@
                 }
             }
         },
-        "/Destiny/Vendors/{vendorId}/": {
+        "/Vendors/{vendorId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2739,7 +2739,7 @@
                 }
             }
         },
-        "/Destiny/Vendors/{vendorId}/Metadata/": {
+        "/Vendors/{vendorId}/Metadata/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2771,7 +2771,7 @@
                 }
             }
         },
-        "/Destiny/Advisors/Xur/": {
+        "/Advisors/Xur/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2796,7 +2796,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/": {
+        "/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2852,7 +2852,7 @@
                 ]
             }
         },
-        "/Destiny/Events/": {
+        "/Events/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2877,7 +2877,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/Account/{destinyMembershipId}/Triumphs/": {
+        "/{membershipType}/Account/{destinyMembershipId}/Triumphs/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2928,7 +2928,7 @@
                 }
             }
         },
-        "/Destiny/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/": {
+        "/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -2986,7 +2986,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Vault/": {
+        "/{membershipType}/MyAccount/Vault/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3041,7 +3041,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Vault/Summary/": {
+        "/{membershipType}/MyAccount/Vault/Summary/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3096,7 +3096,7 @@
                 ]
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3154,7 +3154,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Metadata/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Metadata/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3212,7 +3212,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3277,7 +3277,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/Metadata/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/Metadata/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3342,7 +3342,7 @@
                 }
             }
         },
-        "/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/Summaries/": {
+        "/{membershipType}/MyAccount/Character/{characterId}/Vendors/Summaries/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3398,7 +3398,7 @@
                 ]
             }
         },
-        "/Destiny/SearchDestinyPlayer/{membershipType}/{displayName}/": {
+        "/SearchDestinyPlayer/{membershipType}/{displayName}/": {
             "get": {
                 "tags": [
                     "DestinyService"
@@ -3442,7 +3442,7 @@
                 }
             }
         },
-        "/Destiny/SetLockState/": {
+        "/SetLockState/": {
             "post": {
                 "tags": [
                     "DestinyService"
@@ -3490,7 +3490,7 @@
                 ]
             }
         },
-        "/Destiny/SetQuestTrackedState/": {
+        "/SetQuestTrackedState/": {
             "post": {
                 "tags": [
                     "DestinyService"
@@ -3541,7 +3541,7 @@
                 ]
             }
         },
-        "/Destiny/TransferItem/": {
+        "/TransferItem/": {
             "post": {
                 "tags": [
                     "DestinyService"

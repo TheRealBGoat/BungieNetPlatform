@@ -2,7 +2,7 @@
 
 $paramDetails = array(
 	'membershipType' => array('enum' => 'BungieMembershipType', 'type' => 'string', 'desc' => 'A valid Bungie.net membershipType.'),
-	'invitationResponseState' => array('enum' => 'InvitationResponseState', 'string' => 'integer', 'desc' => 'How to respond to the invitation.'),
+	'invitationResponseState' => array('enum' => 'InvitationResponseState', 'type' => 'integer', 'desc' => 'How to respond to the invitation.'),
 	'count' => array('type' => 'integer', 'desc' => 'Number of rows to return.'),
 	'tpage' => array('type' => 'integer', 'desc' => 'Page number to return, starting with 0.'),
 	'page' => array('type' => 'integer', 'desc' => 'The current page to return. Starts at 1.'),

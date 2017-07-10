@@ -63,6 +63,18 @@
         {
             "name": "TokensService",
             "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/tokensservice-swagger.json"
+        },
+        {
+            "name": "DestinyService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/destinyservice-swagger.json"
+        },
+        {
+            "name": "CommunitycontentService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/communitycontentservice-swagger.json"
+        },
+        {
+            "name": "CoreService",
+            "url": "https://raw.githubusercontent.com/TheRealBGoat/BungieNetPlatform/swagger-builder/wiki-builder/data/swagger/coreservice-swagger.json"
         }
     ],
     "urls.primaryName": "DestinyService"
