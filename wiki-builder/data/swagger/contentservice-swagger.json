@@ -19,6 +19,7 @@
     "securityDefinitions": {
         "BungieAuth": {
             "type": "bungie",
+            "desc": "Some BungieNetPlatform API endpoints require you to login to a valid Bungie.net account. Any endpoint that has an open lock icon next to it requires this additional authentication. Click below to be taken to Bungie.net to login and authorize the dashboard to perform operations on your behalf.",
             "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
             "tokenUrl": "https://www.bungie.net/platform/app/oauth/token/",
             "flow": "accessCode",
