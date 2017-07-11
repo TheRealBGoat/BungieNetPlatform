@@ -176,9 +176,12 @@ window.onload = function() {
     layout: "StandaloneLayout"
   })
 
-	// ui.initOAuth({
-	// 	clientId: 1953
-	// })
+	ui.initOAuth({
+		clientId: '1953',
+		clientSecret: '',
+		scopeSeparator: ' ',
+		additionalQueryStringParams: {}
+	})
 
   window.ui = ui
 }
