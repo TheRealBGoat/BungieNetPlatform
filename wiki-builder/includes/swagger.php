@@ -83,7 +83,7 @@ function buildSecurityDefinitions() {
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
 	$oauth->type = 'oauth2';
-	$oauth->desc = 'Some BungieNetPlatform API endpoints require you to login to a valid Bungie.net account. Any endpoint that has an open lock icon next to it requires this additional authentication. Click below to be taken to Bungie.net to login and authorize the dashboard to perform operations on your behalf.';
+	$oauth->description = 'Some BungieNetPlatform API endpoints require you to login to a valid Bungie.net account. Any endpoint that has an open lock icon next to it requires this additional authentication. Click below to be taken to Bungie.net to login and authorize the dashboard to perform operations on your behalf.';
 	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
 	$oauth->tokenUrl = 'https://www.bungie.net/platform/app/oauth/token/';
 	$oauth->flow = 'accessCode';
