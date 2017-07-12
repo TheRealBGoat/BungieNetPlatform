@@ -17,6 +17,12 @@
         "https"
     ],
     "securityDefinitions": {
+        "BungieApiKey": {
+            "type": "apiKey",
+            "description": "Access to the BungieNetPlatform APIs requires an API Key to be passed as a header. Please specify your API Key here.",
+            "in": "header",
+            "name": "X-API-Key"
+        },
         "BungieAuth": {
             "type": "oauth2",
             "description": "Some BungieNetPlatform API endpoints require you to login to a valid Bungie.net account. Any endpoint that has an open lock icon next to it requires this additional authentication. Click below to be taken to Bungie.net to login and authorize the dashboard to perform operations on your behalf.",
@@ -26,6 +32,11 @@
             "scopes": {}
         }
     },
+    "security": [
+        {
+            "BungieApiKey": []
+        }
+    ],
     "host": "www.bungie.net",
     "basePath": "/Platform/App",
     "paths": {
@@ -41,7 +52,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -73,7 +87,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -98,7 +115,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -115,7 +135,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -140,7 +163,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -157,7 +183,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -174,7 +203,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -199,7 +231,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -224,7 +259,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -256,7 +294,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -287,7 +328,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -304,7 +348,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -321,7 +368,10 @@
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
                 }
             }
@@ -353,8 +403,36 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/BnetSuccess"
+                        }
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "BnetSuccess": {
+            "type": "object",
+            "properties": {
+                "Response": {
+                    "type": "object"
+                },
+                "ErrorCode": {
+                    "type": "integer"
+                },
+                "ThrottleSeconds": {
+                    "type": "integer"
+                },
+                "ErrorStatus": {
+                    "type": "string"
+                },
+                "Message": {
+                    "type": "string"
+                },
+                "MessageData": {
+                    "type": "object"
                 }
             }
         }

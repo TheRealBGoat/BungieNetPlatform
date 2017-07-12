@@ -5,3 +5,4 @@ wiki-builder/cache
 wiki-wikia.php
 endpoints-changes.json
 enums-changes.json
+wiki-builder/includes/swagger-codegen

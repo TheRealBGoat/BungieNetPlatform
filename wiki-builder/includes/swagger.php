@@ -78,7 +78,16 @@ function buildInfo($desc, $serviceName) {
 }
 
 function buildSecurityDefinitions() {
-	$security = new stdClass();
+	$securityDef = new stdClass();
+
+	// Setup Bungie ApiKey security definition
+	$apiKey = new stdClass();
+	$apiKey->type = 'apiKey';
+	$apiKey->description = 'Access to the BungieNetPlatform APIs requires an API Key to be passed as a header. Please specify your API Key here.';
+	$apiKey->in = 'header';
+	$apiKey->name = 'X-API-Key';
+
+	$securityDef->BungieApiKey = $apiKey;
 
 	// Setup Bungie OAuth security definition
 	$oauth = new stdClass();
@@ -87,19 +96,38 @@ function buildSecurityDefinitions() {
 	$oauth->authorizationUrl = 'https://www.bungie.net/en/OAuth/Authorize';
 	$oauth->tokenUrl = 'https://www.bungie.net/platform/app/oauth/token/';
 	$oauth->flow = 'accessCode';
+	$oauth->scopes = new stdClass(); // Bungie doesn't need or allow scopes to be passed
 
-	$scopes = new stdClass();
-	// $scopes->{'ReadBasicUserProfile'} = "Read user profile information such as the user's handle, Xbox and PSN account names, and Destiny characters.";
-	// $scopes->{'MoveEquipDestinyItems'} = "Move or equip Destiny items";
-	// $scopes->{'ReadDestinyInventoryAndVault'} = "Read user's Destiny vault and character inventory.";
-	// $scopes->{'ReadUserData'} = "Read user data such as web notifications, clan/group memberships, recent activity, and muted users.";
-	// $scopes->{'ReadDestinyVendorsAndAdvisors'} = "Access vendor and advisor data specific to a user.";
+	$securityDef->BungieAuth = $oauth;
 
-	$oauth->scopes = $scopes;
+	return $securityDef;
+}
 
-	$security->BungieAuth = $oauth;
+function buildDefinitions() {
+	$definitions = new stdClass();
 
-	return $security;
+	$bnetResp = new stdClass();
+	$bnetResp->type = 'object';
+
+	$props = new stdClass();
+	$props->Response = new stdClass();
+	$props->Response->type = 'object';
+	$props->ErrorCode = new stdClass();
+	$props->ErrorCode->type = 'integer';
+	$props->ThrottleSeconds = new stdClass();
+	$props->ThrottleSeconds->type = 'integer';
+	$props->ErrorStatus = new stdClass();
+	$props->ErrorStatus->type = 'string';
+	$props->Message = new stdClass();
+	$props->Message->type = 'string';
+	$props->MessageData = new stdClass();
+	$props->MessageData->type = 'object';
+
+	$bnetResp->properties = $props;
+
+	$definitions->BnetSuccess = $bnetResp;
+
+	return $definitions;
 }
 
 function buildParam($name, $paramType, $enums) {
@@ -302,8 +330,9 @@ foreach ($endpoints as $service) {
 
 		$successResponse = new StdClass();
 		$successResponse->description = 'Successful operation';
+		$successResponse->schema = new stdClass();
+		$successResponse->schema->{'$ref'} = '#/definitions/BnetSuccess';
 		$responses->{'200'} = $successResponse;
-
 
 		// Build up the Operation
 		$opDetails = new stdClass();
@@ -339,9 +368,11 @@ foreach ($endpoints as $service) {
 	);
 	$swagger->schemes = array('https');
 	$swagger->securityDefinitions = buildSecurityDefinitions();
+	$swagger->security[] = array('BungieApiKey' => array());
 	$swagger->host = 'www.bungie.net';
 	$swagger->basePath = '/Platform/'.$shortServiceName;
 	$swagger->paths = $paths;
+	$swagger->definitions = buildDefinitions();
 
 	$filename = strtolower($serviceName).'-swagger.json';
 	$swaggerUrl = new stdClass();
