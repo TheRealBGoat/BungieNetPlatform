@@ -152,18 +152,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
