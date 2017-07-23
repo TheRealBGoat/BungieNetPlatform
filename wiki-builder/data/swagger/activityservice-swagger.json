@@ -495,7 +495,7 @@
                         "name": "membershipType",
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [

@@ -836,7 +836,7 @@
                         "name": "invitationResponseState",
                         "description": "How to respond to the invitation.",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [

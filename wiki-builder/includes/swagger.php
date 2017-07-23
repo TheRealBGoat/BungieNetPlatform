@@ -164,7 +164,7 @@ function buildParam($name, $paramType, $enums) {
 		if (isset($details['enum'])) {
 			$enumName = $details['enum'];
 
-			$param->type = 'array';
+			$param->type = 'string';
 
 			$items = new stdClass();
 			$items->type = 'string';

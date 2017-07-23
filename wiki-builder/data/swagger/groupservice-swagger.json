@@ -703,7 +703,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -954,7 +954,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2133,7 +2133,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2501,7 +2501,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2697,7 +2697,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2799,7 +2799,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2846,7 +2846,7 @@
                         "name": "membershipType",
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -2886,7 +2886,7 @@
                         "name": "clanMembershipType",
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [

@@ -4,7 +4,12 @@
             "name": "GetCurrentUser",
             "method": "GET",
             "endpoint": "\/JSONP\/GetBungieNetUser\/",
-            "params": [],
+            "params": {
+                "callback": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -143,7 +148,12 @@
             "name": "GetAuthorizations",
             "method": "GET",
             "endpoint": "\/App\/Authorizations\/{param1}\/",
-            "params": [],
+            "params": {
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -427,7 +437,12 @@
             "name": "GetUserMembershipIds",
             "method": "GET",
             "endpoint": "\/User\/GetMembershipIds\/",
-            "params": [],
+            "params": {
+                "excludebungienet": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -468,7 +483,12 @@
             "name": "SearchUsers",
             "method": "GET",
             "endpoint": "\/User\/SearchUsers\/",
-            "params": [],
+            "params": {
+                "q": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -572,68 +592,7 @@
             "name": "UpdateUser",
             "method": "POST",
             "endpoint": "\/User\/UpdateUser\/",
-            "params": {
-                "about": {
-                    "desc": "",
-                    "link": ""
-                },
-                "adultMode": {
-                    "desc": "",
-                    "link": ""
-                },
-                "displayName": {
-                    "desc": "",
-                    "link": ""
-                },
-                "emailAddress": {
-                    "desc": "",
-                    "link": ""
-                },
-                "emailUsage": {
-                    "desc": "",
-                    "link": ""
-                },
-                "locale": {
-                    "desc": "",
-                    "link": ""
-                },
-                "localeInheritDefault": {
-                    "desc": "",
-                    "link": ""
-                },
-                "profilePicture": {
-                    "desc": "",
-                    "link": ""
-                },
-                "profileTheme": {
-                    "desc": "",
-                    "link": ""
-                },
-                "showActivity": {
-                    "desc": "",
-                    "link": ""
-                },
-                "showFacebookPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "showGamertagPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "showGroupMessaging": {
-                    "desc": "",
-                    "link": ""
-                },
-                "showPsnPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "uniqueName": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "about": {
                     "desc": "",
@@ -787,7 +746,12 @@
             "name": "GetConversationByIdV2",
             "method": "GET",
             "endpoint": "\/Message\/GetConversationByIdV2\/{param1}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -837,7 +801,12 @@
             "name": "GetConversationsV4",
             "method": "GET",
             "endpoint": "\/Message\/GetConversationsV4\/{param1}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -851,7 +820,12 @@
             "name": "GetConversationsV5",
             "method": "GET",
             "endpoint": "\/Message\/GetConversationsV5\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "currentPage": {
@@ -887,7 +861,20 @@
             "name": "GetConversationThreadV3",
             "method": "GET",
             "endpoint": "\/Message\/GetConversationThreadV3\/{param1}\/{param2}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                },
+                "before": {
+                    "desc": "",
+                    "link": ""
+                },
+                "after": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -919,7 +906,12 @@
             "name": "GetConversationWithMemberIdV2",
             "method": "GET",
             "endpoint": "\/Message\/GetConversationWithMemberV2\/{param1}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -933,7 +925,12 @@
             "name": "GetGroupConversations",
             "method": "GET",
             "endpoint": "\/Message\/GetGroupConversations\/{param1}\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1157,7 +1154,12 @@
             "name": "GetRealTimeEvents",
             "method": "GET",
             "endpoint": "\/Notification\/Events\/{param1}\/{param2}\/",
-            "params": [],
+            "params": {
+                "timeout": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1184,7 +1186,12 @@
             "name": "GetRecentNotifications",
             "method": "GET",
             "endpoint": "\/Notification\/GetRecent\/",
-            "params": [],
+            "params": {
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -1227,7 +1234,12 @@
             "name": "GetContentById",
             "method": "GET",
             "endpoint": "\/Content\/GetContentById\/{param1}\/{param2}\/",
-            "params": [],
+            "params": {
+                "head": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1245,7 +1257,12 @@
             "name": "GetContentByTagAndType",
             "method": "GET",
             "endpoint": "\/Content\/GetContentByTagAndType\/{param1}\/{param2}\/{param3}\/",
-            "params": [],
+            "params": {
+                "head": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1355,7 +1372,16 @@
             "name": "GetNews",
             "method": "GET",
             "endpoint": "\/Content\/Site\/News\/{param1}\/{param2}\/",
-            "params": [],
+            "params": {
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1396,7 +1422,12 @@
             "name": "SearchCareers",
             "method": "GET",
             "endpoint": "\/Content\/Careers\/Search\/",
-            "params": [],
+            "params": {
+                "searchtext": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -1405,7 +1436,20 @@
             "name": "SearchContentByTagAndType",
             "method": "GET",
             "endpoint": "\/Content\/SearchContentByTagAndType\/{param1}\/{param2}\/{param3}\/",
-            "params": [],
+            "params": {
+                "head": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1427,7 +1471,12 @@
             "name": "SearchContentEx",
             "method": "POST",
             "endpoint": "\/Content\/SearchEx\/{param1}\/",
-            "params": [],
+            "params": {
+                "head": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1441,7 +1490,28 @@
             "name": "SearchContentWithText",
             "method": "GET",
             "endpoint": "\/Content\/Search\/{param1}\/",
-            "params": [],
+            "params": {
+                "head": {
+                    "desc": "",
+                    "link": ""
+                },
+                "ctype": {
+                    "desc": "",
+                    "link": ""
+                },
+                "tag": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "searchtext": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1457,7 +1527,12 @@
             "name": "GetAggregatedSocialFeed",
             "method": "GET",
             "endpoint": "\/ExternalSocial\/GetAggregatedSocialFeed\/{param1}\/",
-            "params": [],
+            "params": {
+                "types": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1543,44 +1618,7 @@
             "name": "CreatePost",
             "method": "POST",
             "endpoint": "\/Forum\/CreatePost\/",
-            "params": {
-                "body": {
-                    "desc": "",
-                    "link": ""
-                },
-                "category": {
-                    "desc": "",
-                    "link": ""
-                },
-                "groupId": {
-                    "desc": "A valid groupId.",
-                    "link": ""
-                },
-                "isGroupPrivate": {
-                    "desc": "",
-                    "link": ""
-                },
-                "metadata": {
-                    "desc": "",
-                    "link": ""
-                },
-                "parentPostId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "subTopicOverride": {
-                    "desc": "",
-                    "link": ""
-                },
-                "subject": {
-                    "desc": "",
-                    "link": ""
-                },
-                "urlLinkOrImage": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "body": {
                     "desc": "",
@@ -1654,7 +1692,12 @@
             "name": "GetCoreTopicsPaged",
             "method": "GET",
             "endpoint": "\/Forum\/GetCoreTopicsPaged\/{param1}\/{param2}\/{param3}\/{param4}\/",
-            "params": [],
+            "params": {
+                "locales": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1694,7 +1737,12 @@
             "name": "GetForumTagSuggestions",
             "method": "GET",
             "endpoint": "\/Forum\/GetForumTagSuggestions\/",
-            "params": [],
+            "params": {
+                "partialtag": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -1717,7 +1765,16 @@
             "name": "GetPopularTags",
             "method": "GET",
             "endpoint": "\/Forum\/GetPopularTags\/",
-            "params": [],
+            "params": {
+                "quantity": {
+                    "desc": "",
+                    "link": ""
+                },
+                "tagsSinceDate": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -1726,7 +1783,12 @@
             "name": "GetPostAndParent",
             "method": "GET",
             "endpoint": "\/Forum\/GetPostAndParent\/{childPostId}\/",
-            "params": [],
+            "params": {
+                "showbanned": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "childPostId": {
@@ -1740,7 +1802,12 @@
             "name": "GetPostAndParentAwaitingApproval",
             "method": "GET",
             "endpoint": "\/Forum\/GetPostAndParentAwaitingApproval\/{childPostId}\/",
-            "params": [],
+            "params": {
+                "showbanned": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "childPostId": {
@@ -1754,7 +1821,12 @@
             "name": "GetPostsThreadedPaged",
             "method": "GET",
             "endpoint": "\/Forum\/GetPostsThreadedPaged\/{parentPostId}\/{page}\/{pageSize}\/{replySize}\/{getParentPost}\/{rootThreadMode}\/{sortMode}\/",
-            "params": [],
+            "params": {
+                "showbanned": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "parentPostId": {
@@ -1792,7 +1864,12 @@
             "name": "GetPostsThreadedPagedFromChild",
             "method": "GET",
             "endpoint": "\/Forum\/GetPostsThreadedPagedFromChild\/{childPostId}\/{page}\/{pageSize}\/{replySize}\/{rootThreadMode}\/{sortMode}\/",
-            "params": [],
+            "params": {
+                "showbanned": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "childPostId": {
@@ -1849,7 +1926,16 @@
             "name": "GetTopicsPaged",
             "method": "GET",
             "endpoint": "\/Forum\/GetTopicsPaged\/{page}\/{pageSize}\/{group}\/{sort}\/{quickDate}\/{categoryFilter}\/",
-            "params": [],
+            "params": {
+                "tagstring": {
+                    "desc": "",
+                    "link": ""
+                },
+                "locales": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "page": {
@@ -2041,7 +2127,12 @@
             "name": "FollowTag",
             "method": "POST",
             "endpoint": "\/Activity\/Tag\/Follow\/",
-            "params": [],
+            "params": {
+                "tag": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": "Private"
@@ -2064,7 +2155,16 @@
             "name": "GetApplicationActivityForUser",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/Application\/{param2}\/",
-            "params": [],
+            "params": {
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2145,7 +2245,20 @@
             "name": "GetFollowersOfTag",
             "method": "GET",
             "endpoint": "\/Activity\/Tag\/Followers\/",
-            "params": [],
+            "params": {
+                "tag": {
+                    "desc": "",
+                    "link": ""
+                },
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -2154,7 +2267,16 @@
             "name": "GetFollowersOfUser",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{profileId}\/Followers\/",
-            "params": [],
+            "params": {
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "profileId": {
@@ -2168,7 +2290,20 @@
             "name": "GetForumActivityForUser",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/Forums\/",
-            "params": [],
+            "params": {
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2182,7 +2317,16 @@
             "name": "GetForumActivityForUserV2",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/ForumsV2\/",
-            "params": [],
+            "params": {
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2292,7 +2436,20 @@
             "name": "GetLikeAndShareActivityForUser",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikesAndShares\/",
-            "params": [],
+            "params": {
+                "itemsperpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2306,7 +2463,16 @@
             "name": "GetLikeAndShareActivityForUserV2",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikesAndSharesV2\/",
-            "params": [],
+            "params": {
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2320,7 +2486,16 @@
             "name": "GetLikeShareAndForumActivityForUser",
             "method": "GET",
             "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikeShareAndForum\/",
-            "params": [],
+            "params": {
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "format": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -2343,7 +2518,12 @@
             "name": "UnfollowTag",
             "method": "POST",
             "endpoint": "\/Activity\/Tag\/Unfollow\/",
-            "params": [],
+            "params": {
+                "tag": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": "Private"
@@ -2368,12 +2548,7 @@
             "name": "ApproveAllPending",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/ApproveAll\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2410,12 +2585,7 @@
             "name": "ApproveGroupMembershipV2",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/ApproveV2\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2438,16 +2608,7 @@
             "name": "ApprovePendingForList",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/ApproveList\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                },
-                "membershipIds": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2470,16 +2631,7 @@
             "name": "BanMember",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Ban\/",
-            "params": {
-                "comment": {
-                    "desc": "",
-                    "link": ""
-                },
-                "length": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "comment": {
                     "desc": "",
@@ -2547,76 +2699,7 @@
             "name": "CreateGroupV2",
             "method": "POST",
             "endpoint": "\/Group\/Create\/V2\/",
-            "params": {
-                "name": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanCallSign": {
-                    "desc": "",
-                    "link": ""
-                },
-                "motto": {
-                    "desc": "",
-                    "link": ""
-                },
-                "about": {
-                    "desc": "",
-                    "link": ""
-                },
-                "theme": {
-                    "desc": "",
-                    "link": ""
-                },
-                "tags": {
-                    "desc": "",
-                    "link": ""
-                },
-                "avatarImageIndex": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "membershipOption": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isPublicTopicAdminOnly": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isDefaultPostPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanMembershipTypes": {
-                    "desc": "",
-                    "link": ""
-                },
-                "attributes": {
-                    "desc": "",
-                    "link": ""
-                },
-                "allowChat": {
-                    "desc": "",
-                    "link": ""
-                },
-                "locale": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanReviewType": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanName": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "name": {
                     "desc": "",
@@ -2694,16 +2777,7 @@
             "name": "CreateMinimalGroup",
             "method": "POST",
             "endpoint": "\/Group\/Create\/Minimal\/",
-            "params": {
-                "groupName": {
-                    "desc": "",
-                    "link": ""
-                },
-                "groupAbout": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "groupName": {
                     "desc": "",
@@ -2721,12 +2795,7 @@
             "name": "DenyAllPending",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/DenyAll\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2763,12 +2832,7 @@
             "name": "DenyGroupMembershipV2",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/DenyV2\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2791,16 +2855,7 @@
             "name": "DenyPendingForList",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/DenyList\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                },
-                "membershipIds": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -2891,7 +2946,12 @@
             "name": "EditGroupMembership",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/SetMembershipType\/{groupMembershipType}\/",
-            "params": [],
+            "params": {
+                "clanPlatformType": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -2913,88 +2973,7 @@
             "name": "EditGroupV2",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/EditV2\/",
-            "params": {
-                "name": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanCallSign": {
-                    "desc": "",
-                    "link": ""
-                },
-                "motto": {
-                    "desc": "",
-                    "link": ""
-                },
-                "about": {
-                    "desc": "",
-                    "link": ""
-                },
-                "theme": {
-                    "desc": "",
-                    "link": ""
-                },
-                "tags": {
-                    "desc": "",
-                    "link": ""
-                },
-                "avatarImageIndex": {
-                    "desc": "",
-                    "link": ""
-                },
-                "chatSecurity": {
-                    "desc": "",
-                    "link": ""
-                },
-                "allowChat": {
-                    "desc": "",
-                    "link": ""
-                },
-                "membershipOptions": {
-                    "desc": "",
-                    "link": ""
-                },
-                "homepage": {
-                    "desc": "",
-                    "link": ""
-                },
-                "locale": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isPublicTopicAdminOnly": {
-                    "desc": "",
-                    "link": ""
-                },
-                "defaultPublicity": {
-                    "desc": "",
-                    "link": ""
-                },
-                "isDefaultPostPublic": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanReviewType": {
-                    "desc": "",
-                    "link": ""
-                },
-                "enableInvitationMessagingForAdmins": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanName": {
-                    "desc": "",
-                    "link": ""
-                },
-                "clanMembershipTypes": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "name": {
                     "desc": "",
@@ -3089,7 +3068,12 @@
             "name": "EnableClanForGroup",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Clans\/Enable\/{clanMembershipType}\/",
-            "params": [],
+            "params": {
+                "clanName": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3139,7 +3123,16 @@
             "name": "GetAdminsOfGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Admins\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3153,7 +3146,16 @@
             "name": "GetAdminsOfGroupV2",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/AdminsV2\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3181,7 +3183,16 @@
             "name": "GetAllGroupsForCurrentMember",
             "method": "GET",
             "endpoint": "\/Group\/MyGroups\/All\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -3190,7 +3201,16 @@
             "name": "GetAllGroupsForMember",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/All\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3204,7 +3224,16 @@
             "name": "GetAlliedGroups",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Allies\/",
-            "params": [],
+            "params": {
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3236,7 +3265,16 @@
             "name": "GetBannedMembersOfGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Banned\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3250,7 +3288,16 @@
             "name": "GetBannedMembersOfGroupV2",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/BannedV2\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3282,7 +3329,16 @@
             "name": "GetFoundedGroupsForMember",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/Founded\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3300,7 +3356,12 @@
             "name": "GetGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3314,7 +3375,12 @@
             "name": "GetGroupByName",
             "method": "GET",
             "endpoint": "\/Group\/Name\/{groupName}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupName": {
@@ -3328,7 +3394,12 @@
             "name": "GetGroupsFollowedByGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Following\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3346,7 +3417,12 @@
             "name": "GetGroupsFollowingGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/FollowedBy\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3364,7 +3440,12 @@
             "name": "GetGroupTagSuggestions",
             "method": "GET",
             "endpoint": "\/Group\/GetGroupTagSuggestions\/",
-            "params": [],
+            "params": {
+                "partialtag": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -3373,7 +3454,16 @@
             "name": "GetJoinedGroupsForCurrentMember",
             "method": "GET",
             "endpoint": "\/Group\/MyGroups\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -3382,7 +3472,16 @@
             "name": "GetJoinedGroupsForCurrentMemberV2",
             "method": "GET",
             "endpoint": "\/Group\/MyGroups\/V2\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "currentPage": {
@@ -3396,7 +3495,16 @@
             "name": "GetJoinedGroupsForMember",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3410,7 +3518,16 @@
             "name": "GetJoinedGroupsForMemberV2",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/Joined\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "clanonly": {
+                    "desc": "",
+                    "link": ""
+                },
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3428,7 +3545,12 @@
             "name": "GetJoinedGroupsForMemberV3",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/JoinedV3\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3446,7 +3568,24 @@
             "name": "GetMembersOfClan",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/ClanMembers\/",
-            "params": [],
+            "params": {
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "memberType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "sort": {
+                    "desc": "",
+                    "link": ""
+                },
+                "platformType": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3460,7 +3599,28 @@
             "name": "GetMembersOfGroup",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Members\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "memberType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "platformType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "sort": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3474,7 +3634,28 @@
             "name": "GetMembersOfGroupV2",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/MembersV2\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "memberType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "platformType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "sort": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3488,7 +3669,32 @@
             "name": "GetMembersOfGroupV3",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/MembersV3\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "memberType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "platformType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "sort": {
+                    "desc": "",
+                    "link": ""
+                },
+                "nameSearch": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3533,7 +3739,12 @@
             "name": "GetPendingGroupsForCurrentMember",
             "method": "GET",
             "endpoint": "\/Group\/MyPendingGroups\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -3542,7 +3753,12 @@
             "name": "GetPendingGroupsForCurrentMemberV2",
             "method": "GET",
             "endpoint": "\/Group\/MyPendingGroups\/V2\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "currentPage": {
@@ -3556,7 +3772,12 @@
             "name": "GetPendingGroupsForMember",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/Pending\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3570,7 +3791,12 @@
             "name": "GetPendingGroupsForMemberV2",
             "method": "GET",
             "endpoint": "\/Group\/User\/{membershipId}\/PendingV2\/{currentPage}\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipId": {
@@ -3588,7 +3814,16 @@
             "name": "GetPendingMemberships",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Members\/Pending\/",
-            "params": [],
+            "params": {
+                "itemsPerPage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3602,7 +3837,12 @@
             "name": "GetPendingMembershipsV2",
             "method": "GET",
             "endpoint": "\/Group\/{groupId}\/Members\/PendingV2\/",
-            "params": [],
+            "params": {
+                "currentPage": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3616,7 +3856,12 @@
             "name": "GetRecommendedGroups",
             "method": "POST",
             "endpoint": "\/Group\/Recommended\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": "Private"
@@ -3626,43 +3871,7 @@
             "method": "POST",
             "endpoint": "\/Group\/Search\/",
             "params": {
-                "contents.searchValue": {
-                    "desc": "",
-                    "link": ""
-                },
-                "contents.searchType": {
-                    "desc": "",
-                    "link": ""
-                },
-                "creationDate": {
-                    "desc": "",
-                    "link": ""
-                },
-                "currentPage": {
-                    "desc": "The current page to return. Starts at 1.",
-                    "link": ""
-                },
-                "groupMemberCountFilter": {
-                    "desc": "",
-                    "link": ""
-                },
-                "itemsPerPage": {
-                    "desc": "",
-                    "link": ""
-                },
-                "localeFilter": {
-                    "desc": "",
-                    "link": ""
-                },
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "sortBy": {
-                    "desc": "",
-                    "link": ""
-                },
-                "tagText": {
+                "populatefriends": {
                     "desc": "",
                     "link": ""
                 }
@@ -3716,16 +3925,7 @@
             "name": "InviteClanMember",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/InviteToClan\/{membershipId}\/{clanMembershipType}\/",
-            "params": {
-                "title": {
-                    "desc": "",
-                    "link": ""
-                },
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "title": {
                     "desc": "",
@@ -3756,16 +3956,7 @@
             "name": "InviteGroupMember",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Invite\/{membershipId}\/",
-            "params": {
-                "title": {
-                    "desc": "",
-                    "link": ""
-                },
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "title": {
                     "desc": "",
@@ -3792,16 +3983,7 @@
             "name": "InviteManyToJoinAlliance",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Allies\/InviteMany\/",
-            "params": {
-                "targetIds": {
-                    "desc": "",
-                    "link": ""
-                },
-                "messageContent.message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "targetIds": {
                     "desc": "",
@@ -3842,12 +4024,7 @@
             "name": "JoinClanForGroup",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Clans\/Join\/{clanMembershipType}\/",
-            "params": {
-                "message": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "message": {
                     "desc": "",
@@ -3870,7 +4047,12 @@
             "name": "KickMember",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/{membershipId}\/Kick\/",
-            "params": [],
+            "params": {
+                "clanPlatformType": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3938,7 +4120,12 @@
             "name": "RequestGroupMembership",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/Apply\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3952,7 +4139,12 @@
             "name": "RequestGroupMembershipV2",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/ApplyV2\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -3984,7 +4176,12 @@
             "name": "RescindGroupMembership",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Members\/Rescind\/",
-            "params": [],
+            "params": {
+                "populatefriends": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "groupId": {
@@ -4192,36 +4389,7 @@
             "name": "IgnoreItem",
             "method": "POST",
             "endpoint": "\/Ignore\/Ignore\/",
-            "params": {
-                "ignoredItemId": {
-                    "desc": "A valid ignoredItemId.",
-                    "link": ""
-                },
-                "ignoredItemType": {
-                    "desc": "The type of item to ignore.",
-                    "link": "Enums#IgnoredItemType"
-                },
-                "comment": {
-                    "desc": "",
-                    "link": ""
-                },
-                "reason": {
-                    "desc": "",
-                    "link": ""
-                },
-                "itemContextId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "itemContextType": {
-                    "desc": "",
-                    "link": ""
-                },
-                "ModeratorRequest": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "ignoredItemId": {
                     "desc": "A valid ignoredItemId.",
@@ -4309,7 +4477,12 @@
             "name": "AdminUserSearch",
             "method": "GET",
             "endpoint": "\/Admin\/Member\/Search\/",
-            "params": [],
+            "params": {
+                "q": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -4327,7 +4500,20 @@
             "name": "GetAdminHistory",
             "method": "GET",
             "endpoint": "\/Admin\/GlobalHistory\/{param1}\/{param2}\/",
-            "params": [],
+            "params": {
+                "membershipFilter": {
+                    "desc": "",
+                    "link": ""
+                },
+                "startdate": {
+                    "desc": "",
+                    "link": ""
+                },
+                "enddate": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -4604,12 +4790,7 @@
             "name": "ClaimAndApplyOnToken",
             "method": "POST",
             "endpoint": "\/Tokens\/ClaimAndApplyToken\/{tokenType}\/",
-            "params": {
-                "redeemCode": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "redeemCode": {
                     "desc": "",
@@ -4628,12 +4809,7 @@
             "name": "ClaimToken",
             "method": "POST",
             "endpoint": "\/Tokens\/Claim\/",
-            "params": {
-                "redeemCode": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "redeemCode": {
                     "desc": "",
@@ -4757,20 +4933,7 @@
             "name": "EquipItem",
             "method": "POST",
             "endpoint": "\/Destiny\/EquipItem\/",
-            "params": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "itemId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "membershipType": {
                     "desc": "A valid Bungie.net membershipType.",
@@ -4792,20 +4955,7 @@
             "name": "EquipItems",
             "method": "POST",
             "endpoint": "\/Destiny\/EquipItems\/",
-            "params": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                },
-                "itemIds": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "membershipType": {
                     "desc": "A valid Bungie.net membershipType.",
@@ -4827,7 +4977,12 @@
             "name": "GetAccount",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4845,7 +5000,12 @@
             "name": "GetAccountSummary",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Summary\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4877,7 +5037,24 @@
             "name": "GetActivityHistory",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/ActivityHistory\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
-            "params": [],
+            "params": {
+                "mode": {
+                    "desc": "",
+                    "link": ""
+                },
+                "count": {
+                    "desc": "",
+                    "link": ""
+                },
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4899,7 +5076,12 @@
             "name": "GetAdvisorsForAccount",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Advisors\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4917,7 +5099,12 @@
             "name": "GetAdvisorsForCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4939,7 +5126,12 @@
             "name": "GetAdvisorsForCharacterV2",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/V2\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4961,7 +5153,12 @@
             "name": "GetAdvisorsForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4979,7 +5176,12 @@
             "name": "GetAllItemsSummary",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Items\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -4997,7 +5199,12 @@
             "name": "GetAllVendorsForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendors\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5015,7 +5222,12 @@
             "name": "GetBondAdvisors",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Advisors\/Bonds\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5029,7 +5241,12 @@
             "name": "GetCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Complete\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5051,7 +5268,12 @@
             "name": "GetCharacterActivities",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Activities\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5073,7 +5295,12 @@
             "name": "GetCharacterInventory",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5095,7 +5322,12 @@
             "name": "GetCharacterInventorySummary",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/Summary\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5117,7 +5349,12 @@
             "name": "GetCharacterProgression",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Progression\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5139,7 +5376,12 @@
             "name": "GetCharacterSummary",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5161,7 +5403,20 @@
             "name": "GetClanLeaderboards",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/ClanLeaderboards\/{param1}\/",
-            "params": [],
+            "params": {
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -5175,7 +5430,12 @@
             "name": "GetDestinyAggregateActivityStats",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/AggregateActivityStats\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5197,7 +5457,80 @@
             "name": "GetDestinyExplorerItems",
             "method": "GET",
             "endpoint": "\/Destiny\/Explorer\/Items\/",
-            "params": [],
+            "params": {
+                "tpage": {
+                    "desc": "",
+                    "link": ""
+                },
+                "count": {
+                    "desc": "",
+                    "link": ""
+                },
+                "name": {
+                    "desc": "",
+                    "link": ""
+                },
+                "order": {
+                    "desc": "",
+                    "link": ""
+                },
+                "orderstathash": {
+                    "desc": "",
+                    "link": ""
+                },
+                "direction": {
+                    "desc": "",
+                    "link": ""
+                },
+                "rarity": {
+                    "desc": "",
+                    "link": ""
+                },
+                "step": {
+                    "desc": "",
+                    "link": ""
+                },
+                "categories": {
+                    "desc": "",
+                    "link": ""
+                },
+                "weaponPerformance": {
+                    "desc": "",
+                    "link": ""
+                },
+                "impactEffects": {
+                    "desc": "",
+                    "link": ""
+                },
+                "guardianAttributes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "lightAbilities": {
+                    "desc": "",
+                    "link": ""
+                },
+                "damageTypes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "matchrandomsteps": {
+                    "desc": "",
+                    "link": ""
+                },
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "sourcecat": {
+                    "desc": "",
+                    "link": ""
+                },
+                "sourcehash": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5206,7 +5539,48 @@
             "name": "GetDestinyExplorerTalentNodeSteps",
             "method": "GET",
             "endpoint": "\/Destiny\/Explorer\/TalentNodeSteps\/",
-            "params": [],
+            "params": {
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                },
+                "count": {
+                    "desc": "",
+                    "link": ""
+                },
+                "name": {
+                    "desc": "",
+                    "link": ""
+                },
+                "direction": {
+                    "desc": "",
+                    "link": ""
+                },
+                "weaponPerformance": {
+                    "desc": "",
+                    "link": ""
+                },
+                "impactEffects": {
+                    "desc": "",
+                    "link": ""
+                },
+                "guardianAttributes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "lightAbilities": {
+                    "desc": "",
+                    "link": ""
+                },
+                "damageTypes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5233,7 +5607,16 @@
             "name": "GetDestinySingleDefinition",
             "method": "GET",
             "endpoint": "\/Destiny\/Manifest\/{definitionType}\/{definitionId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "version": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "definitionType": {
@@ -5251,7 +5634,12 @@
             "name": "GetExcellenceBadges",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/GetExcellenceBadges\/{membershipType}\/{destinyMembershipId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5269,7 +5657,20 @@
             "name": "GetGrimoireByMembership",
             "method": "GET",
             "endpoint": "\/Destiny\/Vanguard\/Grimoire\/{membershipType}\/{destinyMembershipId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "flavour": {
+                    "desc": "",
+                    "link": ""
+                },
+                "single": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5296,7 +5697,36 @@
             "name": "GetHistoricalStats",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
-            "params": [],
+            "params": {
+                "periodType": {
+                    "desc": "",
+                    "link": ""
+                },
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "groups": {
+                    "desc": "",
+                    "link": ""
+                },
+                "monthstart": {
+                    "desc": "",
+                    "link": ""
+                },
+                "monthend": {
+                    "desc": "",
+                    "link": ""
+                },
+                "daystart": {
+                    "desc": "",
+                    "link": ""
+                },
+                "dayend": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5327,7 +5757,12 @@
             "name": "GetHistoricalStatsForAccount",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/Account\/{membershipType}\/{destinyMembershipId}\/",
-            "params": [],
+            "params": {
+                "groups": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5345,7 +5780,12 @@
             "name": "GetItemDetail",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Inventory\/{itemInstanceId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5371,7 +5811,12 @@
             "name": "GetItemReferenceDetail",
             "method": "GET",
             "endpoint": "\/Destiny\/{param1}\/Account\/{param2}\/Character\/{param3}\/ItemReference\/{param4}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -5397,7 +5842,20 @@
             "name": "GetLeaderboards",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/",
-            "params": [],
+            "params": {
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5415,7 +5873,20 @@
             "name": "GetLeaderboardsForCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
-            "params": [],
+            "params": {
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5437,7 +5908,16 @@
             "name": "GetLeaderboardsForPsn",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/LeaderboardsForPsn\/",
-            "params": [],
+            "params": {
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "code": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5446,7 +5926,12 @@
             "name": "GetMembershipIdByDisplayName",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Stats\/GetMembershipIdByDisplayName\/{displayName}\/",
-            "params": [],
+            "params": {
+                "ignorecase": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5464,7 +5949,20 @@
             "name": "GetMyGrimoire",
             "method": "GET",
             "endpoint": "\/Destiny\/Vanguard\/Grimoire\/{membershipType}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "flavour": {
+                    "desc": "",
+                    "link": ""
+                },
+                "single": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5478,7 +5976,12 @@
             "name": "GetPostGameCarnageReport",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/PostGameCarnageReport\/{activityInstanceId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "activityInstanceId": {
@@ -5492,7 +5995,12 @@
             "name": "GetPublicAdvisors",
             "method": "GET",
             "endpoint": "\/Destiny\/Advisors\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5501,7 +6009,12 @@
             "name": "GetPublicAdvisorsV2",
             "method": "GET",
             "endpoint": "\/Destiny\/Advisors\/V2\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5510,7 +6023,12 @@
             "name": "GetPublicVendor",
             "method": "GET",
             "endpoint": "\/Destiny\/Vendors\/{vendorId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "vendorId": {
@@ -5524,7 +6042,12 @@
             "name": "GetPublicVendorWithMetadata",
             "method": "GET",
             "endpoint": "\/Destiny\/Vendors\/{vendorId}\/Metadata\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "vendorId": {
@@ -5538,7 +6061,12 @@
             "name": "GetPublicXurVendor",
             "method": "GET",
             "endpoint": "\/Destiny\/Advisors\/Xur\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5547,7 +6075,12 @@
             "name": "GetRecordBookCompletionStatus",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/RecordBooks\/{recordBookHash}\/Completion\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5565,7 +6098,12 @@
             "name": "GetSpecialEventAdvisors",
             "method": "GET",
             "endpoint": "\/Destiny\/Events\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
@@ -5574,7 +6112,12 @@
             "name": "GetTriumphs",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Triumphs\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5592,7 +6135,12 @@
             "name": "GetUniqueWeaponHistory",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/UniqueWeapons\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5614,7 +6162,16 @@
             "name": "GetVault",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Vault\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "accountId": {
+                    "desc": "A valid destinyMembershipId.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5628,7 +6185,16 @@
             "name": "GetVaultSummary",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Vault\/Summary\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                },
+                "accountId": {
+                    "desc": "A valid destinyMembershipId.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5642,7 +6208,12 @@
             "name": "GetVendorForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5664,7 +6235,12 @@
             "name": "GetVendorForCurrentCharacterWithMetadata",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Metadata\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5686,7 +6262,12 @@
             "name": "GetVendorItemDetailForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Item\/{itemId}\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5712,7 +6293,12 @@
             "name": "GetVendorItemDetailForCurrentCharacterWithMetadata",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendor\/{vendorId}\/Item\/{itemId}\/Metadata\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5738,7 +6324,12 @@
             "name": "GetVendorSummariesForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Vendors\/Summaries\/",
-            "params": [],
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "membershipType": {
@@ -5774,24 +6365,7 @@
             "name": "SetItemLockState",
             "method": "POST",
             "endpoint": "\/Destiny\/SetLockState\/",
-            "params": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "itemId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                },
-                "state": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "membershipType": {
                     "desc": "A valid Bungie.net membershipType.",
@@ -5817,28 +6391,7 @@
             "name": "SetQuestTrackedState",
             "method": "POST",
             "endpoint": "\/Destiny\/SetQuestTrackedState\/",
-            "params": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "membershipId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                },
-                "itemId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "state": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "membershipType": {
                     "desc": "A valid Bungie.net membershipType.",
@@ -5868,32 +6421,7 @@
             "name": "TransferItem",
             "method": "POST",
             "endpoint": "\/Destiny\/TransferItem\/",
-            "params": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "itemReferenceHash": {
-                    "desc": "",
-                    "link": ""
-                },
-                "itemId": {
-                    "desc": "",
-                    "link": ""
-                },
-                "stackSize": {
-                    "desc": "",
-                    "link": ""
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                },
-                "transferToVault": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
+            "params": [],
             "post": {
                 "membershipType": {
                     "desc": "A valid Bungie.net membershipType.",
@@ -6001,7 +6529,12 @@
             "name": "GetAdminCommunityLiveStatuses",
             "method": "GET",
             "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/{param3}\/",
-            "params": [],
+            "params": {
+                "name": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -6076,7 +6609,16 @@
             "name": "GetCommunityLiveStatuses",
             "method": "GET",
             "endpoint": "\/CommunityContent\/Live\/All\/{partnershipType}\/{communityStatusSort}\/{page}\/",
-            "params": [],
+            "params": {
+                "modeHash": {
+                    "desc": "Filter by ActivityModeType.",
+                    "link": "Enums#DestinyActivityModeType"
+                },
+                "streamLocale": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "partnershipType": {
@@ -6142,7 +6684,12 @@
             "name": "GetFeaturedCommunityLiveStatuses",
             "method": "GET",
             "endpoint": "\/CommunityContent\/Live\/Featured\/{partnershipType}\/{communityStatusSort}\/{page}\/",
-            "params": [],
+            "params": {
+                "streamLocale": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "partnershipType": {
@@ -6215,7 +6762,12 @@
             "name": "GetGlobalAlerts",
             "method": "GET",
             "endpoint": "\/\/GlobalAlerts\/",
-            "params": [],
+            "params": {
+                "includestreaming": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": ""
