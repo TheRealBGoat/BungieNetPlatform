@@ -704,18 +704,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     }
                 ],
                 "responses": {
@@ -955,18 +952,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "name": "clanName",
@@ -2134,18 +2128,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2502,18 +2493,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "body",
@@ -2698,18 +2686,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "body",
@@ -2800,18 +2785,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     }
                 ],
                 "responses": {
@@ -2847,18 +2829,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     }
                 ],
                 "responses": {
@@ -2887,18 +2866,15 @@
                         "description": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     }
                 ],
                 "responses": {

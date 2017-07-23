@@ -348,13 +348,10 @@
                         "description": "The type of partnership. 0=None, 1=Twitch",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Twitch"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Twitch"
+                        ]
                     },
                     {
                         "in": "path",
@@ -362,15 +359,12 @@
                         "description": "Sort by status.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Viewers",
-                                "Trending",
-                                "OverallViewers",
-                                "Followers"
-                            ]
-                        }
+                        "enum": [
+                            "Viewers",
+                            "Trending",
+                            "OverallViewers",
+                            "Followers"
+                        ]
                     },
                     {
                         "in": "path",
@@ -418,13 +412,10 @@
                         "description": "The type of partnership. 0=None, 1=Twitch",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Twitch"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Twitch"
+                        ]
                     },
                     {
                         "in": "path",
@@ -432,15 +423,12 @@
                         "description": "Sort by status.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Viewers",
-                                "Trending",
-                                "OverallViewers",
-                                "Followers"
-                            ]
-                        }
+                        "enum": [
+                            "Viewers",
+                            "Trending",
+                            "OverallViewers",
+                            "Followers"
+                        ]
                     },
                     {
                         "in": "path",
@@ -476,13 +464,10 @@
                         "description": "The type of partnership. 0=None, 1=Twitch",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Twitch"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Twitch"
+                        ]
                     },
                     {
                         "in": "path",
@@ -490,15 +475,12 @@
                         "description": "Sort by status.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Viewers",
-                                "Trending",
-                                "OverallViewers",
-                                "Followers"
-                            ]
-                        }
+                        "enum": [
+                            "Viewers",
+                            "Trending",
+                            "OverallViewers",
+                            "Followers"
+                        ]
                     },
                     {
                         "in": "path",
@@ -534,13 +516,10 @@
                         "description": "The type of partnership. 0=None, 1=Twitch",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Twitch"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Twitch"
+                        ]
                     },
                     {
                         "in": "path",
@@ -548,15 +527,12 @@
                         "description": "Sort by status.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Viewers",
-                                "Trending",
-                                "OverallViewers",
-                                "Followers"
-                            ]
-                        }
+                        "enum": [
+                            "Viewers",
+                            "Trending",
+                            "OverallViewers",
+                            "Followers"
+                        ]
                     },
                     {
                         "in": "path",
@@ -598,13 +574,10 @@
                         "description": "The type of partnership. 0=None, 1=Twitch",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Twitch"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Twitch"
+                        ]
                     },
                     {
                         "in": "path",
@@ -612,18 +585,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "name": "membershipId",

@@ -152,18 +152,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -206,18 +203,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -288,18 +282,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -320,47 +311,44 @@
                         "name": "mode",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "in": "query",
@@ -408,18 +396,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -462,18 +447,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -523,18 +505,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -584,18 +563,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -643,18 +619,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -697,18 +670,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -756,18 +726,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -808,18 +775,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -874,18 +838,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -935,18 +896,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -996,18 +954,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1057,18 +1012,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1118,18 +1070,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1185,47 +1134,44 @@
                         "name": "modes",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "name": "statid",
@@ -1266,18 +1212,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1344,19 +1287,16 @@
                         "name": "order",
                         "description": "Item property used for sorting",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Name",
-                                "ItemType",
-                                "Rarity",
-                                "ItemTypeName",
-                                "ItemStatHash",
-                                "MinimumRequiredLevel",
-                                "MaximumRequiredLevel"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Name",
+                            "ItemType",
+                            "Rarity",
+                            "ItemTypeName",
+                            "ItemStatHash",
+                            "MinimumRequiredLevel",
+                            "MaximumRequiredLevel"
+                        ]
                     },
                     {
                         "in": "query",
@@ -1369,32 +1309,26 @@
                         "name": "direction",
                         "description": "Order to sort items: Ascending or Descending",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Ascending",
-                                "Descending"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Ascending",
+                            "Descending"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "rarity",
                         "description": "Rarity of items to return. Omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Unknown",
-                                "Currency",
-                                "Basic",
-                                "Common",
-                                "Rare",
-                                "Superior",
-                                "Exotic"
-                            ]
-                        }
+                        "enum": [
+                            "Unknown",
+                            "Currency",
+                            "Basic",
+                            "Common",
+                            "Rare",
+                            "Superior",
+                            "Exotic"
+                        ]
                     },
                     {
                         "in": "query",
@@ -1413,102 +1347,87 @@
                         "name": "weaponPerformance",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "RateOfFire",
-                                "Damage",
-                                "Accuracy",
-                                "Range",
-                                "Zoom",
-                                "Recoil",
-                                "Ready",
-                                "Reload",
-                                "HairTrigger",
-                                "AmmoAndMagazine",
-                                "TrackingAndDetonation",
-                                "ShotgunSpread",
-                                "ChargeTime",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "RateOfFire",
+                            "Damage",
+                            "Accuracy",
+                            "Range",
+                            "Zoom",
+                            "Recoil",
+                            "Ready",
+                            "Reload",
+                            "HairTrigger",
+                            "AmmoAndMagazine",
+                            "TrackingAndDetonation",
+                            "ShotgunSpread",
+                            "ChargeTime",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "impactEffects",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "ArmorPiercing",
-                                "Ricochet",
-                                "Flinch",
-                                "CollateralDamage",
-                                "Disorient",
-                                "HighlightTarget",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "ArmorPiercing",
+                            "Ricochet",
+                            "Flinch",
+                            "CollateralDamage",
+                            "Disorient",
+                            "HighlightTarget",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "guardianAttributes",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Stats",
-                                "Shields",
-                                "Health",
-                                "Revive",
-                                "AimUnderFire",
-                                "Radar",
-                                "Invisibility",
-                                "Reputations",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Stats",
+                            "Shields",
+                            "Health",
+                            "Revive",
+                            "AimUnderFire",
+                            "Radar",
+                            "Invisibility",
+                            "Reputations",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "lightAbilities",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Grenades",
-                                "Melee",
-                                "MovementModes",
-                                "Orbs",
-                                "SuperEnergy",
-                                "SuperMods",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Grenades",
+                            "Melee",
+                            "MovementModes",
+                            "Orbs",
+                            "SuperEnergy",
+                            "SuperMods",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "damageTypes",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Kinetic",
-                                "Arc",
-                                "Solar",
-                                "Void",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Kinetic",
+                            "Arc",
+                            "Solar",
+                            "Void",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -1529,15 +1448,12 @@
                         "name": "sourcecat",
                         "description": "Items must drop from the specified source category, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Activity",
-                                "Vendor",
-                                "Aggregate"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Activity",
+                            "Vendor",
+                            "Aggregate"
+                        ]
                     },
                     {
                         "in": "query",
@@ -1589,116 +1505,98 @@
                         "name": "direction",
                         "description": "Order to sort items: Ascending or Descending",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Ascending",
-                                "Descending"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Ascending",
+                            "Descending"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "weaponPerformance",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "RateOfFire",
-                                "Damage",
-                                "Accuracy",
-                                "Range",
-                                "Zoom",
-                                "Recoil",
-                                "Ready",
-                                "Reload",
-                                "HairTrigger",
-                                "AmmoAndMagazine",
-                                "TrackingAndDetonation",
-                                "ShotgunSpread",
-                                "ChargeTime",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "RateOfFire",
+                            "Damage",
+                            "Accuracy",
+                            "Range",
+                            "Zoom",
+                            "Recoil",
+                            "Ready",
+                            "Reload",
+                            "HairTrigger",
+                            "AmmoAndMagazine",
+                            "TrackingAndDetonation",
+                            "ShotgunSpread",
+                            "ChargeTime",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "impactEffects",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "ArmorPiercing",
-                                "Ricochet",
-                                "Flinch",
-                                "CollateralDamage",
-                                "Disorient",
-                                "HighlightTarget",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "ArmorPiercing",
+                            "Ricochet",
+                            "Flinch",
+                            "CollateralDamage",
+                            "Disorient",
+                            "HighlightTarget",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "guardianAttributes",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Stats",
-                                "Shields",
-                                "Health",
-                                "Revive",
-                                "AimUnderFire",
-                                "Radar",
-                                "Invisibility",
-                                "Reputations",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Stats",
+                            "Shields",
+                            "Health",
+                            "Revive",
+                            "AimUnderFire",
+                            "Radar",
+                            "Invisibility",
+                            "Reputations",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "lightAbilities",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Grenades",
-                                "Melee",
-                                "MovementModes",
-                                "Orbs",
-                                "SuperEnergy",
-                                "SuperMods",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Grenades",
+                            "Melee",
+                            "MovementModes",
+                            "Orbs",
+                            "SuperEnergy",
+                            "SuperMods",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "damageTypes",
                         "description": "Items must have node steps in one of these categories, omit for all items.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Kinetic",
-                                "Arc",
-                                "Solar",
-                                "Void",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Kinetic",
+                            "Arc",
+                            "Solar",
+                            "Void",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -1774,35 +1672,32 @@
                         "description": "The type of definition to return.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Activity",
-                                "ActivityType",
-                                "Class",
-                                "Gender",
-                                "InventoryBucket",
-                                "InventoryItem",
-                                "Progression",
-                                "Race",
-                                "Stat",
-                                "TalentGrid",
-                                "StatGroup",
-                                "UnlockFlag",
-                                "Vendor",
-                                "Destination",
-                                "Place",
-                                "DirectorBook",
-                                "MaterialRequirement",
-                                "SandboxPerk",
-                                "ArtDye",
-                                "ArtDyeChannel",
-                                "ActivityBundle",
-                                "GearAsset",
-                                "GrimoireCard"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Activity",
+                            "ActivityType",
+                            "Class",
+                            "Gender",
+                            "InventoryBucket",
+                            "InventoryItem",
+                            "Progression",
+                            "Race",
+                            "Stat",
+                            "TalentGrid",
+                            "StatGroup",
+                            "UnlockFlag",
+                            "Vendor",
+                            "Destination",
+                            "Place",
+                            "DirectorBook",
+                            "MaterialRequirement",
+                            "SandboxPerk",
+                            "ArtDye",
+                            "ArtDyeChannel",
+                            "ActivityBundle",
+                            "GearAsset",
+                            "GrimoireCard"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1851,18 +1746,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1905,18 +1797,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -1991,18 +1880,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2023,84 +1909,75 @@
                         "name": "periodType",
                         "description": "Indicates a specific period type to return. Optional.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Daily",
-                                "Monthly",
-                                "AllTime",
-                                "Activity"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Daily",
+                            "Monthly",
+                            "AllTime",
+                            "Activity"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "modes",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "in": "query",
                         "name": "groups",
                         "description": "Group of stats to include, otherwise only general stats are returned.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "General",
-                                "Weapons",
-                                "Medals",
-                                "Enemies",
-                                "ReservedGroups",
-                                "Leaderboard",
-                                "Activity",
-                                "UniqueWeapon",
-                                "Internal",
-                                "Unknown"
-                            ]
-                        }
+                        "enum": [
+                            "General",
+                            "Weapons",
+                            "Medals",
+                            "Enemies",
+                            "ReservedGroups",
+                            "Leaderboard",
+                            "Activity",
+                            "UniqueWeapon",
+                            "Internal",
+                            "Unknown"
+                        ]
                     },
                     {
                         "in": "query",
@@ -2173,18 +2050,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2198,21 +2072,18 @@
                         "name": "groups",
                         "description": "Group of stats to include, otherwise only general stats are returned.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "General",
-                                "Weapons",
-                                "Medals",
-                                "Enemies",
-                                "ReservedGroups",
-                                "Leaderboard",
-                                "Activity",
-                                "UniqueWeapon",
-                                "Internal",
-                                "Unknown"
-                            ]
-                        }
+                        "enum": [
+                            "General",
+                            "Weapons",
+                            "Medals",
+                            "Enemies",
+                            "ReservedGroups",
+                            "Leaderboard",
+                            "Activity",
+                            "UniqueWeapon",
+                            "Internal",
+                            "Unknown"
+                        ]
                     }
                 ],
                 "responses": {
@@ -2241,18 +2112,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2365,18 +2233,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2390,47 +2255,44 @@
                         "name": "modes",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "name": "statid",
@@ -2471,18 +2333,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -2503,47 +2362,44 @@
                         "name": "modes",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "name": "statid",
@@ -2583,47 +2439,44 @@
                         "name": "modes",
                         "description": "Filter by ActivityModeType.",
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "Story",
-                                "Strike",
-                                "Raid",
-                                "AllPvP",
-                                "Patrol",
-                                "AllPvE",
-                                "PvPIntroduction",
-                                "ThreeVsThree",
-                                "Control",
-                                "Lockdown",
-                                "Team",
-                                "FreeForAll",
-                                "TrialsOfOsiris",
-                                "Doubles",
-                                "Nightfall",
-                                "Heroic",
-                                "AllStrikes",
-                                "IronBanner",
-                                "AllArena",
-                                "Arena",
-                                "ArenaChallenge",
-                                "Elimination",
-                                "Rift",
-                                "AllMayhem",
-                                "MayhemClash",
-                                "MayhemRumble",
-                                "ZoneControl",
-                                "Racing",
-                                "ArenaElderChallenge",
-                                "Supremacy",
-                                "PrivateMatchesAll",
-                                "SupremacyRumble",
-                                "SupremacyClash",
-                                "SupremacyInferno",
-                                "SupremacyMayhem"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "Story",
+                            "Strike",
+                            "Raid",
+                            "AllPvP",
+                            "Patrol",
+                            "AllPvE",
+                            "PvPIntroduction",
+                            "ThreeVsThree",
+                            "Control",
+                            "Lockdown",
+                            "Team",
+                            "FreeForAll",
+                            "TrialsOfOsiris",
+                            "Doubles",
+                            "Nightfall",
+                            "Heroic",
+                            "AllStrikes",
+                            "IronBanner",
+                            "AllArena",
+                            "Arena",
+                            "ArenaChallenge",
+                            "Elimination",
+                            "Rift",
+                            "AllMayhem",
+                            "MayhemClash",
+                            "MayhemRumble",
+                            "ZoneControl",
+                            "Racing",
+                            "ArenaElderChallenge",
+                            "Supremacy",
+                            "PrivateMatchesAll",
+                            "SupremacyRumble",
+                            "SupremacyClash",
+                            "SupremacyInferno",
+                            "SupremacyMayhem"
+                        ]
                     },
                     {
                         "name": "code",
@@ -2658,18 +2511,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "name": "displayName",
@@ -2711,18 +2561,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -2959,18 +2806,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "name": "recordBookHash",
@@ -3046,18 +2890,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3100,18 +2941,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3161,18 +2999,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -3219,18 +3054,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "query",
@@ -3277,18 +3109,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3338,18 +3167,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3399,18 +3225,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3467,18 +3290,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3535,18 +3355,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "in": "path",
@@ -3594,18 +3411,15 @@
                         "description": "A valid Bungie.net membershipType.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "None",
-                                "TigerXbox",
-                                "TigerPsn",
-                                "TigerBlizzard",
-                                "TigerDemon",
-                                "BungieNext",
-                                "All"
-                            ]
-                        }
+                        "enum": [
+                            "None",
+                            "TigerXbox",
+                            "TigerPsn",
+                            "TigerBlizzard",
+                            "TigerDemon",
+                            "BungieNext",
+                            "All"
+                        ]
                     },
                     {
                         "name": "displayName",

@@ -837,14 +837,11 @@
                         "description": "How to respond to the invitation.",
                         "required": true,
                         "type": "string",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Unreviewed",
-                                "Approved",
-                                "Rejected"
-                            ]
-                        }
+                        "enum": [
+                            "Unreviewed",
+                            "Approved",
+                            "Rejected"
+                        ]
                     }
                 ],
                 "responses": {
